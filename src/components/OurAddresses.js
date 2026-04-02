@@ -16,7 +16,7 @@ const locations = [
     name: "Saket | Westend Marg",
     meta: "630 seats | 3 centers",
     tag: "COWORKING & MANAGED OFFICES",
-    image: "/homebannerImages/lg2x.jfif",
+    image: "/homebannerImages/Office_rooms_with_202604020025.jpeg",
   },
   {
     id: "sarita",
