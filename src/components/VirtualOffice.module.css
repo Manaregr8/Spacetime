@@ -1,0 +1,141 @@
+/* ── Section wrapper ──────────────────────────────────── */
+.section {
+  padding: 0 0 72px;
+}
+
+.inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ── Card ─────────────────────────────────────────────── */
+.card {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  background: #f2f2f0;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 280px;
+}
+
+/* ── Left image ───────────────────────────────────────── */
+.imageWrap {
+  position: relative;
+  height: 100%;
+  min-height: 280px;
+}
+
+/* ── Middle text ──────────────────────────────────────── */
+.textWrap {
+  padding: 48px 56px;
+}
+
+.tag {
+  display: inline-block;
+  width: fit-content;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  background: #fff;
+  color: #111;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.tagHighlight {
+  color: #2a8a7a;
+}
+
+.heading {
+  font-size: clamp(22px, 2.4vw, 36px);
+  color: #111;
+  line-height: 1.25;
+  margin-bottom: 18px;
+  max-width: 520px;
+}
+
+.desc {
+  color: #555;
+  line-height: 1.75;
+  max-width: 460px;
+}
+
+/* ── Right CTA ────────────────────────────────────────── */
+.ctaWrap {
+  display: flex;
+  justify-content: center;
+  padding: 0 40px;
+}
+
+.cta {
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.cta:hover {
+  background: #333;
+}
+
+/* ── Fade-up animation ────────────────────────────────── */
+.fadeUp {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.fadeUp.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 960px) {
+  .card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 260px auto auto;
+  }
+
+  .imageWrap {
+    min-height: 260px;
+    height: 260px;
+  }
+
+  .textWrap {
+    padding: 36px 32px 24px;
+  }
+
+  .ctaWrap {
+    justify-content: flex-start;
+    padding: 0 32px 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .inner {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 0 0 48px;
+  }
+
+  .textWrap {
+    padding: 28px 20px 20px;
+  }
+
+  .ctaWrap {
+    padding: 0 20px 28px;
+  }
+}

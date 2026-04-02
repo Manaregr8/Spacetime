@@ -1,0 +1,330 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.scrolled {
+  background-color: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.35);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px;
+  height: 72px;
+}
+
+/* ── Logo ──────────────────────────────────────────────── */
+.logo {
+  display: flex;
+  align-items: baseline;
+  color: #fff;
+  text-decoration: none;
+  font-size: 28px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.logoSpace {
+  font-style: italic;
+  font-weight: 300;
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: -0.3px;
+}
+
+.logoTime {
+  font-weight: 800;
+  font-family: "Arial Black", Arial, sans-serif;
+  letter-spacing: -0.5px;
+}
+
+/* ── Nav Links ─────────────────────────────────────────── */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: #fff;
+}
+
+/* ── Right section ─────────────────────────────────────── */
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-shrink: 0;
+}
+
+.phoneGroup {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #fff;
+}
+
+.phoneNum {
+  font-size: 13.5px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background: #fff;
+  color: #111;
+  border-radius: 50px;
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ctaBtn:hover {
+  background: #e8e8e8;
+}
+
+/* ── Hamburger ─────────────────────────────────────────── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 1100;
+  position: relative;
+}
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 0.25s ease,
+    width 0.3s ease;
+  transform-origin: center;
+}
+
+/* Animate to X when open */
+.hamburgerOpen .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburgerOpen .bar:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.hamburgerOpen .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Backdrop ───────────────────────────────────────────── */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  background: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  transition: background 0.4s ease;
+}
+
+.backdropOpen {
+  background: rgba(0, 0, 0, 0.55);
+  pointer-events: all;
+  backdrop-filter: blur(2px);
+}
+
+/* ── Slide-in drawer ────────────────────────────────────── */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100dvh;
+  width: min(360px, 85vw);
+  z-index: 1100;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 32px 40px;
+  transform: translateX(100%);
+  transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform;
+  overflow-y: auto;
+}
+
+.drawerOpen {
+  transform: translateX(0);
+}
+
+/* Close button */
+.drawerClose {
+  align-self: flex-end;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 40px;
+  transition: background 0.2s;
+}
+
+.drawerClose:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* Nav links */
+.drawerNav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.drawerLink {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: rgba(255,255,255,0.85);
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--font-body), "Manrope", sans-serif;
+  text-decoration: none;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  opacity: 0;
+  transform: translateX(32px);
+  transition: color 0.2s ease,
+    opacity 0.4s ease,
+    transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.drawerOpen .drawerLink {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.drawerLink:hover {
+  color: #fff;
+}
+
+.drawerLinkNum {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.3);
+  font-family: var(--font-body), "Manrope", sans-serif;
+  min-width: 20px;
+}
+
+/* Bottom section */
+.drawerBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 8px;
+}
+
+.drawerDivider {
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+}
+
+.drawerPhone {
+  color: rgba(255,255,255,0.55);
+  font-size: 14px;
+  font-family: var(--font-body), "Manrope", sans-serif;
+  text-decoration: none;
+}
+
+.drawerCta {
+  display: block;
+  background: #fff;
+  color: #111;
+  border-radius: 50px;
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  font-family: var(--font-body), "Manrope", sans-serif;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+.drawerCta:hover {
+  background: #e8e8e8;
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .inner {
+    padding: 0 32px;
+  }
+
+  .navLinks {
+    gap: 24px;
+  }
+}
+
+@media (max-width:1176px) {
+  .navLinks,
+  .phoneGroup,
+  .ctaBtn {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .inner {
+    padding: 0 20px;
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+}

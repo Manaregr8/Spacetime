@@ -1,0 +1,230 @@
+/* ── Section wrapper ──────────────────────────────────── */
+.section {
+  padding: 72px 0 80px;
+}
+
+.inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ── Section header ───────────────────────────────────── */
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.sectionTitle {
+  font-size: clamp(28px, 3vw, 44px);
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.sectionSub {
+  font-size: 15px;
+  color: #3a9e8f;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ── 2-column grid (top cards) ────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* ── Shared card base ─────────────────────────────────── */
+.card {
+  background: #f2f2f2;
+  padding: 35px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Top-image card ───────────────────────────────────── */
+.cardTop {
+  display: flex;
+  flex-direction: column;
+}
+
+.topImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.topText {
+    padding-top: 20px;
+}
+/* ── Side card (text left, image right) ───────────────── */
+.cardSide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  aspect-ratio: 16 / 9;
+  max-height: 400px;
+  width: 100%;
+}
+
+.sideText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sideImage {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 100%;
+}
+
+/* ── Tag labels ───────────────────────────────────────── */
+.tag {
+  display: inline-block;
+  width: fit-content;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  background: #fff;
+  color: #111;
+}
+
+.tag--teal {
+  background: #fff;
+  color: #111;
+}
+
+.tag--amber {
+  background: #fff;
+  color: #111;
+}
+
+/* ── Card text ────────────────────────────────────────── */
+.cardTitle {
+  font-size: 30px;
+  color: #111;
+  line-height: 1.28;
+  margin-bottom: 12px;
+}
+
+.cardDesc {
+  font-size: 17px;
+  color: #666;
+  line-height: 1.75;
+  max-width: 420px;
+}
+
+/* ── CTA row ──────────────────────────────────────────── */
+.ctaRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.cta {
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+  transition: background 0.2s ease;
+}
+
+.cta:hover {
+  background: #333;
+}
+
+/* ── Fade-up animation ────────────────────────────────── */
+.fadeUp {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.fadeUp.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .cardTitle {
+    font-size: clamp(20px, 4vw, 26px);
+  }
+
+  .cardSide {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    aspect-ratio: unset;
+    max-height: unset;
+  }
+
+  .sideText {
+    padding: 0 0 20px;
+  }
+
+  .sideImage {
+    aspect-ratio: 16 / 8;
+    height: auto;
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .inner {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 48px 0 56px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .cardTitle {
+    font-size: clamp(18px, 5vw, 22px);
+  }
+
+  .cardDesc {
+    font-size: 14px;
+  }
+
+  .topText {
+    padding-top: 16px;
+  }
+
+  .sideText {
+    padding: 0 0 16px;
+    order: 2;
+  }
+
+  .sideImage {
+    aspect-ratio: 4 / 3;
+    min-height: 180px;
+    order: 1;
+  }
+}

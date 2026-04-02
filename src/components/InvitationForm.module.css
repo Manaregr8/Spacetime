@@ -1,0 +1,248 @@
+/* ── Section ──────────────────────────────────────────── */
+.section {
+  background: #fff;
+  padding: 80px 0 88px;
+}
+
+.inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ── Card ─────────────────────────────────────────────── */
+.card {
+  background: #f2f2f0;
+  border-radius: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 64px;
+  padding: 64px 72px;
+  align-items: center;
+}
+
+/* ── Left ─────────────────────────────────────────────── */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heading {
+  font-size: clamp(28px, 3.2vw, 48px);
+  color: #111;
+  line-height: 1.15;
+}
+
+.desc {
+  color: #444;
+  line-height: 1.78;
+  max-width: 440px;
+}
+
+/* ── Host ─────────────────────────────────────────────── */
+.host {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.avatar {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.hostName {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+}
+
+.hostTitle {
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* ── Form ─────────────────────────────────────────────── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* ── Inputs ───────────────────────────────────────────── */
+.input {
+  width: 100%;
+  background: #fff;
+  border: 1.5px solid #e4e4e4;
+  border-radius: 10px;
+  padding: 16px 18px;
+  font-size: 14px;
+  font-family: var(--font-body), "Manrope", sans-serif;
+  color: #111;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+
+.input:focus {
+  border-color: #aaa;
+}
+
+/* ── Phone ────────────────────────────────────────────── */
+.phoneWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1.5px solid #e4e4e4;
+  border-radius: 10px;
+  padding: 0 18px;
+  gap: 10px;
+  transition: border-color 0.2s ease;
+}
+
+.phoneWrap:focus-within {
+  border-color: #aaa;
+}
+
+.flag {
+  font-size: 18px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.phoneInput {
+  border: none !important;
+  padding: 16px 0 !important;
+  border-radius: 0 !important;
+  flex: 1;
+}
+
+.phoneInput:focus {
+  border-color: transparent !important;
+}
+
+/* ── Select ───────────────────────────────────────────── */
+.selectWrap {
+  position: relative;
+}
+
+.select {
+  width: 100%;
+  appearance: none;
+  background: #fff;
+  border: 1.5px solid #e4e4e4;
+  border-radius: 10px;
+  padding: 16px 18px;
+  font-size: 14px;
+  font-family: var(--font-body), "Manrope", sans-serif;
+  color: #111;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.select:focus {
+  border-color: #aaa;
+}
+
+.selectArrow {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #888;
+  pointer-events: none;
+}
+
+/* ── Submit button ────────────────────────────────────── */
+.submit {
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 18px 24px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.2s ease;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.submit:hover {
+  background: #333;
+}
+
+.submitMain {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--font-body), "Manrope", sans-serif;
+  letter-spacing: 0.1px;
+}
+
+.submitSub {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--font-body), "Manrope", sans-serif;
+}
+
+/* ── Fade-up ──────────────────────────────────────────── */
+.fadeUp {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.fadeUp.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 960px) {
+  .card {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 48px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .inner {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 56px 0 64px;
+  }
+
+  .card {
+    padding: 32px 24px;
+    border-radius: 16px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

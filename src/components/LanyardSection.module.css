@@ -1,0 +1,77 @@
+.section {
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  min-height: 80vh;
+  overflow: hidden;
+}
+
+/* ── Left text ────────────────────────────────────────── */
+.textBlock {
+    background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 64px;
+  gap: 24px;
+}
+
+.tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.45);
+  font-family: var(--font-body), "Manrope", sans-serif;
+}
+
+.heading {
+  font-size: clamp(32px, 3.5vw, 52px);
+  color: #fff;
+  line-height: 1.1;
+}
+
+.desc {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 400px;
+}
+
+/* ── Canvas area ──────────────────────────────────────── */
+.canvasWrap {
+  position: relative;
+  height: 80vh;
+  min-height: 500px;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 900px) {
+  .section {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+
+  .textBlock {
+    padding: 60px 32px 16px;
+    gap: 16px;
+  }
+
+  .desc {
+    max-width: 100%;
+  }
+
+  .canvasWrap {
+    height: 70vw;
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .textBlock {
+    padding: 48px 20px 8px;
+  }
+
+  .canvasWrap {
+    height: 90vw;
+  }
+}
