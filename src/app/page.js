@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Loader from "@/components/Loader";
 import HeroSection from "@/components/HeroSection";
 import OurSpaces from "@/components/OurSpaces";
 import VirtualOffice from "@/components/VirtualOffice";
@@ -12,6 +13,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
+      <Loader />
       <Navbar />
       <HeroSection />
       <OurSpaces />

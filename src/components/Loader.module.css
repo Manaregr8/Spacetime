@@ -1,0 +1,73 @@
+/* ── Full-screen loader ───────────────────────────────── */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.48s ease, visibility 0.48s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ── Logo word wrapper ───────────────────────────────── */
+.logoWrap {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+}
+
+/* ── Individual characters ───────────────────────────── */
+.char {
+  display: inline-block;
+  opacity: 0;
+  animation: charDrop 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  line-height: 1;
+}
+
+/* "space" — italic serif, light weight */
+.charSpace {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(40px, 7vw, 80px);
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: -0.5px;
+}
+
+/* "time" — sans, slightly heavier */
+.charTime {
+  font-family: var(--font-heading), "Cal Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(40px, 7vw, 80px);
+  color: #fff;
+  letter-spacing: 0.04em;
+}
+
+/* ── Bounce-drop keyframe ────────────────────────────── */
+@keyframes charDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px) scaleY(1.1);
+  }
+  55% {
+    opacity: 1;
+    transform: translateY(12px) scaleY(0.95);
+  }
+  72% {
+    transform: translateY(-8px) scaleY(1.04);
+  }
+  86% {
+    transform: translateY(5px) scaleY(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
