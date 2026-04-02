@@ -21,6 +21,9 @@ export const metadata = {
   title: "Spacetime | Premium Coworking Spaces",
   description:
     "Curated sanctuaries for those who build. Hospitality-first. Design that elevates.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {

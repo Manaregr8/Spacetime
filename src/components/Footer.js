@@ -7,8 +7,8 @@ import styles from "./Footer.module.css";
 
 const footerImages = [
   "/footerLinks/preview.svg",
-  "/footerLinks/preview (1).svg",
-  "/footerLinks/preview (2).svg",
+  "/footerLinks/preview-1.svg",
+  "/footerLinks/preview-2.svg",
 ];
 
 const companyLinks = [
