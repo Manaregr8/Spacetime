@@ -1,0 +1,274 @@
+/* ── Section wrapper ──────────────────────────────────── */
+.section {
+  padding: 100px 0;
+  overflow: hidden; /* prevents horizontal scroll from slider overflow */
+  background: white;
+}
+
+.inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+  position: relative;
+}
+
+.container {
+  background: #000;
+  color: #fff;
+  display: flex;
+  position: relative;
+  padding: 80px 0 80px 80px;
+}
+
+/* ── Top left big quote ────────────────────────────────── */
+.bigQuote {
+  position: absolute;
+  top: -60px;
+  left: 60px;
+  background: #478dec; /* Soft blue like the image */
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.bigQuote svg {
+  width: 50px;
+  height: 50px;
+  color: white;
+}
+
+/* ── Left content column ───────────────────────────────── */
+.leftCol {
+  width: 35%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.heading {
+  font-size: clamp(32px, 3vw, 42px);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #e5e5e5;
+  margin-bottom: 40px;
+  max-width: 400px;
+}
+
+.contactLink {
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.contactLink:hover {
+  text-decoration: underline;
+}
+
+/* ── Custom Navigation ─────────────────────────────────── */
+.customNavigation {
+  display: flex;
+  gap: 2px;
+}
+
+.customNavigation button {
+  width: 48px;
+  height: 38px;
+  background: #e5e5e5;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  transition: background 0.2s;
+}
+
+.customNavigation button:hover {
+  background: #fff;
+}
+
+.customNavigation button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Right side / slider ───────────────────────────────── */
+.rightCol {
+  width: 65%;
+  position: relative;
+  z-index: 5;
+}
+
+.swiperContainer {
+  width: 100%;
+  /* Force visible to allow cards to go outside container right */
+  overflow: visible !important;
+  margin-top: 20px;
+  /* Clip elements sliding to the left so they don't overlap left text! */
+  clip-path: inset(-1000% -1000% -1000% -30px);
+}
+
+.slide {
+  height: auto;
+}
+
+.card {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardImageWrap {
+  background: #e5e5e5;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardContent {
+  background: #e5e5e5;
+  border-top: 15px solid #000;
+  position: relative;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Small blue quote spanning intersection */
+.smallQuote {
+  position: absolute;
+  top: -27.5px; /* Adjust to center on 15px border */
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  background: #478dec;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.smallQuote svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.cardText {
+  font-size: 14px;
+  color: #111;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.cardName {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 4px;
+}
+
+.cardPost {
+  font-size: 13px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* ── Custom Pagination ─────────────────────────────────── */
+.customPagination {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 24px;
+  padding-right: 20px;
+}
+
+.customPagination :global(.swiper-pagination-bullet) {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  opacity: 0.4;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.customPagination :global(.swiper-pagination-bullet-active) {
+  opacity: 1;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    padding: 60px 40px;
+  }
+
+  .leftCol {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .rightCol {
+    width: 100%;
+  }
+
+  .bigQuote {
+    left: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .inner {
+    padding: 0 16px;
+  }
+
+  .container {
+    padding: 60px 20px 40px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .bigQuote {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: 10px;
+  }
+
+  .bigQuote svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .customPagination {
+    padding-right: 0;
+    justify-content: center;
+  }
+}

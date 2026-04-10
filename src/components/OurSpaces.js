@@ -12,7 +12,8 @@ const spaces = [
     title: "Coworking Sanctuaries",
     desc: "Thoughtfully composed environments where founders and operators thrive in community — without the noise or anonymity of ordinary coworking. Hot desks, dedicated seats and private pods, all wrapped in warm hospitality.",
     image: "/homebannerImages/Enhance_office_modern_202604020034.jpeg",
-    layout: "top", // image on top, text below
+    layout: "top",
+    cta: "Explore coworking",
   },
   {
     id: "managed",
@@ -22,6 +23,7 @@ const spaces = [
     desc: "Your own dedicated floor or wing — fully customised, impeccably managed by our hospitality team. Single monthly experience, zero operational friction. For teams ready to scale with grace and presence.",
     image: "/homebannerImages/remove_the_big_202604020018.png",
     layout: "top",
+    cta: "Enquire about offices",
   },
   {
     id: "ondemand",
@@ -30,11 +32,12 @@ const spaces = [
     title: "Private Meeting & Gathering Rooms",
     desc: "Boardrooms, creative salons and event spaces for 4–100 people. Booked by the hour or day, hosted with the same care as everything else at Spacetime.",
     image: "/homebannerImages/create_a_office_202604020015.png",
-    layout: "side", // text left, image right
+    layout: "side",
+    cta: "Book a room",
   },
 ];
 
-function SpaceCard({ space, index }) {
+function SpaceCard({ space, index, onCtaClick }) {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -68,6 +71,9 @@ function SpaceCard({ space, index }) {
           </span>
           <h3 className={styles.cardTitle}>{space.title}</h3>
           <p className={styles.cardDesc}>{space.desc}</p>
+          <button className={styles.cardCta} onClick={onCtaClick}>
+            {space.cta}
+          </button>
         </div>
         <div className={styles.sideImage}>
           <Image
@@ -75,7 +81,7 @@ function SpaceCard({ space, index }) {
             alt={space.title}
             fill
             style={{ objectFit: "cover" }}
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
           />
         </div>
       </div>
@@ -94,7 +100,7 @@ function SpaceCard({ space, index }) {
           alt={space.title}
           fill
           style={{ objectFit: "cover" }}
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
         />
       </div>
       <div className={styles.topText}>
@@ -103,6 +109,9 @@ function SpaceCard({ space, index }) {
         </span>
         <h3 className={styles.cardTitle}>{space.title}</h3>
         <p className={styles.cardDesc}>{space.desc}</p>
+        <button className={styles.cardCta} onClick={onCtaClick}>
+          {space.cta}
+        </button>
       </div>
     </div>
   );
@@ -131,29 +140,18 @@ export default function OurSpaces() {
   return (
     <section id="our-spaces" className={styles.section}>
       <div className={styles.inner}>
-        {/* Section header */}
         <div ref={headerRef} className={`${styles.header} ${styles.fadeUp}`}>
           <h2 className={styles.sectionTitle}>Our Spaces</h2>
           <p className={styles.sectionSub}>Designed for those who lead</p>
         </div>
 
-        {/* Top 2-column grid */}
+        {/* All 3 cards in one unified grid */}
         <div className={styles.grid}>
-          {spaces
-            .filter((s) => s.layout === "top")
-            .map((space, i) => (
-              <SpaceCard key={space.id} space={space} index={i} />
-            ))}
+          {spaces.map((space, i) => (
+            <SpaceCard key={space.id} space={space} index={i} onCtaClick={openModal} />
+          ))}
         </div>
 
-        {/* Bottom full-width card */}
-        {spaces
-          .filter((s) => s.layout === "side")
-          .map((space, i) => (
-            <SpaceCard key={space.id} space={space} index={i + 2} />
-          ))}
-
-        {/* CTA */}
         <div className={styles.ctaRow}>
           <button className={styles.cta} onClick={openModal}>Reserve your space</button>
         </div>

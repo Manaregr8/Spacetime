@@ -1,14 +1,21 @@
 .section {
   background: white;
-  display: grid;
-  grid-template-columns: 1fr 0.5fr;
   min-height: 80vh;
   overflow: hidden;
 }
 
+.inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  min-height: 80vh;
+}
+
 /* ── Left text ────────────────────────────────────────── */
 .textBlock {
-    background-color: black;
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,6 +54,10 @@
 /* ── Responsive ───────────────────────────────────────── */
 @media (max-width: 900px) {
   .section {
+    min-height: unset;
+  }
+
+  .inner {
     grid-template-columns: 1fr;
     min-height: unset;
   }
@@ -63,6 +74,12 @@
   .canvasWrap {
     height: 70vw;
     min-height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .inner {
+    padding: 0 16px;
   }
 }
 

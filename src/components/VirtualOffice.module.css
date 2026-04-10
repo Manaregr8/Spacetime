@@ -1,7 +1,5 @@
 /* ── Section wrapper ──────────────────────────────────── */
-.section {
-  padding: 0 0 72px;
-}
+
 
 .inner {
   max-width: 1600px;

@@ -1,0 +1,345 @@
+.section {
+  padding: 48px 0;
+  background: #ffffff;
+}
+
+.inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.header span {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #777;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.heading {
+  font-size: clamp(28px, 3.2vw, 42px);
+  color: #111;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+/* ── Bento Grid — Side LEFT, Featured RIGHT ─────────── */
+.bentoContainer {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  /* side first = left */
+  gap: 24px;
+  aspect-ratio: 21 / 9;
+  width: 100%;
+}
+
+/* ── Featured Card (RIGHT) ────────────────────────────── */
+.featuredArea {
+  position: relative;
+  height: 100%;
+  order: 2;
+  /* explicit right */
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.featuredArea.swapping {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.featuredCard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #1a1a1a;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.featuredImage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease;
+}
+
+.featuredCard:hover .featuredImage {
+  transform: scale(1.03);
+}
+
+.featuredOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
+.featuredContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 48px;
+  z-index: 2;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tag {
+  background: #2a8a7a;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  width: fit-content;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.featuredTitle {
+  font-size: clamp(28px, 3.5vw, 48px);
+  line-height: 1.1;
+  font-weight: 500;
+  margin: 0;
+}
+
+.featuredMeta {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.featuredMetaItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.featuredDesc {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  max-width: 600px;
+  margin-top: 8px;
+}
+
+/* ── Side Column (LEFT) ────────────────────────────── */
+.sideColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  order: 1;
+  /* explicit left */
+}
+
+.sideCard {
+  background: #fdfdfd;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sideCard.activeCard {
+  background: #f0f7f6;
+  border-color: #2a8a7a;
+  transform: translateX(8px);
+  /* slides right toward the featured card */
+}
+
+.sideCard:hover:not(.activeCard) {
+  transform: translateX(-4px);
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.sideCardInner {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.sideImageWrap {
+  width: 80px;
+  height: 80px;
+  margin-left: 16px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.sideContent {
+  flex: 1;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  z-index: 2;
+}
+
+.sideEventTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.sideEventDate {
+  font-size: 10px;
+  font-weight: 700;
+  color: #2a8a7a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: #2a8a7a;
+  width: 100%;
+  transform-origin: left;
+  animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ── Entrance Animations (mount only) ────────────────── */
+/*
+  These apply once on first render via IntersectionObserver.
+  We start visible so re-renders / key changes never
+  accidentally hide elements again.
+*/
+.fadeUp {
+  /* intentionally not setting opacity:0 here —
+     the JS observer adds .animateIn on mount */
+}
+
+.fadeInLeft {
+  /* same — driven purely by JS observer */
+}
+
+/* The observer toggles this class on initial reveal */
+.animateFeatured {
+  animation: enterFeatured 0.7s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+.animateSide {
+  animation: enterSide 0.6s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+@keyframes enterFeatured {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes enterSide {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  /* enters from right */
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .bentoContainer {
+    grid-template-columns: 1fr;
+    aspect-ratio: auto;
+  }
+
+  .featuredArea {
+    order: 1;
+    /* featured on top */
+  }
+
+  .featuredCard {
+    aspect-ratio: 16 / 9;
+  }
+
+  .sideColumn {
+    order: 2;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 8px 4px;
+    gap: 16px;
+    scrollbar-width: none;
+  }
+
+  .sideColumn::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sideCard {
+    min-width: 280px;
+    height: 110px;
+    flex: 0 0 auto;
+    transform: none !important;
+  }
+
+  .sideImageWrap {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    padding: 0 24px;
+  }
+
+  .featuredContent {
+    padding: 24px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+}

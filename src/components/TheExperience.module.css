@@ -23,6 +23,57 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
+/* ── Swiper Wrapper & Navigation ───────────────────────── */
+.sliderWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.sliderInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+  z-index: 10;
+  pointer-events: none; /* Let user swipe the slider underneath */
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navButton {
+  width: 48px;
+  height: 38px;
+  background: #e5e5e5;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  transition: background 0.2s;
+  pointer-events: auto; /* Make buttons click-able */
+}
+
+.navButton:hover {
+  background: #fff;
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 /* ── Swiper container ─────────────────────────────────── */
 .swiper {
   width: 100%;

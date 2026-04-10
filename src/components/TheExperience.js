@@ -1,10 +1,11 @@
 "use client";
 import { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCoverflow } from "swiper/modules";
+import { Autoplay, EffectCoverflow, Navigation } from "swiper/modules";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
 import styles from "./TheExperience.module.css";
 
 const slides = [
@@ -67,45 +68,58 @@ export default function TheExperience() {
         <p className={styles.subtitle}>Step inside the club</p>
       </div>
 
-      {/* Swiper */}
-      <Swiper
-        modules={[Autoplay, EffectCoverflow]}
-        effect="coverflow"
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 120,
-          modifier: 2.5,
-          slideShadows: false,
-        }}
-        centeredSlides
-        slidesPerView="auto"
-        loop
-        autoplay={{ delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true }}
-        className={styles.swiper}
-      >
-        {slides.map((slide) => (
-          <SwiperSlide key={slide.id} className={styles.slide}>
-            <div className={styles.imageWrap}>
-              <Image
-                src={slide.image}
-                alt={slide.title}
-                fill
-                style={{ objectFit: "cover" }}
-                sizes="(max-width: 768px) 90vw, 60vw"
-              />
-              {/* Bottom overlay */}
-              <div className={styles.overlay} />
+      {/* Swiper Wrapper */}
+      <div className={styles.sliderWrapper}>
+        <div className={styles.sliderInner}>
+          <div className={styles.navContainer}>
+            <button className={`${styles.navButton} swiper-experience-prev`}>{'<'}</button>
+            <button className={`${styles.navButton} swiper-experience-next`}>{'>'}</button>
+          </div>
+        </div>
 
-              {/* Text — slides up when active */}
-              <div className={styles.slideText}>
-                <h3 className={styles.slideTitle}>{slide.title}</h3>
-                <p className={styles.slideDesc}>{slide.desc}</p>
+        <Swiper
+          modules={[Autoplay, EffectCoverflow, Navigation]}
+          effect="coverflow"
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 120,
+            modifier: 2.5,
+            slideShadows: false,
+          }}
+          navigation={{
+            prevEl: '.swiper-experience-prev',
+            nextEl: '.swiper-experience-next',
+          }}
+          centeredSlides
+          slidesPerView="auto"
+          loop
+          autoplay={{ delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true }}
+          className={styles.swiper}
+        >
+          {slides.map((slide) => (
+            <SwiperSlide key={slide.id} className={styles.slide}>
+              <div className={styles.imageWrap}>
+                <Image
+                  src={slide.image}
+                  alt={slide.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 768px) 90vw, 60vw"
+                />
+                {/* Bottom overlay */}
+                <div className={styles.overlay} />
+
+                {/* Text — slides up when active */}
+                <div className={styles.slideText}>
+                  <h3 className={styles.slideTitle}>{slide.title}</h3>
+                  <p className={styles.slideDesc}>{slide.desc}</p>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </section>
   );
 }
