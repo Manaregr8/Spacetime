@@ -22,33 +22,18 @@ const features = [
   },
   {
     id: "connected",
-    title: "Prime & Connected",
-    subtitle: null,
+    title: "Connected",
+    subtitle: "At the Center",
     desc: "Metro-adjacent addresses surrounded by Delhi's best cafés and energy.",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="4" y="3" width="16" height="16" rx="2" />
-        <path d="M4 11h16" />
-        <path d="M8 19v2M16 19v2" />
-        <circle cx="9" cy="15" r="1" fill="currentColor" stroke="none" />
-        <circle cx="15" cy="15" r="1" fill="currentColor" stroke="none" />
-      </svg>
-    ),
-    large: false,
+    large: true,
   },
   {
     id: "scale",
     title: "Built to Scale",
-    subtitle: null,
+    subtitle: "Future Ready",
     desc: "Industry-leading retention + deliberate growth: 2,400 seats today → 3,000+ soon.",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 20 L8 14 L12 16 L18 8 L22 4" />
-        <path d="M18 4h4v4" />
-      </svg>
-    ),
-    large: false,
-  },
+    large: true,
+  }
 ];
 
 function FeatureCard({ feature, index }) {

@@ -1,5 +1,5 @@
 .section {
-  padding: 48px 0;
+  padding: 80px 0;
   background: #ffffff;
 }
 
@@ -30,22 +30,22 @@
   font-weight: 400;
 }
 
-/* ── Bento Grid — Side LEFT, Featured RIGHT ─────────── */
+/* ── Bento Grid — Featured LEFT, Side RIGHT ─────────── */
 .bentoContainer {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  /* side first = left */
+  grid-template-columns: 1.2fr 0.8fr;
+  /* featured first = left */
   gap: 24px;
   aspect-ratio: 21 / 9;
   width: 100%;
 }
 
-/* ── Featured Card (RIGHT) ────────────────────────────── */
+/* ── Featured Card (LEFT) ────────────────────────────── */
 .featuredArea {
   position: relative;
   height: 100%;
-  order: 2;
-  /* explicit right */
+  order: 1;
+  /* explicit left */
   opacity: 1;
   transform: none;
   transition: opacity 0.35s ease, transform 0.35s ease;
@@ -140,14 +140,14 @@
   margin-top: 8px;
 }
 
-/* ── Side Column (LEFT) ────────────────────────────── */
+/* ── Side Column (RIGHT) ────────────────────────────── */
 .sideColumn {
   display: flex;
   flex-direction: column;
   gap: 12px;
   height: 100%;
-  order: 1;
-  /* explicit left */
+  order: 2;
+  /* explicit right */
 }
 
 .sideCard {
@@ -166,8 +166,8 @@
 .sideCard.activeCard {
   background: #f0f7f6;
   border-color: #2a8a7a;
-  transform: translateX(8px);
-  /* slides right toward the featured card */
+  transform: translateX(-8px);
+  /* slides left toward the featured card */
 }
 
 .sideCard:hover:not(.activeCard) {
@@ -289,28 +289,37 @@
 }
 
 /* ── Responsive ───────────────────────────────────────── */
-@media (max-width: 1200px) {
+
+/* Stack at 1000px — two-column gets too cramped below this */
+@media (max-width: 1000px) {
   .bentoContainer {
     grid-template-columns: 1fr;
     aspect-ratio: auto;
+    gap: 16px;
   }
 
   .featuredArea {
     order: 1;
-    /* featured on top */
   }
 
   .featuredCard {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
+    border-radius: 16px;
+  }
+
+  .featuredContent {
+    padding: 32px;
+    gap: 12px;
   }
 
   .sideColumn {
     order: 2;
     flex-direction: row;
     overflow-x: auto;
-    padding: 8px 4px;
-    gap: 16px;
+    padding: 4px 2px 8px;
+    gap: 12px;
     scrollbar-width: none;
+    height: auto;
   }
 
   .sideColumn::-webkit-scrollbar {
@@ -318,15 +327,16 @@
   }
 
   .sideCard {
-    min-width: 280px;
-    height: 110px;
+    min-width: 260px;
+    height: 100px;
     flex: 0 0 auto;
     transform: none !important;
+    border-radius: 12px;
   }
 
   .sideImageWrap {
-    width: 70px;
-    height: 70px;
+    width: 68px;
+    height: 68px;
   }
 }
 
@@ -335,11 +345,73 @@
     padding: 0 24px;
   }
 
+  .section {
+    padding: 40px 0;
+  }
+
+  .featuredCard {
+    aspect-ratio: 1 / 1;
+    border-radius: 14px;
+  }
+
   .featuredContent {
     padding: 24px;
+    gap: 10px;
+  }
+
+  .featuredDesc {
+    font-size: 14px;
+  }
+
+  .sideCard {
+    min-width: 230px;
+    height: 90px;
+    border-radius: 10px;
+  }
+
+  .sideImageWrap {
+    width: 60px;
+    height: 60px;
+    margin-left: 12px;
+  }
+
+  .sideContent {
+    padding: 12px 14px;
+  }
+
+  .sideEventTitle {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .inner {
+    padding: 0 16px;
   }
 
   .section {
-    padding: 60px 0;
+    padding: 32px 0;
+  }
+
+  .featuredCard {
+    aspect-ratio: 3 / 4;
+    border-radius: 12px;
+  }
+
+  .featuredContent {
+    padding: 20px;
+    gap: 8px;
+  }
+
+
+  .sideCard {
+    min-width: 200px;
+    height: 84px;
+    border-radius: 8px;
+  }
+
+  .sideImageWrap {
+    width: 56px;
+    height: 56px;
   }
 }

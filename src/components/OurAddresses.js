@@ -16,14 +16,14 @@ const locations = [
     name: "Saket | Westend Marg",
     meta: "630 seats | 3 centers",
     tag: "COWORKING & MANAGED OFFICES",
-    image: "/homebannerImages/Office_rooms_with_202604020025.jpeg",
+    image: "/homebannerImages/event2.png",
   },
   {
     id: "sarita",
     name: "Sarita Vihar",
     meta: "240 seats & Managed offices",
     tag: "COWORKING",
-    image: "/homebannerImages/Office_rooms_with_202604020025 (1).jpeg",
+    image: "/homebannerImages/remove_the_big_202604020018.png",
   },
   {
     id: "panchsheel",

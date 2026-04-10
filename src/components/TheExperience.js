@@ -11,7 +11,7 @@ import styles from "./TheExperience.module.css";
 const slides = [
   {
     id: 1,
-    image: "/homebannerImages/Office_rooms_with_202604020025 (1).jpeg",
+    image: "/homebannerImages/remove_the_big_202604020018.png",
     title: "Where Work Feels Like a Privilege",
     desc: "Every corner designed to make you want to stay.",
   },
@@ -29,7 +29,7 @@ const slides = [
   },
   {
     id: 4,
-    image: "/homebannerImages/Office_rooms_with_202604020025 (2).jpeg",
+    image: "/homebannerImages/event2.png",
     title: "Spaces That Speak Your Language",
     desc: "Curated environments for those who demand excellence.",
   },
@@ -68,15 +68,8 @@ export default function TheExperience() {
         <p className={styles.subtitle}>Step inside the club</p>
       </div>
 
-      {/* Swiper Wrapper */}
+      {/* Swiper — no overlay nav, buttons sit below */}
       <div className={styles.sliderWrapper}>
-        <div className={styles.sliderInner}>
-          <div className={styles.navContainer}>
-            <button className={`${styles.navButton} swiper-experience-prev`}>{'<'}</button>
-            <button className={`${styles.navButton} swiper-experience-next`}>{'>'}</button>
-          </div>
-        </div>
-
         <Swiper
           modules={[Autoplay, EffectCoverflow, Navigation]}
           effect="coverflow"
@@ -88,8 +81,8 @@ export default function TheExperience() {
             slideShadows: false,
           }}
           navigation={{
-            prevEl: '.swiper-experience-prev',
-            nextEl: '.swiper-experience-next',
+            prevEl: ".swiper-experience-prev",
+            nextEl: ".swiper-experience-next",
           }}
           centeredSlides
           slidesPerView="auto"
@@ -107,10 +100,7 @@ export default function TheExperience() {
                   style={{ objectFit: "cover" }}
                   sizes="(max-width: 768px) 90vw, 60vw"
                 />
-                {/* Bottom overlay */}
                 <div className={styles.overlay} />
-
-                {/* Text — slides up when active */}
                 <div className={styles.slideText}>
                   <h3 className={styles.slideTitle}>{slide.title}</h3>
                   <p className={styles.slideDesc}>{slide.desc}</p>
@@ -119,6 +109,12 @@ export default function TheExperience() {
             </SwiperSlide>
           ))}
         </Swiper>
+
+        {/* Nav buttons — below the slider in normal flow */}
+        <div className={styles.navContainer}>
+          <button className={`${styles.navButton} swiper-experience-prev`}>&#8592;</button>
+          <button className={`${styles.navButton} swiper-experience-next`}>&#8594;</button>
+        </div>
       </div>
     </section>
   );

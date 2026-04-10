@@ -135,7 +135,7 @@ export default function MonthlyEvents() {
     timerRef.current = setInterval(() => {
       const next = (activeIndexRef.current + 1) % initialEvents.length;
       triggerSwapFromTimer(next);
-    }, 5000);
+    }, 8000);
 
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
