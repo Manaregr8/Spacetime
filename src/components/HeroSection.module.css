@@ -254,3 +254,17 @@
     max-width: 300px;
   }
 }
+
+@media (max-width:393px) {
+  .hero {
+    aspect-ratio: 3/5;
+    min-height: 580px;
+  }
+}
+
+@media (max-width:370px) {
+  .hero {
+    aspect-ratio: 1/2;
+    min-height: 580px;
+  }
+}
