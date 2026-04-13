@@ -6,35 +6,36 @@ import styles from "./WhySpacetime.module.css";
 const features = [
   {
     id: "hospitality",
-    title: "Hospitality",
-    subtitle: "First, Always",
-    desc: "Warm, anticipatory service — the kind found in private clubs, not leases.",
+    title: "Hospitality First, Always",
+    subtitle: null,
+    desc: "Warm anticipatory service — the kind found in private clubs, not leases.",
     icon: null,
     large: true,
   },
   {
     id: "curated",
-    title: "Curated",
-    subtitle: "Design",
-    desc: "Hi-spec finishes and thoughtful details at a level rarely seen this side of ultra-premium.",
+    title: "Curated Design",
+    subtitle: null,
+    desc: "Hi-spec finishes and thoughtful details rarely seen this side of ultra-premium.",
     icon: null,
     large: true,
   },
   {
     id: "connected",
-    title: "Connected",
-    subtitle: "At the Center",
-    desc: "Metro-adjacent addresses surrounded by Delhi's best cafés and energy.",
+    title: "Prime & Connected",
+    subtitle: null,
+    desc: "Metro-adjacent addresses in South & Central Delhi, surrounded by the city's best cafés and energy.",
     large: true,
   },
   {
     id: "scale",
     title: "Built to Scale",
-    subtitle: "Future Ready",
-    desc: "Industry-leading retention + deliberate growth: 2,400 seats today → 3,000+ soon.",
+    subtitle: null,
+    desc: "Industry-leading retention. 2,400 seats today to 3,300+ in the next 3 months.",
     large: true,
   }
 ];
+
 
 function FeatureCard({ feature, index }) {
   const ref = useRef(null);
@@ -101,7 +102,7 @@ export default function WhySpacetime() {
           <div ref={leftRef} className={`${styles.left} ${styles.fadeUp}`}>
             <h2 className={styles.heading}>
               Not for everyone.{" "}
-              <span className={styles.headingBlock}>Exactly as intended.</span>
+              <span className={styles.headingBlock} style={{ color: "#f2b300" }}>Exactly as intended.</span>
             </h2>
             <p className={styles.subtext}>
               Because once you've experienced it, returning to ordinary is no

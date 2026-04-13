@@ -3,7 +3,7 @@
 
 .inner {
   max-width: 1600px;
-  margin: 0 auto;
+  margin: 0 auto 80px 0;
   padding: 0 48px;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .tagHighlight {
-  color: #2a8a7a;
+  color: #f2b300;
 }
 
 .heading {
@@ -54,6 +54,25 @@
   line-height: 1.25;
   margin-bottom: 18px;
   max-width: 520px;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.pill {
+  display: inline-block;
+  background: #fff;
+  color: #f2b300;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(242, 179, 0, 0.4);
+  letter-spacing: 0.1px;
 }
 
 .desc {
@@ -79,11 +98,29 @@
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, transform 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+}
+
+.ctaMain {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.ctaSub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
 }
 
 .cta:hover {
   background: #333;
+  transform: translateY(-1px);
 }
 
 /* ── Fade-up animation ────────────────────────────────── */

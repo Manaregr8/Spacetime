@@ -23,7 +23,7 @@
 
 .sectionSub {
   font-size: 15px;
-  color: #3a9e8f;
+  color: #f2b300;
   font-style: italic;
   font-weight: 400;
 }
@@ -136,6 +136,21 @@
   font-size: 15px;
   color: #666;
   line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+/* ── Price highlight chip ─────────────────────────────── */
+.highlight {
+  display: inline-block;
+  background: #fff8dc;
+  color: #f2b300;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(242, 179, 0, 0.35);
+  margin-bottom: 16px;
+  letter-spacing: 0.1px;
 }
 
 /* ── Per-card CTA button ──────────────────────────────── */
@@ -167,7 +182,7 @@
 }
 
 .cardCta:hover {
-  color: #3a9e8f;
+  color: #f2b300;
 }
 
 /* ── CTA row ──────────────────────────────────────────── */

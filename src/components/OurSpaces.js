@@ -10,32 +10,36 @@ const spaces = [
     tag: "COWORKING",
     tagColor: "teal",
     title: "Coworking Sanctuaries",
-    desc: "Thoughtfully composed environments where founders and operators thrive in community — without the noise or anonymity of ordinary coworking. Hot desks, dedicated seats and private pods, all wrapped in warm hospitality.",
+    desc: "Dedicated seats, hot desks and private pods in warm, hospitality-first environments. Thoughtfully composed spaces where community thrives — without the noise or anonymity of ordinary coworking.",
+    highlight: "From ₹7,999/mo",
     image: "/homebannerImages/Enhance_office_modern_202604020034.jpeg",
     layout: "top",
-    cta: "Explore coworking",
+    cta: "Reserve your space",
   },
   {
     id: "managed",
-    tag: "MANAGED OFFICE",
+    tag: "MANAGED OFFICES",
     tagColor: "teal",
-    title: "Private Offices, Curated for You",
-    desc: "Your own dedicated floor or wing — fully customised, impeccably managed by our hospitality team. Single monthly experience, zero operational friction. For teams ready to scale with grace and presence.",
+    title: "Managed Private Offices",
+    desc: "Your own dedicated floor or wing — fully customized and impeccably managed by our hospitality team. Single monthly invoice. Zero operational friction. For teams ready to scale with grace and presence.",
+    highlight: "Tailored to your team size",
     image: "/homebannerImages/remove_the_big_202604020018.png",
     layout: "top",
-    cta: "Enquire about offices",
+    cta: "Contact Sales",
   },
   {
     id: "ondemand",
-    tag: "ON DEMAND",
+    tag: "ON-DEMAND",
     tagColor: "amber",
     title: "Private Meeting & Gathering Rooms",
-    desc: "Boardrooms, creative salons and event spaces for 4–100 people. Booked by the hour or day, hosted with the same care as everything else at Spacetime.",
+    desc: "Boardrooms, creative salons and event spaces for 3–100 people. Booked by the hour or day, hosted with white-glove service.",
+    highlight: null,
     image: "/homebannerImages/create_a_office_202604020015.png",
     layout: "side",
-    cta: "Book a room",
+    cta: "Reserve your space",
   },
 ];
+
 
 function SpaceCard({ space, index, onCtaClick }) {
   const ref = useRef(null);
@@ -71,6 +75,9 @@ function SpaceCard({ space, index, onCtaClick }) {
           </span>
           <h3 className={styles.cardTitle}>{space.title}</h3>
           <p className={styles.cardDesc}>{space.desc}</p>
+          {space.highlight && (
+            <span className={styles.highlight}>{space.highlight}</span>
+          )}
           <button className={styles.cardCta} onClick={onCtaClick}>
             {space.cta}
           </button>
@@ -109,6 +116,9 @@ function SpaceCard({ space, index, onCtaClick }) {
         </span>
         <h3 className={styles.cardTitle}>{space.title}</h3>
         <p className={styles.cardDesc}>{space.desc}</p>
+        {space.highlight && (
+          <span className={styles.highlight}>{space.highlight}</span>
+        )}
         <button className={styles.cardCta} onClick={onCtaClick}>
           {space.cta}
         </button>
@@ -141,7 +151,7 @@ export default function OurSpaces() {
     <section id="our-spaces" className={styles.section}>
       <div className={styles.inner}>
         <div ref={headerRef} className={`${styles.header} ${styles.fadeUp}`}>
-          <h2 className={styles.sectionTitle}>Our Spaces</h2>
+          <h2 className={styles.sectionTitle}>Our <span style={{ color: "#f2b300" }}>Spaces</span></h2>
           <p className={styles.sectionSub}>Designed for those who lead</p>
         </div>
 

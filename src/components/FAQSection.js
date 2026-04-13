@@ -3,56 +3,38 @@ import React, { useState } from 'react';
 import styles from './FAQSection.module.css';
 
 const faqData = {
-  "General Questions": [
+  "Pricing": [
     {
-      q: "Presented own highly to is offers surprise of ear chair?",
-      a: "Create text automations and flows based on custom prebuilt audiences. Capture abandon carts. You cannot spend 2 months."
+      q: "How does Managed Office pricing work?",
+      a: "Custom quote based on team size and floor requirements. All-inclusive — furniture, hospitality, internet, maintenance. No hidden charges."
     },
     {
-      q: "The even a the man, used to and surprised that at incentive?",
-      a: "Our spaces provide everything you need to hit the ground running with premium amenities."
+      q: "Can I start with just a few desks and scale?",
+      a: "Yes. Our model is built for seamless growth — from 1 seat to 100+ without moving spaces or disrupting your team."
     },
-    {
-      q: "Dishonourable mellower and we their visuals theoretically produce?",
-      a: "Yes, you can upgrade or downgrade your membership plan anytime to suit your evolving business needs."
-    },
-    {
-      q: "For structure seeing to a room as his right in?",
-      a: "Our community managers are always visible and ready to help you out through our normal channels."
-    },
-    {
-      q: "The clear my a of from the rosy time how new times because that?",
-      a: "Absolutely, we encourage community engagement and host weekly events."
-    }
   ],
-  "Support team": [
+  "Day Pass": [
     {
-      q: "How can I reach the support team?",
-      a: "You can reach us directly via the member portal or email us anytime for rapid responses."
+      q: "What's included in the Free Day Pass?",
+      a: "Full access to all amenities, high-speed internet, complimentary beverages, and the complete Spacetime experience for one full day. No commitment required."
     },
     {
-      q: "What are the standard support hours?",
-      a: "We offer 24/7 support for all our members via the dedicated helpline."
-    }
+      q: "Is there a long-term commitment?",
+      a: "No. Flexible month-to-month options are available alongside longer-term plans. We work to your timeline, not ours."
+    },
   ],
-  "Miscellaneous": [
+  "Locations": [
     {
-      q: "Are pets allowed in the coworking space?",
-      a: "Yes, our locations are fully pet-friendly! Keep them leashed in common spots."
-    }
+      q: "What are your locations?",
+      a: "All premium South & Central Delhi locations — Greater Kailash II, Saket (Westend Marg), Connaught Place, NSIC Okhla, Panchsheel Enclave and Sarita Vihar."
+    },
   ],
-  "Consectetur": [
+  "Virtual Office": [
     {
-      q: "Lorem ipsum dolor sit amet consectetur?",
-      a: "Adipiscing elit pellentesque habitant morbi tristique senectus."
-    }
+      q: "How does a Virtual Office work for my needs?",
+      a: "Our virtual office gives you a prestigious Delhi-NCR address for GST registration, mail handling and professional correspondence — all managed by our hospitality team. You can also access meeting rooms at member rates."
+    },
   ],
-  "Gabitasse": [
-    {
-      q: "Habitasse platea dictumst quisque sagittis?",
-      a: "Purus in massa tempor nec feugiat nisl pretium fusce id."
-    }
-  ]
 };
 
 const PlusIcon = () => (
@@ -76,7 +58,7 @@ const ChevronRight = () => (
 );
 
 export default function FAQSection() {
-  const [activeCategory, setActiveCategory] = useState("General Questions");
+  const [activeCategory, setActiveCategory] = useState("Pricing");
   const [openIndex, setOpenIndex] = useState(0);
 
   const categories = Object.keys(faqData);
@@ -84,7 +66,7 @@ export default function FAQSection() {
 
   const handleCategoryClick = (category) => {
     setActiveCategory(category);
-    setOpenIndex(0); // reset open accordion when changing category
+    setOpenIndex(0);
   };
 
   const toggleAccordion = (index) => {
@@ -97,16 +79,15 @@ export default function FAQSection() {
         <div className={styles.header}>
           <h2 className={styles.heading}>Frequently Asked Questions</h2>
           <p className={styles.subheading}>
-            Our platform is built to help you work smarter, not harder. It adapts to your needs
-            and supports your goals. Make the most of every feature.
+            Everything you need to know about joining the Spacetime community.
           </p>
         </div>
 
         <div className={styles.content}>
           <div className={styles.tabs}>
             {categories.map((cat) => (
-              <button 
-                key={cat} 
+              <button
+                key={cat}
                 onClick={() => handleCategoryClick(cat)}
                 className={`${styles.tab} ${activeCategory === cat ? styles.tabActive : ''}`}
               >

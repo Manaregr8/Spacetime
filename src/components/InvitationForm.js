@@ -54,7 +54,7 @@ export default function InvitationForm() {
           {/* ── Left ── */}
           <div className={styles.left}>
             <h2 className={styles.heading}>
-              Your invitation is<br />ready.
+              Your invitation is<br /><span style={{ color: "#f2b300" }}>ready.</span>
             </h2>
             <p className={styles.desc}>
               Experience the difference between renting space and being hosted.

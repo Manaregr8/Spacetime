@@ -1,34 +1,47 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useBooking } from "@/context/BookingContext";
 import styles from "./Footer.module.css";
 
-const footerImages = [
-  "/footerLinks/preview.svg",
-  "/footerLinks/preview-1.svg",
-  "/footerLinks/preview-2.svg",
-];
-
-const companyLinks = [
-  { label: "Home", href: "/" },
-  { label: "About us", href: "#insights" },
-  { label: "Our Addresses", href: "#our-addresses" },
-  { label: "The Experience", href: "#the-experience" },
-  { label: "Careers at Spacetime", href: "#contact" },
+const quickLinks = [
+  { label: "Locations", href: "#our-addresses" },
+  { label: "Spaces", href: "#our-spaces" },
+  { label: "Virtual Office", href: "#virtual-office" },
+  { label: "Community", href: "#events" },
+  { label: "Book a Tour", href: "#contact" },
+  { label: "Careers", href: "#contact" },
 ];
 
 const locationLabels = [
   "Greater Kailash",
-  "Saket | Westend Marg",
-  "Panchsheel Enclave",
+  "Saket",
+  "NSIC Okhla",
   "Sarita Vihar",
-  "Upcoming Centers",
+  "Connaught Place",
+  "Panchsheel Enclave",
+];
+
+const tickerItems = [
+  "Coworking Sanctuaries",
+  "Dedicated Desks",
+  "Managed Offices",
+  "Private Pods",
+  "Virtual Offices",
+  "Collaborative Spaces",
+  "On-demand Meeting Rooms",
+  "Events & Workshops",
+  "Community & Networking",
+  "Concierge",
+  "Content Studios",
 ];
 
 export default function Footer() {
   const { openModal } = useBooking();
+
+  // Duplicate for seamless loop
+  const allTicker = [...tickerItems, ...tickerItems];
+
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
@@ -40,14 +53,16 @@ export default function Footer() {
               <span className={styles.logoSpace}>space</span>
               <span className={styles.logoTime}>time</span>
             </div>
-            <p className={styles.tagline}>Hosting ambition with warm hospitality. A curated sanctuary for those who build, create, and lead — designed to elevate every workday.</p>
+            <p className={styles.tagline}>
+              Hosting ambition with warm hospitality. A curated sanctuary for those who build, create, and lead — designed to elevate every workday.
+            </p>
           </div>
 
-          {/* Col 2 — Company */}
+          {/* Col 2 — Quick Links */}
           <div className={styles.col}>
-            <h4 className={styles.colHeading}>Company</h4>
+            <h4 className={styles.colHeading}>Quick Links</h4>
             <ul className={styles.linkList}>
-              {companyLinks.map((l) => (
+              {quickLinks.map((l) => (
                 <li key={l.label}>
                   <Link href={l.href} className={styles.navLink}>{l.label}</Link>
                 </li>
@@ -69,7 +84,7 @@ export default function Footer() {
 
           {/* Col 4 — Contacts */}
           <div className={styles.col}>
-            <h4 className={styles.colHeading}>Contacts</h4>
+            <h4 className={styles.colHeading}>Contact</h4>
             <ul className={styles.contactList}>
               <li className={styles.contactItem}>
                 <span className={styles.contactIcon}>
@@ -82,29 +97,38 @@ export default function Footer() {
               <li className={styles.contactItem}>
                 <span className={styles.contactIcon}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </span>
+                <a href="mailto:hello@spacetime.in" className={styles.contactLink}>hello@spacetime.in</a>
+              </li>
+              <li className={styles.contactItem}>
+                <span className={styles.contactIcon}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
                     <circle cx="12" cy="9" r="2.5" />
                   </svg>
                 </span>
                 <address className={styles.address}>
-                  DLF Savitri, Greater Kailash 2,<br />New Delhi 110 048
+                  DLF Savitri, Greater Kailash II,<br />New Delhi 110 048
                 </address>
               </li>
             </ul>
 
             {/* Social icons */}
             <div className={styles.socials}>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialBtn} aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialBtn} aria-label="Instagram">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                   <circle cx="12" cy="12" r="4" />
                   <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
-                </svg>
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialBtn} aria-label="LinkedIn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
-                  <circle cx="4" cy="4" r="2" />
                 </svg>
               </a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialBtn} aria-label="Facebook">
@@ -121,9 +145,23 @@ export default function Footer() {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* ── Bottom bar ── */}
-        <div className={styles.bottom}>
+      {/* ── Auto-scrolling ticker ── */}
+      <div className={styles.ticker}>
+        <div className={styles.tickerTrack}>
+          {allTicker.map((item, i) => (
+            <span key={i} className={styles.tickerItem}>
+              {item}
+              <span className={styles.tickerDot}>·</span>
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* ── Bottom bar ── */}
+      <div className={styles.bottomBar}>
+        <div className={styles.bottomInner}>
           <p className={styles.copyright}>© 2026 Spacetime. A private club for those who build.</p>
           <div className={styles.legal}>
             <Link href="/terms" className={styles.legalLink}>Terms &amp; Conditions</Link>

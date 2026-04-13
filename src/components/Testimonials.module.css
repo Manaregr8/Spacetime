@@ -1,7 +1,7 @@
 /* ── Section wrapper ──────────────────────────────────── */
 .section {
-  padding: 100px 0;
-  overflow: hidden; /* prevents horizontal scroll from slider overflow */
+  padding: 0px 0;
+  overflow: hidden;
   background: white;
 }
 
@@ -17,28 +17,7 @@
   color: #fff;
   display: flex;
   position: relative;
-  padding: 80px 0 80px 80px;
-}
-
-/* ── Top left big quote ────────────────────────────────── */
-.bigQuote {
-  position: absolute;
-  top: -60px;
-  left: 60px;
-  background: #478dec; /* Soft blue like the image */
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
-
-.bigQuote svg {
-  width: 50px;
-  height: 50px;
-  color: white;
+  padding: 40px 0 40px 80px;
 }
 
 /* ── Left content column ───────────────────────────────── */
@@ -64,21 +43,22 @@
 .desc {
   font-size: 15px;
   line-height: 1.6;
-  color: #e5e5e5;
+  color: rgba(255, 255, 255, 0.65);
   margin-bottom: 40px;
   max-width: 400px;
 }
 
 .contactLink {
   font-size: 14px;
-  color: #fff;
+  color: #f2b300;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 50px;
+  transition: opacity 0.2s;
 }
 
 .contactLink:hover {
-  text-decoration: underline;
+  opacity: 0.8;
 }
 
 /* ── Custom Navigation ─────────────────────────────────── */
@@ -103,7 +83,8 @@
 }
 
 .customNavigation button:hover {
-  background: #fff;
+  background: #f2b300;
+  color: #000;
 }
 
 .customNavigation button:disabled {
@@ -120,10 +101,8 @@
 
 .swiperContainer {
   width: 100%;
-  /* Force visible to allow cards to go outside container right */
   overflow: visible !important;
   margin-top: 20px;
-  /* Clip elements sliding to the left so they don't overlap left text! */
   clip-path: inset(-1000% -1000% -1000% -30px);
 }
 
@@ -155,14 +134,14 @@
   flex-grow: 1;
 }
 
-/* Small blue quote spanning intersection */
+/* Quote accent on card */
 .smallQuote {
   position: absolute;
-  top: -27.5px; /* Adjust to center on 15px border */
+  top: -27.5px;
   left: -20px;
   width: 40px;
   height: 40px;
-  background: #478dec;
+  background: #f2b300;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -173,7 +152,7 @@
 .smallQuote svg {
   width: 20px;
   height: 20px;
-  color: white;
+  color: #111;
 }
 
 .cardText {
@@ -218,6 +197,7 @@
 
 .customPagination :global(.swiper-pagination-bullet-active) {
   opacity: 1;
+  background: #f2b300;
 }
 
 /* ── Responsive ───────────────────────────────────────── */
@@ -236,10 +216,6 @@
   .rightCol {
     width: 100%;
   }
-
-  .bigQuote {
-    left: 20px;
-  }
 }
 
 @media (max-width: 600px) {
@@ -253,18 +229,6 @@
 
   .heading {
     font-size: 28px;
-  }
-
-  .bigQuote {
-    width: 80px;
-    height: 80px;
-    top: -40px;
-    left: 10px;
-  }
-
-  .bigQuote svg {
-    width: 35px;
-    height: 35px;
   }
 
   .customPagination {

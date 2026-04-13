@@ -6,11 +6,11 @@ import { useBooking } from "@/context/BookingContext";
 import styles from "./Navbar.module.css";
 
 const navLinks = [
-  { label: "Our Spaces", href: "#our-spaces" },
-  { label: "Our Addresses", href: "#our-addresses" },
-  { label: "The Experience", href: "#the-experience" },
-  { label: "Insights", href: "#insights" },
-  { label: "Contact", href: "#contact" },
+  { label: "Locations", href: "#our-addresses" },
+  { label: "Spaces", href: "#our-spaces" },
+  { label: "Experience", href: "#the-experience" },
+  { label: "Virtual Office", href: "#virtual-office" },
+  { label: "Community", href: "#events" },
 ];
 
 export default function Navbar() {
@@ -52,7 +52,7 @@ export default function Navbar() {
             <WaIcon />
           </div>
           <button className={styles.ctaBtn} onClick={openModal}>
-            Book a private walkthrough
+            Book a Private Tour
           </button>
         </div>
 
@@ -105,7 +105,7 @@ export default function Navbar() {
             className={styles.drawerCta}
             onClick={() => { setMenuOpen(false); openModal(); }}
           >
-            Book a private walkthrough
+            Book a Private Tour
           </button>
         </div>
       </div>

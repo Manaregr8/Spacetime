@@ -64,7 +64,7 @@ export default function TheExperience() {
     <section id="the-experience" className={styles.section}>
       {/* Header */}
       <div ref={headerRef} className={`${styles.header} ${styles.fadeUp}`}>
-        <h2 className={styles.title}>The Spacetime Experience</h2>
+        <h2 className={styles.title}>The Spacetime <span style={{ color: "#f2b300" }}>Experience</span></h2>
         <p className={styles.subtitle}>Step inside the club</p>
       </div>
 

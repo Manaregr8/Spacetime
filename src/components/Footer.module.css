@@ -103,7 +103,7 @@
 .logoTime {
   font-family: var(--font-heading), "Cal Sans", sans-serif;
   font-weight: 400;
-  color: #fff;
+  color: #f2b300;
   letter-spacing: 0.03em;
 }
 
@@ -169,7 +169,7 @@
 }
 
 .navLink:hover {
-  color: #5ecfb8;
+  color: #f2b300;
 }
 
 /* ── Contact column ───────────────────────────────────── */
@@ -203,7 +203,7 @@
 }
 
 .contactLink:hover {
-  color: #5ecfb8;
+  color: #f2b300;
 }
 
 .address {
@@ -238,9 +238,15 @@
 }
 
 /* ── Bottom bar ───────────────────────────────────────── */
-.bottom {
+.bottomBar {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 24px 0;
+  padding: 0;
+}
+
+.bottomInner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 24px 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -270,16 +276,62 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
+/* ── Auto-scrolling ticker row ────────────────────────── */
+.ticker {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 18px 0;
+  overflow: hidden;
+  background: #222;
+  mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
+}
+
+.tickerTrack {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+  animation: tickerScroll 30s linear infinite;
+}
+
+.tickerTrack:hover {
+  animation-play-state: paused;
+}
+
+.tickerItem {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.45);
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  font-family: var(--font-body), "Manrope", sans-serif;
+  text-transform: uppercase;
+  padding: 0 24px;
+  transition: color 0.2s;
+}
+
+.tickerItem:hover {
+  color: #f2b300;
+}
+
+.tickerDot {
+  margin-left: 24px;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+}
+
+@keyframes tickerScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* ── Responsive ───────────────────────────────────────── */
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-  }
-
-  .marqueeWrapper {
-    margin: 0 -40px;
-    width: calc(100% + 80px);
   }
 }
 
@@ -298,18 +350,19 @@
     padding-bottom: 48px;
   }
 
-  .bottom {
+  .bottomInner {
+    padding: 20px;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
   }
 
-  .marqueeWrapper {
-    margin: 0 -20px;
-    width: calc(100% + 40px);
+  .tickerItem {
+    padding: 0 16px;
+    font-size: 11px;
   }
 
-  .marqueeTrack {
-    gap: 36px;
+  .tickerDot {
+    margin-left: 16px;
   }
 }

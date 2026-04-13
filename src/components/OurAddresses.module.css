@@ -24,7 +24,7 @@
 
 .sectionSub {
   font-size: 15px;
-  color: #3a6e8f;
+  color: #555;
   line-height: 1.75;
   max-width: 680px;
   margin: 0 auto;
@@ -57,6 +57,15 @@
   );
   pointer-events: none;
   z-index: 1;
+  transition: background 0.3s ease;
+}
+
+.overlayHover {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0.82) 100%
+  );
 }
 
 /* ── Tag ──────────────────────────────────────────────── */
@@ -97,6 +106,24 @@
   color: rgba(255, 255, 255, 0.75);
 }
 
+.priceHighlight {
+  display: inline-block;
+  margin-top: 10px;
+  background: #f2b300;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.2px;
+  animation: fadeInUp 0.25s ease;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* ── Hover zoom ───────────────────────────────────────── */
 .card img {
   transition: transform 0.5s ease !important;
@@ -104,6 +131,37 @@
 
 .card:hover img {
   transform: scale(1.05) !important;
+}
+
+/* ── 8th arrow card (desktop only) ─────────────────────── */
+.arrowCard {
+  background: #f5f5f5;
+  border-radius: 18px;
+  aspect-ratio: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.arrowCard:hover {
+  background: #111;
+  transform: scale(1.02);
+}
+
+.arrowCard:hover .arrowIcon path {
+  stroke: #f2b300;
+}
+
+.arrowIcon {
+  width: 56px;
+  height: 56px;
+  transition: transform 0.25s ease;
+}
+
+.arrowCard:hover .arrowIcon {
+  transform: translateX(6px);
 }
 
 /* ── Fade-up ──────────────────────────────────────────── */
@@ -118,8 +176,28 @@
   transform: translateY(0);
 }
 
+/* ── Footer note ──────────────────────────────────────── */
+.footerNote {
+  text-align: center;
+  margin-top: 36px;
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+  letter-spacing: 0.1px;
+}
+
 /* ── Responsive ───────────────────────────────────────── */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .arrowCard {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }

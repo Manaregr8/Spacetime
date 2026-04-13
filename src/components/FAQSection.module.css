@@ -21,7 +21,7 @@
 .heading {
   font-size: clamp(28px, 4vw, 38px);
   font-weight: 600;
-  color: #0d273a; /* Dark navy */
+  color: #111;
   margin-bottom: 16px;
   letter-spacing: -0.5px;
 }
@@ -80,11 +80,13 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
   border: 1px solid rgba(0, 0, 0, 0.03);
   font-weight: 600;
+  border-left: 3px solid #f2b300;
 }
 
 .tabActive svg {
   opacity: 1;
   transform: translateX(0);
+  color: #f2b300;
 }
 
 /* ── Accordion (Right Content) ── */
@@ -152,7 +154,7 @@
 }
 
 .itemActive .icon {
-  color: #111;
+  color: #f2b300;
 }
 
 .answer {
@@ -173,7 +175,7 @@
     flex-direction: column;
     gap: 40px;
   }
-  
+
   .tabs {
     width: 100%;
     flex-direction: row;
@@ -181,11 +183,11 @@
     padding-bottom: 10px;
     gap: 16px;
   }
-  
+
   .tabs::-webkit-scrollbar {
     height: 4px;
   }
-  
+
   .tabs::-webkit-scrollbar-thumb {
     background: rgba(0,0,0,0.1);
     border-radius: 4px;
@@ -195,7 +197,7 @@
     white-space: nowrap;
     padding: 14px 20px;
   }
-  
+
   .inner {
     padding: 0 30px;
   }
@@ -205,11 +207,11 @@
   .inner {
     padding: 0 20px;
   }
-  
+
   .section {
     padding: 60px 0;
   }
-  
+
   .heading {
     font-size: 28px;
   }

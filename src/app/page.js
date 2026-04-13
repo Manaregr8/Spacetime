@@ -21,10 +21,11 @@ export default function Home() {
       <HeroSection />
       <OurSpaces />
       <VirtualOffice />
-      <MonthlyEvents />
+
       <WhySpacetime />
-      <OurAddresses />
+      <MonthlyEvents />
       <Testimonials />
+      <OurAddresses />
       <TheExperience />
       <LanyardSection />
       <FAQSection />

@@ -4,6 +4,14 @@ import Image from "next/image";
 import { useBooking } from "@/context/BookingContext";
 import styles from "./VirtualOffice.module.css";
 
+const highlights = [
+  "Professional address",
+  "GST registration support",
+  "Discreet mail handling",
+  "Virtual receptionist",
+  "Meeting-room credits",
+];
+
 export default function VirtualOffice() {
   const { openModal } = useBooking();
   const ref = useRef(null);
@@ -25,7 +33,7 @@ export default function VirtualOffice() {
   }, []);
 
   return (
-    <section className={styles.section}>
+    <section id="virtual-office" className={styles.section}>
       <div className={styles.inner}>
         <div ref={ref} className={`${styles.card} ${styles.fadeUp}`}>
           {/* Left image */}
@@ -45,18 +53,24 @@ export default function VirtualOffice() {
               <span className={styles.tagHighlight}>VIRTUAL</span> OFFICE
             </span>
             <h2 className={styles.heading}>
-              A prestigious address that works as hard as you do
+              A prestigious Delhi-NCR address that works as hard as you do.
             </h2>
+            <div className={styles.pills}>
+              {highlights.map((h) => (
+                <span key={h} className={styles.pill}>{h}</span>
+              ))}
+            </div>
             <p className={styles.desc}>
-              Professional address, GST registration support, discreet mail
-              handling, virtual receptionist, and meeting-room credits — all
-              managed with the same hospitality as our physical spaces.
+              All managed with the same hospitality as our physical spaces.
             </p>
           </div>
 
           {/* Right CTA */}
           <div className={styles.ctaWrap}>
-            <button className={styles.cta} onClick={openModal}>Secure your Virtual address</button>
+            <button className={styles.cta} onClick={openModal}>
+              <span className={styles.ctaMain}>Secure your Virtual Address</span>
+              <span className={styles.ctaSub}>in 60 seconds</span>
+            </button>
           </div>
         </div>
       </div>

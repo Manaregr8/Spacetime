@@ -6,44 +6,34 @@ import styles from "./MonthlyEvents.module.css";
 const initialEvents = [
   {
     id: 1,
-    title: "Founder's Fireside Chat",
-    date: "12 APR, 6:00 PM",
-    location: "Level 4, Sky Lounge",
-    tag: "Networking",
-    shortDesc: "Journey from garage to global.",
-    fullDesc: "An intimate evening with local tech pioneers sharing their journey from garage to global. Learn about scaling, fundraising, and the hurdles of building a startup in today's market.",
-    image: "/homebannerImages/event1.png"
+    title: "AI Masterclass with Spacetime Founder",
+    date: "15 APR, 6:00 PM",
+    location: "Spacetime, Greater Kailash II",
+    tag: "Masterclass",
+    shortDesc: "AI strategy and tools for founders.",
+    fullDesc: "An intimate session with Spacetime's founder on leveraging AI in your business — from automation to decision-making. Practical, candid, and built for builders.",
+    image: "/event1.png"
   },
   {
     id: 2,
-    title: "Creative Flow Workshop",
-    date: "18 APR, 2:00 PM",
-    location: "Studio B",
-    tag: "Skill Building",
-    shortDesc: "Unlock new levels of focus.",
-    fullDesc: "Unlock new levels of focus and creativity with our expert-led flow state workshop. We will explore breathing techniques, environment design, and psychological triggers to help you do your best work.",
+    title: "Wellness Wednesday — Yoga & Sound Healing",
+    date: "22 APR, 8:00 AM",
+    location: "Saket, Westend Marg Centre",
+    tag: "Wellness",
+    shortDesc: "Start Wednesday with intention.",
+    fullDesc: "A guided yoga and sound healing session to reset and recharge mid-week. Open to all Spacetime members and their guests. Mats and refreshments provided.",
     image: "/homebannerImages/event2.png"
   },
   {
     id: 3,
-    title: "Community Brew & Build",
-    date: "24 APR, 10:00 AM",
-    location: "The Coffee Hub",
-    tag: "Social Mixer",
-    shortDesc: "Coffee & collaborative problem-solving.",
-    fullDesc: "Start your morning with artisanal coffee and collaborative problem-solving sessions. Connect with fellow builders, designers, and developers in an informal, high-energy environment.",
+    title: "Investor Connect — Networking Lunch",
+    date: "03 MAY, 12:30 PM",
+    location: "Connaught Place Centre",
+    tag: "Networking",
+    shortDesc: "Curated introductions over a private lunch.",
+    fullDesc: "A curated, invite-only networking lunch connecting founders with investors. Limited seats. Hosted by the Spacetime community team with warm introductions and structured conversations.",
     image: "/homebannerImages/event3.png"
   },
-  {
-    id: 4,
-    title: "The Future of Co-working",
-    date: "28 APR, 4:30 PM",
-    location: "Main Auditorium",
-    tag: "Panel Talk",
-    shortDesc: "Reshaping the modern workplace.",
-    fullDesc: "Exploring how decentralised teams and high-end tech are reshaping the workplace. Join our panel of architects and CEOs as they discuss the evolution of the office in a post-pandemic world.",
-    image: "/homebannerImages/event4.png"
-  }
 ];
 
 export default function MonthlyEvents() {
@@ -156,8 +146,8 @@ export default function MonthlyEvents() {
     <section className={styles.section} id="events">
       <div className={styles.inner}>
         <div className={styles.header}>
-          <span>EXPERIENCE MORE</span>
-          <h2 className={styles.heading}>This Month at Spacetime</h2>
+          <span>COMMUNITY & EVENTS</span>
+          <h2 className={styles.heading}>More than desks. <span style={{ color: "#f2b300" }}>A living ecosystem.</span></h2>
         </div>
 
         <div className={styles.bentoContainer} ref={containerRef}>
@@ -171,21 +161,18 @@ export default function MonthlyEvents() {
                 style={{ animationDelay: `${idx * 150}ms` }}
                 onClick={() => handleSelect(idx)}
               >
-                <div className={styles.sideCardInner}>
-                  <div className={styles.sideImageWrap}>
-                    <Image
-                      src={event.image}
-                      alt={event.title}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      sizes="20vw"
-                    />
-                  </div>
-                  <div className={styles.sideContent}>
-                    <span className={styles.sideEventDate}>{event.date.split(',')[0]}</span>
-                    <h3 className={styles.sideEventTitle}>{event.title}</h3>
-                    <p style={{ fontSize: '12px', color: '#777', margin: 0 }}>{event.shortDesc}</p>
-                  </div>
+                {/* Full-bleed image */}
+                <Image
+                  src={event.image}
+                  alt={event.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="20vw"
+                />
+                {/* 45° diagonal gradient overlay + text */}
+                <div className={styles.sideTextOverlay}>
+                  <span className={styles.sideEventDate}>{event.date.split(',')[0]}</span>
+                  <h3 className={styles.sideEventTitle}>{event.title}</h3>
                 </div>
                 {activeIndex === idx && <div className={styles.progressBar} key={`bar-${activeIndex}`} />}
               </div>
@@ -234,6 +221,11 @@ export default function MonthlyEvents() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className={styles.calendarCta}>
+          <p className={styles.calendarSub}>Weekly events, workshops and member-only experiences designed to spark ideas and connections.</p>
+          <button className={styles.calendarBtn}>View full calendar →</button>
         </div>
       </div>
     </section>

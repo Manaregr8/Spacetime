@@ -14,31 +14,24 @@ const testimonialsData = [
   {
     id: 1,
     image: '/person_1.png',
-    text: "Joining Spacetime transformed my productivity. The modern setup and professional environment are unmatched. I've met incredible collaborators here who have helped my business grow tremendously.",
-    name: 'Michael Carter',
-    post: 'Tech Entrepreneur'
+    text: "Spacetime isn't just an office, it's the first place my team looks forward to coming to every day.",
+    name: 'Praveen H',
+    post: 'Founder & CEO, Avacasa'
   },
   {
     id: 2,
     image: '/person_2.png',
-    text: "The aesthetic, the ambiance, and the supportive community make this the perfect workspace. I love the flexible desk options and the premium amenities. It feels like a second home.",
-    name: 'Sarah Jenkins',
-    post: 'Creative Director'
+    text: "The hospitality and attention to detail make it feel like a private club for startups. We've grown from 8 to 28 people here without missing a beat.",
+    name: 'Pankaz Jaiin',
+    post: 'Chairman, RPZ / CORFAC International'
   },
   {
     id: 3,
     image: '/person_3.png',
-    text: "I was looking for a dynamic co-working environment, and I found exactly that. The networking events have connected me with similar minds. Highly recommended for remote workers.",
-    name: 'David Reynolds',
-    post: 'Freelance Designer'
+    text: "Best decision we made in 2025. The community, the spaces, the services — everything is top notch.",
+    name: 'Nupur Verma',
+    post: 'CMO, Achromic Ventures'
   },
-  {
-    id: 4,
-    image: '/person_1.png',
-    text: "Spacetime goes above and beyond to ensure members are comfortable. The quiet zones are perfect for deep work, and the communal areas foster great conversations and networking.",
-    name: 'James Wilson',
-    post: 'Software Developer'
-  }
 ];
 
 const QuoteIcon = () => (
@@ -52,20 +45,14 @@ export default function Testimonials() {
     <section className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.container}>
-          {/* Top-left big blue quote */}
-          <div className={styles.bigQuote}>
-            <QuoteIcon />
-          </div>
 
           <div className={styles.leftCol}>
-            <h2 className={styles.heading}>connect with<br />other members</h2>
+            <h2 className={styles.heading}>Real voices from<br />the Spacetime<br />community</h2>
             <p className={styles.desc}>
-              Discover a vibrant community of professionals, creatives, and entrepreneurs.
-              Our members are at the heart of our workspace, coming together to collaborate,
-              innovate, and elevate their businesses in an inspiring environment.
+              Founders, operators and creators who chose Spacetime and never looked back. Their work speaks. Their words do too.
             </p>
             <Link href="/" className={styles.contactLink}>
-              contact now -{'>'}
+              contact now -{'>'}  
             </Link>
 
             <div className={styles.customNavigation}>
