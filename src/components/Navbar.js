@@ -48,7 +48,7 @@ export default function Navbar() {
         <div className={styles.navRight}>
           <div className={styles.phoneGroup}>
             <PhoneIcon />
-            <span className={styles.phoneNum}>+91 99999 99999</span>
+            <a href="tel:+919810474703" className={styles.phoneNum}>+91 98104 74703</a>
             <WaIcon />
           </div>
           <button className={styles.ctaBtn} onClick={openModal}>
@@ -100,7 +100,7 @@ export default function Navbar() {
 
         <div className={styles.drawerBottom}>
           <div className={styles.drawerDivider} />
-          <a href="tel:+919999999999" className={styles.drawerPhone}>+91 99999 99999</a>
+          <a href="tel:+919810474703" className={styles.drawerPhone}>+91 98104 74703</a>
           <button
             className={styles.drawerCta}
             onClick={() => { setMenuOpen(false); openModal(); }}

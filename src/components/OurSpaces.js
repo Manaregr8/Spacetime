@@ -9,7 +9,8 @@ const spaces = [
     id: "coworking",
     tag: "COWORKING",
     tagColor: "teal",
-    title: "Coworking Sanctuaries",
+    title: <>Coworking <br />Sanctuaries</>,
+    altText: "Coworking Sanctuaries",
     desc: "Dedicated seats, hot desks and private pods in warm, hospitality-first environments. Thoughtfully composed spaces where community thrives — without the noise or anonymity of ordinary coworking.",
     highlight: "From ₹7,999/mo",
     image: "/homebannerImages/Enhance_office_modern_202604020034.jpeg",
@@ -20,7 +21,8 @@ const spaces = [
     id: "managed",
     tag: "MANAGED OFFICES",
     tagColor: "teal",
-    title: "Managed Private Offices",
+    title: <>Managed <br />Private Offices</>,
+    altText: "Managed Private Offices",
     desc: "Your own dedicated floor or wing — fully customized and impeccably managed by our hospitality team. Single monthly invoice. Zero operational friction. For teams ready to scale with grace and presence.",
     highlight: "Tailored to your team size",
     image: "/homebannerImages/remove_the_big_202604020018.png",
@@ -31,7 +33,8 @@ const spaces = [
     id: "ondemand",
     tag: "ON-DEMAND",
     tagColor: "amber",
-    title: "Private Meeting & Gathering Rooms",
+    title: <>Private Meeting <br />& Gathering Rooms</>,
+    altText: "Private Meeting & Gathering Rooms",
     desc: "Boardrooms, creative salons and event spaces for 3–100 people. Booked by the hour or day, hosted with white-glove service.",
     highlight: null,
     image: "/homebannerImages/create_a_office_202604020015.png",
@@ -85,7 +88,7 @@ function SpaceCard({ space, index, onCtaClick }) {
         <div className={styles.sideImage}>
           <Image
             src={space.image}
-            alt={space.title}
+            alt={space.altText}
             fill
             style={{ objectFit: "cover" }}
             sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
@@ -104,7 +107,7 @@ function SpaceCard({ space, index, onCtaClick }) {
       <div className={styles.topImage}>
         <Image
           src={space.image}
-          alt={space.title}
+          alt={space.altText}
           fill
           style={{ objectFit: "cover" }}
           sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
@@ -151,7 +154,7 @@ export default function OurSpaces() {
     <section id="our-spaces" className={styles.section}>
       <div className={styles.inner}>
         <div ref={headerRef} className={`${styles.header} ${styles.fadeUp}`}>
-          <h2 className={styles.sectionTitle}>Our <span style={{ color: "#f2b300" }}>Spaces</span></h2>
+          <h2 className={styles.sectionTitle}>Our <span style={{ color: "#f2b300", fontWeight: "bold" }}>Spaces</span></h2>
           <p className={styles.sectionSub}>Designed for those who lead</p>
         </div>
 

@@ -1,6 +1,6 @@
 /* ── Section wrapper ──────────────────────────────────── */
 .section {
-  padding: 72px 0 80px;
+  padding: 72px 0 50px;
 }
 
 .inner {
@@ -18,13 +18,13 @@
 .sectionTitle {
   font-size: clamp(28px, 3vw, 44px);
   color: #111;
+  font-weight: 100;
   margin-bottom: 10px;
 }
 
 .sectionSub {
   font-size: 15px;
-  color: #f2b300;
-  font-style: italic;
+  color: black;
   font-weight: 400;
 }
 
@@ -151,6 +151,7 @@
   border: 1px solid rgba(242, 179, 0, 0.35);
   margin-bottom: 16px;
   letter-spacing: 0.1px;
+  width: fit-content;
 }
 
 /* ── Per-card CTA button ──────────────────────────────── */

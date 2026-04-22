@@ -107,7 +107,7 @@ export default function PrivacyPage() {
 
           <section className={styles.section}>
             <h2 className={styles.sectionNum}>Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy or how we handle your personal data, please contact us at <a href="mailto:hello@myspacetime.in" className={styles.link}>hello@myspacetime.in</a>.</p>
+            <p>If you have any questions about this Privacy Policy or how we handle your personal data, please contact us at <a href="mailto:akash@myspacetime.in" className={styles.link}>akash@myspacetime.in</a>.</p>
           </section>
 
         </div>

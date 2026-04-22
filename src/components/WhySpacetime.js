@@ -6,7 +6,7 @@ import styles from "./WhySpacetime.module.css";
 const features = [
   {
     id: "hospitality",
-    title: "Hospitality First, Always",
+    title: <>Hospitality First, <br />Always</>,
     subtitle: null,
     desc: "Warm anticipatory service — the kind found in private clubs, not leases.",
     icon: null,
@@ -14,7 +14,7 @@ const features = [
   },
   {
     id: "curated",
-    title: "Curated Design",
+    title: <>Curated <br />Design</>,
     subtitle: null,
     desc: "Hi-spec finishes and thoughtful details rarely seen this side of ultra-premium.",
     icon: null,
@@ -22,14 +22,14 @@ const features = [
   },
   {
     id: "connected",
-    title: "Prime & Connected",
+    title: <>Prime & <br />Connected</>,
     subtitle: null,
     desc: "Metro-adjacent addresses in South & Central Delhi, surrounded by the city's best cafés and energy.",
     large: true,
   },
   {
     id: "scale",
-    title: "Built to Scale",
+    title: <>Built to <br />Scale</>,
     subtitle: null,
     desc: "Industry-leading retention. 2,400 seats today to 3,300+ in the next 3 months.",
     large: true,
@@ -102,7 +102,7 @@ export default function WhySpacetime() {
           <div ref={leftRef} className={`${styles.left} ${styles.fadeUp}`}>
             <h2 className={styles.heading}>
               Not for everyone.{" "}
-              <span className={styles.headingBlock} style={{ color: "#f2b300" }}>Exactly as intended.</span>
+              <span className={styles.headingBlock} style={{ color: "#f2b300", fontWeight: "bold" }}>Exactly as intended.</span>
             </h2>
             <p className={styles.subtext}>
               Because once you've experienced it, returning to ordinary is no

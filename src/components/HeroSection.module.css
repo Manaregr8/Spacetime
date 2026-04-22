@@ -69,53 +69,115 @@
 .ctaWrapper {
   display: inline-flex;
   flex-direction: column;
-  align-items: center;
-  background: #f2b300;
-  border: none;
-  border-radius: 10px;
-  padding: 14px 28px;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f2b300);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 10px 24px;
   cursor: pointer;
-  gap: 3px;
-  transition: background 0.2s ease, transform 0.15s ease;
+  color: white;
+  gap: 2px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 6px 16px rgba(242, 179, 0, 0.3);
+  z-index: 1;
+}
+
+.ctaWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  transform: skewX(-20deg);
+  transition: all 0.6s ease;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .ctaWrapper:hover {
-  background: #d9a000;
-  transform: translateY(-1px);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(242, 179, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.ctaWrapper:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(242, 179, 0, 0.4);
+}
+
+.ctaWrapper:hover::after {
+  left: 200%;
 }
 
 .ctaMain {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
-  color: #111;
-  letter-spacing: 0.1px;
+  color: white;
+  letter-spacing: 0.2px;
+  position: relative;
+  z-index: 2;
 }
 
 .ctaSub {
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.55);
+  font-size: 13px;
+  color: white;
   font-weight: 500;
+  position: relative;
+  z-index: 2;
 }
 
 .ctaSecondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
-  border: none;
-  border-radius: 10px;
-  padding: 14px 28px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  padding: 16px 32px;
   color: #111;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.15s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   white-space: nowrap;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.ctaSecondary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  transform: skewX(-20deg);
+  transition: all 0.6s ease;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .ctaSecondary:hover {
-  background: #f0f0f0;
-  transform: translateY(-1px);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  border-color: #fff;
+}
+
+.ctaSecondary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ctaSecondary:hover::after {
+  left: 200%;
 }
 
 /* ── Company logos marquee ─────────────────────────────── */
