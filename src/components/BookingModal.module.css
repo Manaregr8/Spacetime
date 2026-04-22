@@ -48,8 +48,8 @@
 /* ── Close button ─────────────────────────────────────── */
 .closeBtn {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 16px;
+  right: 16px;
   width: 36px;
   height: 36px;
   border-radius: 10px;
@@ -61,9 +61,9 @@
   cursor: pointer;
   color: #444;
   transition: background 0.2s, color 0.2s;
-  grid-column: 1 / -1;
-  justify-self: end;
+  z-index: 1;
 }
+
 
 .closeBtn:hover {
   background: rgba(0, 0, 0, 0.14);
@@ -227,7 +227,72 @@
   font-family: var(--font-body), "Manrope", sans-serif;
 }
 
+/* ── Success state ─────────────────────────────────────── */
+.successBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  padding: 40px 24px;
+}
+
+.successIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #f2b300;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.successTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  font-family: var(--font-body), "Manrope", sans-serif;
+}
+
+.successSub {
+  font-size: 14px;
+  color: #555;
+  font-family: var(--font-body), "Manrope", sans-serif;
+  max-width: 280px;
+}
+
+/* ── Error message ─────────────────────────────────────── */
+.errorMsg {
+  font-size: 13px;
+  color: #fc8181;
+  font-family: var(--font-body), "Manrope", sans-serif;
+  text-align: center;
+}
+
 /* ── Responsive ───────────────────────────────────────── */
+.modalTour {
+  max-width: 480px;
+  grid-template-columns: 1fr;
+  padding: 48px 40px 40px;
+}
+
+.formTour {
+  gap: 18px;
+}
+
+.tourHeading {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .modal {
     grid-template-columns: 1fr;

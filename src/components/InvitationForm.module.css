@@ -219,6 +219,53 @@
   transform: translateY(0);
 }
 
+/* ── Success state ─────────────────────────────────────── */
+.successBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  padding: 40px 24px;
+}
+
+.successIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #f2b300;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.successTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  font-family: var(--font-body), "Manrope", sans-serif;
+}
+
+.successSub {
+  font-size: 14px;
+  color: #666;
+  font-family: var(--font-body), "Manrope", sans-serif;
+  max-width: 280px;
+}
+
+/* ── Error message ─────────────────────────────────────── */
+.errorMsg {
+  font-size: 13px;
+  color: #e53e3e;
+  font-family: var(--font-body), "Manrope", sans-serif;
+  text-align: center;
+}
+
 /* ── Responsive ───────────────────────────────────────── */
 @media (max-width: 960px) {
   .card {

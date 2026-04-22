@@ -51,7 +51,7 @@ export default function Navbar() {
             <a href="tel:+919810474703" className={styles.phoneNum}>+91 98104 74703</a>
             <WaIcon />
           </div>
-          <button className={styles.ctaBtn} onClick={openModal}>
+          <button className={styles.ctaBtn} onClick={() => openModal("tour")}>
             Book a Private Tour
           </button>
         </div>
@@ -103,7 +103,7 @@ export default function Navbar() {
           <a href="tel:+919810474703" className={styles.drawerPhone}>+91 98104 74703</a>
           <button
             className={styles.drawerCta}
-            onClick={() => { setMenuOpen(false); openModal(); }}
+            onClick={() => { setMenuOpen(false); openModal("tour"); }}
           >
             Book a Private Tour
           </button>

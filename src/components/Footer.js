@@ -64,7 +64,15 @@ export default function Footer() {
             <ul className={styles.linkList}>
               {quickLinks.map((l) => (
                 <li key={l.label}>
-                  <Link href={l.href} className={styles.navLink}>{l.label}</Link>
+                  {l.label === "Book a Tour" ? (
+                    <button onClick={() => openModal("tour")} className={styles.navLink}>
+                      {l.label}
+                    </button>
+                  ) : (
+                    <Link href={l.href} className={styles.navLink}>
+                      {l.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

@@ -4,13 +4,15 @@ import { createContext, useContext, useState, useCallback } from "react";
 const BookingContext = createContext(null);
 
 export function BookingProvider({ children }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [modalType, setModalType] = useState(null); // null | 'full' | 'tour'
 
-  const openModal = useCallback(() => setIsOpen(true), []);
-  const closeModal = useCallback(() => setIsOpen(false), []);
+  const openModal = useCallback((type = "full") => setModalType(type), []);
+  const closeModal = useCallback(() => setModalType(null), []);
+
+  const isOpen = !!modalType;
 
   return (
-    <BookingContext.Provider value={{ isOpen, openModal, closeModal }}>
+    <BookingContext.Provider value={{ isOpen, modalType, openModal, closeModal }}>
       {children}
     </BookingContext.Provider>
   );

@@ -37,7 +37,7 @@ export default function HeroSection() {
               <span className={styles.ctaMain}>Claim Free Day Pass</span>
               <span className={styles.ctaSub}>No commitment, just an invitation</span>
             </button>
-            <button className={styles.ctaSecondary} onClick={openModal}>
+            <button className={styles.ctaSecondary} onClick={() => openModal("tour")}>
               Book a Private Tour
             </button>
           </div>
