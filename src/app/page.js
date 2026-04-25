@@ -23,10 +23,13 @@ export default function Home() {
       <VirtualOffice />
 
       <WhySpacetime />
-      <MonthlyEvents />
-      <Testimonials />
       <OurAddresses />
       <TheExperience />
+
+      <MonthlyEvents />
+      <Testimonials />
+
+
       <LanyardSection />
       <FAQSection />
       <InvitationForm />

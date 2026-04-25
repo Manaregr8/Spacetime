@@ -1,6 +1,5 @@
 .section {
   background: white;
-  min-height: 80vh;
   overflow: hidden;
 }
 
@@ -9,8 +8,9 @@
   margin: 0 auto;
   padding: 0 48px;
   display: grid;
-  grid-template-columns: 1fr 0.5fr;
-  min-height: 80vh;
+  grid-template-columns: 2fr 1fr;
+  /* Adjust ratio for smaller right card */
+  gap: 32px;
 }
 
 /* ── Left text ────────────────────────────────────────── */
@@ -21,6 +21,7 @@
   justify-content: center;
   padding: 80px 64px;
   gap: 24px;
+  width: 100%;
 }
 
 .tag {
@@ -38,10 +39,12 @@
 }
 
 .desc {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.45);
   font-size: 15px;
-  line-height: 1.8;
-  max-width: 400px;
+  line-height: 1.65;
+  max-width: 100%;
+  /* Changed from fixed 580px to allow flex shrink */
+  margin-bottom: 8px;
 }
 
 .flipNote {
@@ -51,9 +54,11 @@
   background: rgba(242, 179, 0, 0.08);
   border-left: 3px solid #f2b300;
   border-radius: 0 8px 8px 0;
-  padding: 12px 16px;
-  max-width: 400px;
-  margin-top: -4px;
+  padding: 14px 20px;
+  max-width: 100%;
+  /* Changed to 100% to prevent overflow */
+  margin-top: 10px;
+  text-align: justify;
 }
 
 .flipNote strong {
@@ -75,12 +80,13 @@
 /* ── Canvas area ──────────────────────────────────────── */
 .canvasWrap {
   position: relative;
-  height: 80vh;
-  min-height: 500px;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
 }
 
 /* ── Responsive ───────────────────────────────────────── */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .section {
     min-height: unset;
   }
@@ -88,20 +94,34 @@
   .inner {
     grid-template-columns: 1fr;
     min-height: unset;
+    gap: 0;
   }
 
   .textBlock {
-    padding: 60px 32px 16px;
+    padding: 60px 40px;
     gap: 16px;
-  }
-
-  .desc {
-    max-width: 100%;
+    /* Flat bottom to merge with canvas */
   }
 
   .canvasWrap {
-    height: 70vw;
-    min-height: 320px;
+    height: 60vw;
+    min-height: 350px;
+    /* Soft background for canvas in mobile */
+    border-radius: 0 0 16px 16px;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .textBlock {
+    padding: 48px 32px;
+  }
+
+  .canvasWrap {
+    height: 80vw;
   }
 }
 
@@ -113,7 +133,7 @@
 
 @media (max-width: 480px) {
   .textBlock {
-    padding: 48px 20px 8px;
+    padding: 40px 24px;
   }
 
   .canvasWrap {

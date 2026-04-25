@@ -91,38 +91,41 @@
 }
 
 .cta {
-  background: linear-gradient(135deg, #ffbb00);
+  background: #111;
   color: #fff;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  padding: 16px 28px;
+  padding: 16px 32px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
-  transition: background 0.2s ease, transform 0.15s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2px;
   text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .ctaMain {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   color: #fff;
 }
 
 .ctaSub {
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.5);
   font-weight: 400;
 }
 
 .cta:hover {
-  background: linear-gradient(135deg, #ffae00);
-  transform: translateY(-1px);
+  background: #222;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  border-color: rgba(242, 179, 0, 0.3);
 }
 
 /* ── Fade-up animation ────────────────────────────────── */
@@ -138,15 +141,16 @@
 }
 
 /* ── Responsive ───────────────────────────────────────── */
-@media (max-width: 960px) {
+@media (max-width: 1309px) {
   .card {
     grid-template-columns: 1fr;
-    grid-template-rows: 260px auto auto;
+    grid-template-rows: auto auto auto;
   }
 
   .imageWrap {
-    min-height: 260px;
-    height: 260px;
+    min-height: unset;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Preserves aspect ratio when stacked */
   }
 
   .textWrap {

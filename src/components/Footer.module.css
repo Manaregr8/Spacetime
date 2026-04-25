@@ -254,9 +254,32 @@
   gap: 24px;
 }
 
+.bottomLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bottomCta {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s;
+  font-family: var(--font-body), "Manrope", sans-serif;
+}
+
+.bottomCta:hover {
+  color: #f2b300;
+}
+
 .copyright {
   font-size: 13px;
-  color: #f2b300;
+  color: rgba(255, 255, 255, 0.45); /* Same as legalLink */
   font-family: var(--font-body), "Manrope", sans-serif;
 }
 
@@ -302,25 +325,28 @@
 .tickerItem {
   display: inline-flex;
   align-items: center;
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.45);
+  font-family: var(--font-heading), "Cal Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #f2b300; /* Vibrant brand gold */
   white-space: nowrap;
-  letter-spacing: 0.05em;
-  font-family: var(--font-body), "Manrope", sans-serif;
+  letter-spacing: 0.22em; /* Extra tracking for premium feel */
   text-transform: uppercase;
-  padding: 0 24px;
-  transition: color 0.2s;
+  padding: 0 44px;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: default;
 }
 
 .tickerItem:hover {
   color: #f2b300;
+  text-shadow: 0 0 12px rgba(242, 179, 0, 0.4); /* Soft glow */
 }
 
 .tickerDot {
-  margin-left: 24px;
-  color: rgba(255, 255, 255, 0.2);
-  font-size: 16px;
+  margin-left: 44px;
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 12px;
+  font-weight: 200;
 }
 
 @keyframes tickerScroll {

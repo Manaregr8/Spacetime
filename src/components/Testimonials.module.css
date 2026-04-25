@@ -119,13 +119,14 @@
 
 .cardImageWrap {
   background: #e5e5e5;
-  height: 220px;
+  aspect-ratio: 16 / 10; /* Keeps image proportion consistent */
+  height: auto;
   position: relative;
   overflow: hidden;
 }
 
 .cardContent {
-  background: #e5e5e5;
+  background: #ffffff; /* Changed from #e5e5e5 to white */
   border-top: 15px solid #2c2c2c;
   position: relative;
   padding: 30px;
@@ -168,6 +169,7 @@
   font-weight: 600;
   color: #000;
   margin-bottom: 4px;
+  letter-spacing: 0.5px; /* Added letter spacing */
 }
 
 .cardPost {

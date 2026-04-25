@@ -84,38 +84,31 @@ export default function FAQSection() {
         </div>
 
         <div className={styles.content}>
-          <div className={styles.tabs}>
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => handleCategoryClick(cat)}
-                className={`${styles.tab} ${activeCategory === cat ? styles.tabActive : ''}`}
-              >
-                <span>{cat}</span>
-                <ChevronRight />
-              </button>
-            ))}
-          </div>
-
           <div className={styles.accordion}>
-            {activeQuestions.map((item, index) => {
-              const isOpen = openIndex === index;
-              return (
-                <div key={index} className={`${styles.item} ${isOpen ? styles.itemActive : ''}`}>
-                  <div className={styles.question} onClick={() => toggleAccordion(index)}>
-                    <span>{item.q}</span>
-                    <div className={styles.icon}>
-                      {isOpen ? <CloseIcon /> : <PlusIcon />}
+            {Object.entries(faqData).map(([category, questions]) => (
+              <div key={category} className={styles.categoryGroup}>
+                <h3 className={styles.categoryTitle}>{category}</h3>
+                {questions.map((item, index) => {
+                  const globalIndex = `${category}-${index}`;
+                  const isOpen = openIndex === globalIndex;
+                  return (
+                    <div key={index} className={`${styles.item} ${isOpen ? styles.itemActive : ''}`}>
+                      <div className={styles.question} onClick={() => setOpenIndex(isOpen ? null : globalIndex)}>
+                        <span>{item.q}</span>
+                        <div className={styles.icon}>
+                          {isOpen ? <CloseIcon /> : <PlusIcon />}
+                        </div>
+                      </div>
+                      {isOpen && (
+                        <div className={styles.answer}>
+                          <p>{item.a}</p>
+                        </div>
+                      )}
                     </div>
-                  </div>
-                  {isOpen && (
-                    <div className={styles.answer}>
-                      <p>{item.a}</p>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+                  );
+                })}
+              </div>
+            ))}
           </div>
         </div>
       </div>

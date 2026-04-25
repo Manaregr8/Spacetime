@@ -17,17 +17,16 @@ export default function HeroSection() {
 
   return (
     <section className={styles.hero}>
-      {/* Overlay gradient */}
+      {/* Overlay gradients */}
       <div className={styles.overlay} />
+      <div className={styles.vignette} />
 
       {/* Max-width inner wrapper */}
       <div className={styles.inner}>
         {/* Main text content */}
         <div className={styles.content}>
           <h1 className={styles.heading}>
-            An address for those who&rsquo;ve
-            <br />
-            outgrown the ordinary.
+            An address for those who&rsquo;ve outgrown the ordinary.
           </h1>
           <p className={styles.subtext}>
             Premium coworking &amp; managed offices in Delhi-NCR. Curated sanctuaries where founders and teams are hosted, not just housed. A community built with intention.
@@ -42,12 +41,12 @@ export default function HeroSection() {
             </button>
           </div>
         </div>
-        {/* 180+ tag + logos marquee */}
+        {/* 180+ companies button + logos marquee */}
         <div className={styles.logosSection}>
-          <div className={styles.logosTag}>
+          <button className={styles.logosTag}>
             <span className={styles.logosTagDot} />
             <span className={styles.logosTagText}>180+ ambitious companies scaling with us</span>
-          </div>
+          </button>
           <div className={styles.marqueeTrack}>
             <div className={styles.marquee}>
               {marqueeItems.map((src, i) => (

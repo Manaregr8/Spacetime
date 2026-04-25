@@ -12,7 +12,7 @@ const initialEvents = [
     tag: "Masterclass",
     shortDesc: "AI strategy and tools for founders.",
     fullDesc: "An intimate session with Spacetime's founder on leveraging AI in your business — from automation to decision-making. Practical, candid, and built for builders.",
-    image: "/event1.png"
+    image: "/homebannerImages/subtle_masterclass.png"
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const initialEvents = [
     tag: "Wellness",
     shortDesc: "Start Wednesday with intention.",
     fullDesc: "A guided yoga and sound healing session to reset and recharge mid-week. Open to all Spacetime members and their guests. Mats and refreshments provided.",
-    image: "/homebannerImages/event2.png"
+    image: "/homebannerImages/subtle_wellness.png"
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const initialEvents = [
     tag: "Networking",
     shortDesc: "Curated introductions over a private lunch.",
     fullDesc: "A curated, invite-only networking lunch connecting founders with investors. Limited seats. Hosted by the Spacetime community team with warm introductions and structured conversations.",
-    image: "/homebannerImages/event3.png"
+    image: "/homebannerImages/subtle_networking.png"
   },
 ];
 

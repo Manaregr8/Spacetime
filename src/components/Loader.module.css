@@ -35,7 +35,7 @@
   font-family: Georgia, "Times New Roman", serif;
   font-style: italic;
   font-weight: 300;
-  font-size: clamp(40px, 7vw, 80px);
+  font-size: clamp(32px, 6vw, 56px);
   color: rgba(255, 255, 255, 0.88);
   letter-spacing: -0.5px;
 }
@@ -45,7 +45,7 @@
   font-family: var(--font-heading), "Cal Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: clamp(40px, 7vw, 80px);
+  font-size: clamp(32px, 6vw, 56px);
   color: #f2b300;
   letter-spacing: 0.04em;
 }
@@ -54,17 +54,17 @@
 @keyframes charDrop {
   0% {
     opacity: 0;
-    transform: translateY(-70px) scaleY(1.1);
+    transform: translateY(-50px) scaleY(1.1);
   }
   55% {
     opacity: 1;
-    transform: translateY(12px) scaleY(0.95);
+    transform: translateY(8px) scaleY(0.95);
   }
   72% {
-    transform: translateY(-8px) scaleY(1.04);
+    transform: translateY(-5px) scaleY(1.04);
   }
   86% {
-    transform: translateY(5px) scaleY(0.98);
+    transform: translateY(3px) scaleY(0.98);
   }
   100% {
     opacity: 1;

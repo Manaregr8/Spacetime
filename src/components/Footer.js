@@ -170,7 +170,12 @@ export default function Footer() {
       {/* ── Bottom bar ── */}
       <div className={styles.bottomBar}>
         <div className={styles.bottomInner}>
-          <p className={styles.copyright}>© 2026 Spacetime. A private club for those who build.</p>
+          <div className={styles.bottomLeft}>
+            <button className={styles.bottomCta} onClick={() => openModal("tour")}>
+              Book a Private Walkthrough &rarr;
+            </button>
+            <p className={styles.copyright}>© 2026 Spacetime. A private club for those who build.</p>
+          </div>
           <div className={styles.legal}>
             <Link href="/terms" className={styles.legalLink}>Terms &amp; Conditions</Link>
             <Link href="/privacy" className={styles.legalLink}>Privacy Policy</Link>

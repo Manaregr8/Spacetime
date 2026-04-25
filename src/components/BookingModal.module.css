@@ -275,17 +275,17 @@
 }
 
 /* ── Responsive ───────────────────────────────────────── */
-.modalTour {
+.modalSmall {
   max-width: 480px;
   grid-template-columns: 1fr;
   padding: 48px 40px 40px;
 }
 
-.formTour {
+.formSmall {
   gap: 18px;
 }
 
-.tourHeading {
+.smallHeading {
   font-size: 24px;
   font-weight: 800;
   color: #111;

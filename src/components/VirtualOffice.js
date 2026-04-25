@@ -67,9 +67,9 @@ export default function VirtualOffice() {
 
           {/* Right CTA */}
           <div className={styles.ctaWrap}>
-            <button className={styles.cta} onClick={openModal}>
-              <span className={styles.ctaMain}>Secure your Virtual Address</span>
-              <span className={styles.ctaSub}>in 60 seconds</span>
+            <button className={styles.cta} onClick={() => openModal("virtual")}>
+              <span className={styles.ctaMain}>Get your Virtual Address</span>
+              <span className={styles.ctaSub}>Ready in minutes</span>
             </button>
           </div>
         </div>

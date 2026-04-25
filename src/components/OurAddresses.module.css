@@ -17,14 +17,16 @@
 }
 
 .sectionTitle {
-  font-size: clamp(28px, 3vw, 48px);
-  color: #1a1a1a;
-  margin-bottom: 18px;
+  font-size: clamp(28px, 3vw, 44px);
+  color: #111;
+  font-weight: 500;
+  margin: 0 auto 18px;
+  text-align: center;
 }
 
 .sectionSub {
   font-size: 15px;
-  color: #555;
+  color: rgba(0, 0, 0, 0.5); /* Increased transparency */
   line-height: 1.75;
   max-width: 680px;
   margin: 0 auto;
@@ -74,15 +76,19 @@
   top: 16px;
   left: 16px;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.92);
+  background: #fff;
   color: #111;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 1.1px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
   padding: 6px 12px;
-  border-radius: 100px;
-  white-space: nowrap;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.tagHighlight {
+  color: #f2b300;
 }
 
 /* ── Bottom info ──────────────────────────────────────── */
@@ -179,11 +185,12 @@
 /* ── Footer note ──────────────────────────────────────── */
 .footerNote {
   text-align: center;
-  margin-top: 36px;
-  font-size: 14px;
-  color: #777;
-  font-style: italic;
-  letter-spacing: 0.1px;
+  margin: 48px auto 0;
+  font-size: 15px;
+  color: #555;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  max-width: 600px;
 }
 
 /* ── Responsive ───────────────────────────────────────── */

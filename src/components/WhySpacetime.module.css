@@ -26,9 +26,10 @@
 }
 
 .heading {
-  font-size: clamp(28px, 3.2vw, 48px);
+  font-size: clamp(32px, 3.8vw, 54px); /* Increased prominence */
   color: #fff;
-  line-height: 1.18;
+  line-height: 1.12;
+  font-weight: 500;
 }
 
 .headingBlock {
@@ -75,6 +76,11 @@
   font-size: 18px;
   color: #fff;
   line-height: 1.2;
+  transition: color 0.3s ease;
+}
+
+.featureCard:hover .featureTitle {
+  color: #f2b300;
 }
 
 .featureTitleLarge {

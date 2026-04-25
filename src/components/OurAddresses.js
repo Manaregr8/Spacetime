@@ -100,7 +100,9 @@ function AddressCard({ location, index }) {
       <div className={`${styles.overlay} ${hovered ? styles.overlayHover : ""}`} />
 
       {/* Top tag */}
-      <span className={styles.tag}>{location.tag}</span>
+      <span className={styles.tag}>
+        <span className={styles.tagHighlight}>{location.tag.split(" ")[0]}</span> {location.tag.split(" ").slice(1).join(" ")}
+      </span>
 
       {/* Bottom text */}
       <div className={styles.info}>
@@ -137,7 +139,7 @@ export default function OurAddresses() {
     <section id="our-addresses" className={styles.section}>
       <div className={styles.inner}>
         <div ref={headerRef} className={`${styles.header} ${styles.fadeUp}`}>
-          <h2 className={styles.sectionTitle}>Our Addresses</h2>
+          <h2 className={styles.sectionTitle}>Our <span style={{ color: "#f2b300", fontWeight: "bold" }}>Addresses</span></h2>
           <p className={styles.sectionSub}>
             Prime. Privately held. Built to grow with Delhi-NCR&apos;s most ambitious companies.
           </p>
