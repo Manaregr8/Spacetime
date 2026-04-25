@@ -9,7 +9,9 @@
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  padding-top: 72px;
+  /* Navbar height */
 }
 
 /* Dark gradient overlay — heavier on the left */
@@ -41,6 +43,8 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
 }
 
 /* ── Text content ──────────────────────────────────────── */
@@ -49,6 +53,8 @@
   z-index: 1;
   padding: 0 0 0 48px;
   max-width: 850px;
+  margin: auto 0;
+  /* Centers content vertically in available space */
 }
 
 .heading {
@@ -86,7 +92,7 @@
   align-items: flex-start;
   position: relative;
   overflow: hidden;
-  background: rgba(242, 179, 0, 0.7);
+  background: rgb(242, 177, 0);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -102,7 +108,15 @@
 
 @keyframes continuousBlip {
   0% { left: -100%; }
-  30% { left: 200%; }
+  20% { left: 200%; }
+  100% { left: 200%; }
+}
+
+@keyframes hoverBlip {
+  0% { left: -100%; }
+  45% { left: 200%; }
+  48% { left: -100%; }
+  90% { left: 200%; }
   100% { left: 200%; }
 }
 
@@ -115,10 +129,10 @@
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
   transform: skewX(-20deg);
-  transition: all 0.4s ease;
+  transition: left 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   z-index: 2;
   pointer-events: none;
-  animation: continuousBlip 2.5s linear infinite;
+  animation: continuousBlip 3s linear infinite;
 }
 
 .ctaWrapper:hover {
@@ -132,12 +146,12 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+.ctaWrapper:hover {
+  background-color: #f2b300;
+}
+
 .ctaWrapper:hover::after {
-  animation: none;
-  left: -20%;
-  width: 140%;
-  background: rgba(255, 255, 255, 0.25);
-  transform: skewX(0deg);
+  animation: hoverBlip 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
 .ctaMain {
@@ -339,6 +353,11 @@
   .hero {
     aspect-ratio: 4 / 3;
     min-height: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 80px;
+    /* Space for navbar */
   }
 
   .overlay {
@@ -349,8 +368,19 @@
         rgba(0, 0, 0, 0) 100%);
   }
 
+  .inner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
   .content {
-    padding: 0 24px 48px;
+    padding: 0 24px;
+    text-align: left;
+    margin: auto 0;
+    /* Vertically centers content in the remaining space */
   }
 
   .logosSection {
@@ -362,6 +392,7 @@
   .hero {
     aspect-ratio: 3 / 4;
     min-height: 580px;
+    padding-top: 70px;
   }
 
   .content {
