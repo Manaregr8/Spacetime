@@ -75,8 +75,8 @@ export default function BookingModal() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 
           ...form, 
-          source: modalType === 'tour' ? "Tour Request" : "Booking Modal",
-          option: modalType === 'tour' ? "" : form.option
+          source: modalType === 'tour' ? "Private Tour" : (modalType === 'virtual' ? "Virtual Office" : form.option),
+          option: modalType === 'tour' ? "Private Tour" : (modalType === 'virtual' ? "Virtual Office" : form.option)
         }),
       });
       if (!res.ok) throw new Error("Server error");
