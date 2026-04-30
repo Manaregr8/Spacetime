@@ -1,4 +1,4 @@
-/* ── Full-screen loader ───────────────────────────────── */
+/* ── Full-screen loader ───────────────────────────────────────────── */
 .loader {
   position: fixed;
   inset: 0;
@@ -15,35 +15,48 @@
   visibility: hidden;
 }
 
-/* ── SVG Logo ───────────────────────────────── */
+/* ── Single unified SVG logo ─────────────────────────────────────── */
+/*
+  The SVG viewBox is 431.43 × 107.62 (≈ 4:1 ratio).
+  We let it fill 90vw up to 520px wide; height is automatic
+  because the SVG's own preserveAspectRatio handles it.
+  No flex children = no overlap ever.
+*/
 .svgLogo {
-  width: 90%;
-  max-width: 400px;
+  display: block;
+  width: 90vw;
+  max-width: 520px;
   height: auto;
+  /* always derives from the 431:107 viewBox ratio */
 }
 
 @media (max-width: 480px) {
   .svgLogo {
-    max-width: 240px;
+    width: 92vw;
   }
 }
 
-/* ── Path Drawing Animations ───────────────────────────── */
-
-/* The word "space" inside the SVG */
+/* ── "space" text stroke-draw animation (CSS fallback) ───────────── */
+/*
+  The JS Web Animations API drives the primary animation.
+  This keyframe is a safety fallback for environments where
+  the JS hasn't run yet or is slow.
+*/
 .animText {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: drawText 2s ease-out forwards, fillText 0.8s 2s forwards;
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation:
+    drawText 2s 0s ease-out forwards,
+    fillText 0.8s 2s ease-in-out forwards;
 }
 
-/* "time" — fades in at the same time space fills */
+/* ── "time" path — fades in as "space" fills ─────────────────────── */
 .animFadeIn {
   opacity: 0;
   animation: fadeIn 0.8s 2s ease-out forwards;
 }
 
-/* Keyframes */
+/* ── Keyframes ───────────────────────────────────────────────────── */
 
 @keyframes drawText {
   to {
@@ -51,30 +64,25 @@
   }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
 @keyframes fillText {
   from {
     fill: transparent;
     stroke: #ffffff;
   }
+
   to {
     fill: #ffffff;
     stroke: transparent;
   }
 }
 
-@keyframes fillPath {
+@keyframes fadeIn {
   from {
-    fill: transparent;
-    stroke: #ffffff;
+    opacity: 0;
   }
+
   to {
-    fill: #ffffff;
-    stroke: transparent;
+    opacity: 1;
   }
 }
 
@@ -83,6 +91,7 @@
     fill: transparent;
     stroke: #ffffff;
   }
+
   to {
     fill: #fcbb2d;
     stroke: transparent;
