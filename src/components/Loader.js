@@ -99,15 +99,15 @@ export default function Loader() {
               style={{
                 fontWeight: 500,
                 fontSize: "109.029px",
-                fontFamily: "'Tsukimi Rounded'",
+                fontFamily: "var(--font-tsukimi)",
                 textAlign: "start",
-                letterSpacing: "-3.175px",
+                letterSpacing: "normal",
                 writingMode: "lr-tb",
                 direction: "ltr",
                 textAnchor: "start",
                 fill: "transparent",
               }}
-              x="-2926.7585"
+              x="-2956.7585"
               y="1837.2983"
               transform="matrix(3.7687726,-0.0460673,0.04632363,3.7897469,-831.49611,0)"
               className={styles.animText}
@@ -119,7 +119,7 @@ export default function Loader() {
                   fontStyle: "italic",
                   fontWeight: "bold",
                   fontFamily: "'Times New Roman'",
-                  letterSpacing: "-3.175px",
+                  letterSpacing: "normal",
                   strokeWidth: 3,
                 }}
               >
