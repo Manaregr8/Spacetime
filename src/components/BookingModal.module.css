@@ -144,8 +144,13 @@
   transition: border-color 0.2s ease;
 }
 
-.input::placeholder { color: #aaa; }
-.input:focus { border-color: #aaa; }
+.input::placeholder {
+  color: #aaa;
+}
+
+.input:focus {
+  border-color: #aaa;
+}
 
 .phoneWrap {
   position: relative;
@@ -158,9 +163,16 @@
   gap: 10px;
   transition: border-color 0.2s;
 }
-.phoneWrap:focus-within { border-color: #aaa; }
 
-.flag { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.phoneWrap:focus-within {
+  border-color: #aaa;
+}
+
+.flag {
+  font-size: 18px;
+  line-height: 1;
+  flex-shrink: 0;
+}
 
 .phoneInput {
   border: none !important;
@@ -168,9 +180,14 @@
   border-radius: 0 !important;
   flex: 1;
 }
-.phoneInput:focus { border-color: transparent !important; }
 
-.selectWrap { position: relative; }
+.phoneInput:focus {
+  border-color: transparent !important;
+}
+
+.selectWrap {
+  position: relative;
+}
 
 .select {
   width: 100%;
@@ -186,7 +203,10 @@
   cursor: pointer;
   transition: border-color 0.2s;
 }
-.select:focus { border-color: #aaa; }
+
+.select:focus {
+  border-color: #aaa;
+}
 
 .selectArrow {
   position: absolute;
@@ -213,7 +233,10 @@
   width: 100%;
   margin-top: 4px;
 }
-.submit:hover { background: #333; }
+
+.submit:hover {
+  background: #333;
+}
 
 .submitMain {
   font-size: 15px;
@@ -245,7 +268,7 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: #f2b300;
+  background: #fcbb2d;
   color: #fff;
   font-size: 26px;
   font-weight: 700;

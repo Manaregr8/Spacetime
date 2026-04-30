@@ -43,10 +43,9 @@ export default function HeroSection() {
         </div>
         {/* 180+ companies button + logos marquee */}
         <div className={styles.logosSection}>
-          <button className={styles.logosTag}>
-            <span className={styles.logosTagDot} />
-            <span className={styles.logosTagText}>180+ ambitious companies scaling with us</span>
-          </button>
+          <p className={styles.logosTagText}>
+            180+ ambitious companies scaling with us
+          </p>
           <div className={styles.marqueeTrack}>
             <div className={styles.marquee}>
               {marqueeItems.map((src, i) => (

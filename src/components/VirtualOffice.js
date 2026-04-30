@@ -6,6 +6,7 @@ import styles from "./VirtualOffice.module.css";
 
 const highlights = [
   "Professional address",
+  "Business Registration",
   "GST registration support",
   "Discreet mail handling",
   "Virtual receptionist",
@@ -53,7 +54,8 @@ export default function VirtualOffice() {
               <span className={styles.tagHighlight}>VIRTUAL</span> OFFICE
             </span>
             <h2 className={styles.heading}>
-              A prestigious Delhi-NCR address that works as hard as you do.
+              A prestigious <span style={{ color: "#fcbb2d", fontWeight: "700" }}>Delhi-NCR address</span><br />
+              that works as hard as you do.
             </h2>
             <div className={styles.pills}>
               {highlights.map((h) => (
@@ -74,6 +76,6 @@ export default function VirtualOffice() {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }

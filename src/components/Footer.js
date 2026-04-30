@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useBooking } from "@/context/BookingContext";
 import styles from "./Footer.module.css";
 
@@ -50,8 +51,7 @@ export default function Footer() {
           {/* Col 1 — Brand */}
           <div className={styles.brand}>
             <div className={styles.logo}>
-              <span className={styles.logoSpace}>space</span>
-              <span className={styles.logoTime}>time</span>
+              <Image src="/logo.png" alt="Spacetime" width={200} height={50} style={{ objectFit: 'contain', height: '40px', width: 'auto' }} />
             </div>
             <p className={styles.tagline}>
               Hosting ambition with warm hospitality. A curated sanctuary for those who build, create, and lead — designed to elevate every workday.

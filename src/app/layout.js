@@ -1,4 +1,4 @@
-import { Cal_Sans, Manrope } from "next/font/google";
+import { Cal_Sans, Manrope, Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
 import { BookingProvider } from "@/context/BookingContext";
 import BookingModal from "@/components/BookingModal";
@@ -17,6 +17,13 @@ const manrope = Manrope({
   display: "swap",
 });
 
+const beVietnamPro = Be_Vietnam_Pro({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-be-vietnam",
+  display: "swap",
+});
+
 export const metadata = {
   title: "Spacetime | Premium Coworking Spaces",
   description:
@@ -29,7 +36,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${calSans.variable} ${manrope.variable}`}>
+    <html lang="en" className={`${calSans.variable} ${manrope.variable} ${beVietnamPro.variable}`}>
       <body>
         <BookingProvider>
           {children}

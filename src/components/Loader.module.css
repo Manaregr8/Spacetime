@@ -15,59 +15,70 @@
   visibility: hidden;
 }
 
-/* ── Logo word wrapper ───────────────────────────────── */
-.logoWrap {
-  display: flex;
-  align-items: baseline;
-  gap: 0;
+/* ── SVG Logo ───────────────────────────────── */
+.svgLogo {
+  width: 90%;
+  max-width: 400px;
+  height: auto;
 }
 
-/* ── Individual characters ───────────────────────────── */
-.char {
-  display: inline-block;
+/* ── Path Drawing Animations ───────────────────────────── */
+
+/* The word "space" inside the SVG */
+.animText {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawText 2s ease-out forwards, fillText 0.8s 2s forwards;
+}
+
+/* "time" — fades in at the same time space fills */
+.animFadeIn {
   opacity: 0;
-  animation: charDrop 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  line-height: 1;
+  animation: fadeIn 0.8s 2s ease-out forwards;
 }
 
-/* "space" — italic serif, light weight */
-.charSpace {
-  font-family: Georgia, "Times New Roman", serif;
-  font-style: italic;
-  font-weight: 300;
-  font-size: clamp(32px, 6vw, 56px);
-  color: rgba(255, 255, 255, 0.88);
-  letter-spacing: -0.5px;
+/* Keyframes */
+
+@keyframes drawText {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
-/* "time" — sans, slightly heavier */
-.charTime {
-  font-family: var(--font-heading), "Cal Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: clamp(32px, 6vw, 56px);
-  color: #f2b300;
-  letter-spacing: 0.04em;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-/* ── Bounce-drop keyframe ────────────────────────────── */
-@keyframes charDrop {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px) scaleY(1.1);
+@keyframes fillText {
+  from {
+    fill: transparent;
+    stroke: #ffffff;
   }
-  55% {
-    opacity: 1;
-    transform: translateY(8px) scaleY(0.95);
+  to {
+    fill: #ffffff;
+    stroke: transparent;
   }
-  72% {
-    transform: translateY(-5px) scaleY(1.04);
+}
+
+@keyframes fillPath {
+  from {
+    fill: transparent;
+    stroke: #ffffff;
   }
-  86% {
-    transform: translateY(3px) scaleY(0.98);
+  to {
+    fill: #ffffff;
+    stroke: transparent;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scaleY(1);
+}
+
+@keyframes fillCircle {
+  from {
+    fill: transparent;
+    stroke: #ffffff;
+  }
+  to {
+    fill: #fcbb2d;
+    stroke: transparent;
   }
 }

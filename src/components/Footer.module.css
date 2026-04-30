@@ -89,23 +89,8 @@
 }
 
 .logo {
-  font-size: 28px;
-  line-height: 1;
-  letter-spacing: -0.5px;
-}
-
-.logoSpace {
-  font-family: Georgia, "Times New Roman", serif;
-  font-style: italic;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.88);
-}
-
-.logoTime {
-  font-family: var(--font-heading), "Cal Sans", sans-serif;
-  font-weight: 400;
-  color: #f2b300;
-  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
 }
 
 .tagline {
@@ -170,7 +155,7 @@
 }
 
 .navLink:hover {
-  color: #f2b300;
+  color: #fcbb2d;
 }
 
 /* ── Contact column ───────────────────────────────────── */
@@ -204,7 +189,7 @@
 }
 
 .contactLink:hover {
-  color: #f2b300;
+  color: #fcbb2d;
 }
 
 .address {
@@ -229,7 +214,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #f2b300;
+  color: #fcbb2d;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -274,7 +259,7 @@
 }
 
 .bottomCta:hover {
-  color: #f2b300;
+  color: #fcbb2d;
 }
 
 .copyright {
@@ -328,18 +313,18 @@
   font-family: var(--font-heading), "Cal Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #f2b300; /* Vibrant brand gold */
+  color: #fcbb2d; /* Vibrant brand gold */
   white-space: nowrap;
   letter-spacing: 0.22em; /* Extra tracking for premium feel */
   text-transform: uppercase;
-  padding: 0 44px;
+  padding: 0 0 0 44px;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   cursor: default;
 }
 
 .tickerItem:hover {
-  color: #f2b300;
-  text-shadow: 0 0 12px rgba(242, 179, 0, 0.4); /* Soft glow */
+  color: #fcbb2d;
+  text-shadow: 0 0 12px rgba(252, 187, 45, 0.4); /* Soft glow */
 }
 
 .tickerDot {
@@ -390,7 +375,7 @@
   }
 
   .tickerItem {
-    padding: 0 16px;
+    padding: 0 0 0 16px;
     font-size: 11px;
   }
 

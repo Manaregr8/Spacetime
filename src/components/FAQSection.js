@@ -77,7 +77,7 @@ export default function FAQSection() {
     <section className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.header}>
-          <h2 className={styles.heading}>Frequently Asked Questions</h2>
+          <h2 className={styles.heading}>Frequently Asked <span style={{ color: "#fcbb2d", fontWeight: 800, letterSpacing: "-1px" }}>Questions</span></h2>
           <p className={styles.subheading}>
             Everything you need to know about joining the Spacetime community.
           </p>

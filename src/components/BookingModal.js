@@ -182,7 +182,7 @@ export default function BookingModal() {
               <span className={styles.submitMain}>
                 {status === "loading" ? "Sending…" : "Send my Request"}
               </span>
-              <span className={styles.submitSub}>We reply within one business hour. Limited daily invitations.</span>
+              <span className={styles.submitSub}>We reply within one business hour.</span>
             </button>
           </form>
         )}

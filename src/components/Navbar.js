@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useBooking } from "@/context/BookingContext";
 import styles from "./Navbar.module.css";
 
@@ -29,8 +30,7 @@ export default function Navbar() {
       <div className={styles.inner}>
         {/* Logo */}
         <Link href="/" className={styles.logo}>
-          <span className={styles.logoSpace}>space</span>
-          <span className={styles.logoTime}>time</span>
+          <Image src="/logo.png" alt="Spacetime" width={200} height={50} style={{ objectFit: 'contain', height: '36px', width: 'auto' }} priority />
         </Link>
 
         {/* Desktop Nav Links */}
@@ -49,7 +49,15 @@ export default function Navbar() {
           <div className={styles.phoneGroup}>
             <PhoneIcon />
             <a href="tel:+919810474703" className={styles.phoneNum}>+91 98104 74703</a>
-            <WaIcon />
+            <a
+              href="https://wa.me/919810474703"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp"
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              <WaIcon />
+            </a>
           </div>
           <button className={styles.ctaBtn} onClick={() => openModal("tour")}>
             Book a Private Tour

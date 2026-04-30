@@ -89,10 +89,11 @@
 .ctaWrapper {
   display: inline-flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   position: relative;
   overflow: hidden;
-  background: rgb(242, 177, 0);
+  background: #fcbb2d;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -147,7 +148,7 @@
 }
 
 .ctaWrapper:hover {
-  background-color: #f2b300;
+  background-color: #fcbb2d;
 }
 
 .ctaWrapper:hover::after {
@@ -233,60 +234,14 @@
   gap: 20px;
 }
 
-/* 180+ companies button pill ─────────────────────────── */
-.logosTag {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(242, 179, 0, 0.08);
-  border: 1px solid rgba(242, 179, 0, 0.3);
-  border-radius: 100px;
-  padding: 8px 18px 8px 12px;
-  width: fit-content;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  outline: none;
-}
-
-.logosTag:hover {
-  background: rgba(242, 179, 0, 0.15);
-  border-color: rgba(242, 179, 0, 0.6);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(242, 179, 0, 0.15);
-}
-
-.logosTagDot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #f2b300;
-  flex-shrink: 0;
-  box-shadow: 0 0 10px #f2b300;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  50% {
-    transform: scale(1.3);
-    opacity: 0.7;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
+/* 180+ companies text ─────────────────────────── */
 .logosTagText {
-  font-size: 13.5px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.95);
-  letter-spacing: 0.2px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
 /* Fade edges */

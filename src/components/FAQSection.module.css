@@ -23,7 +23,7 @@
   font-weight: 600;
   color: #111;
   margin-bottom: 16px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1.3px;
 }
 
 .subheading {
@@ -55,7 +55,7 @@
 .categoryTitle {
   font-size: 13px;
   font-weight: 700;
-  color: #f2b300;
+  color: #fcbb2d;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 24px;
@@ -121,7 +121,7 @@
 }
 
 .itemActive .icon {
-  color: #f2b300;
+  color: #fcbb2d;
 }
 
 .answer {
@@ -165,7 +165,7 @@
   }
 
   .section {
-    padding: 60px 0;
+    padding: 60px 0 0 0;
   }
 
   .heading {

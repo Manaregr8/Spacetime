@@ -51,8 +51,8 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-  background: rgba(242, 179, 0, 0.08);
-  border-left: 3px solid #f2b300;
+  background: rgba(252, 187, 45, 0.08);
+  border-left: 3px solid #fcbb2d;
   border-radius: 0 8px 8px 0;
   padding: 14px 20px;
   max-width: 100%;
@@ -63,7 +63,7 @@
 
 .flipNote strong {
   display: block;
-  color: #f2b300;
+  color: #fcbb2d;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.05em;

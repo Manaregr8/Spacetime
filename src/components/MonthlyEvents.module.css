@@ -13,15 +13,13 @@
   margin-bottom: 40px;
 }
 
-.header span {
-  display: block;
-  font-size: 14px;
-  font-weight: 700;
-  color: #777;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
+.subheading {
+  font-size: 16px;
+  color: #666;
+  margin-top: 8px;
+  font-weight: 400;
 }
+
 
 .heading {
   font-size: clamp(28px, 3vw, 44px); /* Standardized size */
@@ -99,7 +97,7 @@
 }
 
 .tag {
-  background: #f2b300;
+  background: #fcbb2d;
   color: #fff;
   padding: 6px 14px;
   border-radius: 6px;
@@ -162,7 +160,7 @@
 }
 
 .sideCard.activeCard {
-  border-color: #f2b300;
+  border-color: #fcbb2d;
   transform: translateX(-6px);
 }
 
@@ -203,7 +201,7 @@
 .sideEventDate {
   font-size: 10px;
   font-weight: 700;
-  color: #f2b300;
+  color: #fcbb2d;
   text-transform: uppercase;
   letter-spacing: 0.8px;
 }
@@ -213,7 +211,7 @@
   bottom: 0;
   left: 0;
   height: 3px;
-  background: #f2b300;
+  background: #fcbb2d;
   width: 100%;
   transform-origin: left;
   animation: progress 5s linear forwards;

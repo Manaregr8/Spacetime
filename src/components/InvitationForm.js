@@ -192,9 +192,7 @@ export default function InvitationForm() {
                 <span className={styles.submitMain}>
                   {status === "loading" ? "Sending…" : "Send my Invitation"}
                 </span>
-                <span className={styles.submitSub}>
-                  We reply within one business hour. Limited daily invitations.
-                </span>
+                <span className={styles.submitSub}>We reply within one business hour.</span>
               </button>
             </form>
           )}

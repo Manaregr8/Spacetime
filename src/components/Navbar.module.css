@@ -27,26 +27,10 @@
 /* ── Logo ──────────────────────────────────────────────── */
 .logo {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   color: #fff;
   text-decoration: none;
-  font-size: 28px;
-  line-height: 1;
   flex-shrink: 0;
-}
-
-.logoSpace {
-  font-style: italic;
-  font-weight: 300;
-  font-family: Georgia, "Times New Roman", serif;
-  letter-spacing: -0.3px;
-}
-
-.logoTime {
-  font-weight: 800;
-  font-family: "Arial Black", Arial, sans-serif;
-  letter-spacing: -0.5px;
-  color: #f2b300;
 }
 
 /* ── Nav Links ─────────────────────────────────────────── */
@@ -76,7 +60,7 @@
   left: 0;
   width: 100%;
   height: 1.5px;
-  background: #f2b300;
+  background: #fcbb2d;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.28s cubic-bezier(0.23, 1, 0.32, 1);
@@ -115,22 +99,23 @@
 
 .ctaBtn {
   display: inline-block;
-  background: linear-gradient(135deg, #ffc824, #f2b300);
-  color: #fff;
+  background: #fff;
+  color: #000;
   border-radius: 50px;
   padding: 10px 22px;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
   text-decoration: none;
   white-space: nowrap;
   border: none;
   cursor: pointer;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 14px rgba(242, 179, 0, 0.35);
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.15);
 }
 
 .ctaBtn:hover {
-  box-shadow: 0 6px 20px rgba(242, 179, 0, 0.5);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
   transform: translateY(-1px);
 }
 
@@ -215,7 +200,7 @@
 /* Close button */
 .drawerClose {
   align-self: flex-end;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   border: none;
   color: #fff;
   width: 38px;
@@ -230,7 +215,7 @@
 }
 
 .drawerClose:hover {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 /* Nav links */
@@ -245,13 +230,13 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 18px;
   font-weight: 600;
   font-family: var(--font-body), "Manrope", sans-serif;
   text-decoration: none;
   padding: 14px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   opacity: 0;
   transform: translateX(32px);
   transition: color 0.2s ease,
@@ -271,7 +256,7 @@
 .drawerLinkNum {
   font-size: 11px;
   font-weight: 400;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
   font-family: var(--font-body), "Manrope", sans-serif;
   min-width: 20px;
 }
@@ -286,11 +271,11 @@
 
 .drawerDivider {
   height: 1px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .drawerPhone {
-  color: rgba(255,255,255,0.55);
+  color: rgba(255, 255, 255, 0.55);
   font-size: 14px;
   font-family: var(--font-body), "Manrope", sans-serif;
   text-decoration: none;
@@ -298,8 +283,8 @@
 
 .drawerCta {
   display: block;
-  background: linear-gradient(135deg, #ffc824, #f2b300);
-  color: #fff;
+  background: #fff;
+  color: #000;
   border-radius: 50px;
   padding: 14px 24px;
   font-size: 14px;
@@ -311,11 +296,11 @@
   cursor: pointer;
   width: 100%;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 14px rgba(242, 179, 0, 0.35);
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.15);
 }
 
 .drawerCta:hover {
-  box-shadow: 0 6px 20px rgba(242, 179, 0, 0.5);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
   transform: translateY(-1px);
 }
 
@@ -331,6 +316,7 @@
 }
 
 @media (max-width:1176px) {
+
   .navLinks,
   .phoneGroup,
   .ctaBtn {

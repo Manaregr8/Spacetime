@@ -13,7 +13,7 @@ export default function LanyardSection() {
           <span className={styles.tag}>YOUR DAY PASS</span>
           <h2 className={styles.heading}>
             Pick up your day&nbsp;pass.<br />
-            Drag it. Feel it.
+            <span style={{ color: "#fcbb2d", fontWeight: 800 }}>Drag it. Feel it.</span>
           </h2>
           <p className={styles.desc}>
             Every member starts with a complimentary day inside one of our curated spaces. Grab the card on the right and claim yours in&nbsp;seconds.

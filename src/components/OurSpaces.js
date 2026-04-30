@@ -163,7 +163,7 @@ export default function OurSpaces() {
     <section id="our-spaces" className={styles.section}>
       <div className={styles.inner}>
         <div ref={headerRef} className={`${styles.header} ${styles.fadeUp}`}>
-          <h2 className={styles.sectionTitle}>Our <span style={{ color: "#f2b300", fontWeight: "bold" }}>Spaces</span></h2>
+          <h2 className={styles.sectionTitle}>Our <span style={{ color: "#fcbb2d", fontWeight: "bold" }}>Spaces</span></h2>
           <p className={styles.sectionSub}>Designed for those who lead</p>
         </div>
 

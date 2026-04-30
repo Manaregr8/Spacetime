@@ -13,21 +13,21 @@ import styles from './Testimonials.module.css';
 const testimonialsData = [
   {
     id: 1,
-    image: '/person_1.png',
+    image: '/testimonials/Praveen Hatti.png',
     text: "Spacetime isn't just an office, it's the first place my team looks forward to coming to every day.",
-    name: 'Praveen H',
+    name: 'Praveen Hatti',
     post: 'Founder & CEO, Avacasa'
   },
   {
     id: 2,
-    image: '/person_2.png',
+    image: '/testimonials/Pankaj-Jain.png',
     text: "The hospitality and attention to detail make it feel like a private club for startups. We've grown from 8 to 28 people here without missing a beat.",
-    name: 'Pankaz Jaiin',
+    name: 'Pankaj Jain',
     post: 'Chairman, RPZ / CORFAC International'
   },
   {
     id: 3,
-    image: '/person_3.png',
+    image: '/testimonials/Nupur.png',
     text: "Best decision we made in 2025. The community, the spaces, the services — everything is top notch.",
     name: 'Nupur Verma',
     post: 'CMO, Achromic Ventures'
@@ -35,7 +35,7 @@ const testimonialsData = [
 ];
 
 const QuoteIcon = () => (
-  <svg viewBox="0 0 24 24" fill="#2c2c2c">
+  <svg viewBox="0 0 24 24" fill="#ffffff">
     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
   </svg>
 );
@@ -47,7 +47,7 @@ export default function Testimonials() {
         <div className={styles.container}>
 
           <div className={styles.leftCol}>
-            <h2 className={styles.heading}>Real voices from<br />the Spacetime<br />community</h2>
+            <h2 className={styles.heading}>Real voices from<br />the <span style={{ color: "#fcbb2d", fontWeight: 800 }}>Spacetime</span><br /><span style={{ color: "#fcbb2d", fontWeight: 800 }}>community</span></h2>
             <p className={styles.desc}>
               Founders, operators and creators who chose Spacetime and never looked back. Their work speaks. Their words do too.
             </p>
@@ -95,7 +95,7 @@ export default function Testimonials() {
                         src={item.image}
                         alt={item.name}
                         fill
-                        style={{ objectFit: 'cover' }}
+                        style={{ objectFit: 'cover', objectPosition: 'top' }}
                       />
                     </div>
                     <div className={styles.cardContent}>

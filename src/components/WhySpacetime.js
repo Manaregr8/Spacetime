@@ -102,7 +102,7 @@ export default function WhySpacetime() {
           <div ref={leftRef} className={`${styles.left} ${styles.fadeUp}`}>
             <h2 className={styles.heading}>
               Not for everyone.{" "}
-              <span className={styles.headingBlock} style={{ color: "#f2b300", fontWeight: "bold" }}>Exactly as intended.</span>
+              <span className={styles.headingBlock} style={{ color: "#fcbb2d", fontWeight: "bold" }}>Exactly as intended.</span>
             </h2>
             <p className={styles.subtext}>
               Because once you've experienced it, returning to ordinary is no

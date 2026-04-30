@@ -146,8 +146,8 @@ export default function MonthlyEvents() {
     <section className={styles.section} id="events">
       <div className={styles.inner}>
         <div className={styles.header}>
-          <span>COMMUNITY & EVENTS</span>
-          <h2 className={styles.heading}>More than desks. <span style={{ color: "#f2b300" }}>A living ecosystem.</span></h2>
+          <h2 className={styles.heading}>More than <span style={{ color: "#fcbb2d", fontWeight: 800 }}>desks.</span></h2>
+          <p className={styles.subheading}>A living ecosystem.</p>
         </div>
 
         <div className={styles.bentoContainer} ref={containerRef}>
