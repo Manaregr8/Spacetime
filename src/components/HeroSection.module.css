@@ -3,15 +3,21 @@
   position: relative;
   aspect-ratio: 16 / 7;
   width: 100%;
-  background-image: url("/homebannerImages/create_a_office_202604020015.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding-top: 72px;
   /* Navbar height */
+  overflow: hidden;
+}
+
+.heroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 /* Dark gradient overlay — heavier on the left */

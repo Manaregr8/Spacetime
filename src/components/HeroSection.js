@@ -11,12 +11,23 @@ const bannerLogos = [
 ];
 
 export default function HeroSection() {
-  const { openModal } = useBooking();
+  const { openModal, setHeroLoaded } = useBooking();
   // Quadruple for seamless infinite marquee
   const marqueeItems = [...bannerLogos, ...bannerLogos, ...bannerLogos, ...bannerLogos];
 
   return (
     <section className={styles.hero}>
+      {/* LCP Optimization: Use Image component with priority instead of CSS background */}
+      <Image
+        src="/homebannerImages/create_a_office_202604020015.webp"
+        alt="Spacetime Office"
+        fill
+        priority
+        fetchPriority="high"
+        className={styles.heroImage}
+        style={{ objectFit: "cover" }}
+        onLoad={() => setHeroLoaded(true)}
+      />
       {/* Overlay gradients */}
       <div className={styles.overlay} />
       <div className={styles.vignette} />

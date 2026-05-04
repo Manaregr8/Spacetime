@@ -5,6 +5,7 @@ const BookingContext = createContext(null);
 
 export function BookingProvider({ children }) {
   const [modalType, setModalType] = useState(null); // null | 'full' | 'tour'
+  const [isHeroLoaded, setHeroLoaded] = useState(false);
 
   const openModal = useCallback((type = "full") => setModalType(type), []);
   const closeModal = useCallback(() => setModalType(null), []);
@@ -12,7 +13,7 @@ export function BookingProvider({ children }) {
   const isOpen = !!modalType;
 
   return (
-    <BookingContext.Provider value={{ isOpen, modalType, openModal, closeModal }}>
+    <BookingContext.Provider value={{ isOpen, modalType, openModal, closeModal, isHeroLoaded, setHeroLoaded }}>
       {children}
     </BookingContext.Provider>
   );
