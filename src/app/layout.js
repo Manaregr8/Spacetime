@@ -1,7 +1,9 @@
 import { Cal_Sans, Manrope, Be_Vietnam_Pro, Tsukimi_Rounded } from "next/font/google";
 import "./globals.css";
+import dynamic from "next/dynamic";
 import { BookingProvider } from "@/context/BookingContext";
-import BookingModal from "@/components/BookingModal";
+
+const BookingModal = dynamic(() => import("@/components/BookingModal"), { ssr: false });
 
 const tsukimi = Tsukimi_Rounded({
   subsets: ["latin"],

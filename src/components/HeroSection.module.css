@@ -114,29 +114,29 @@
 }
 
 @keyframes continuousBlip {
-  0% { left: -100%; }
-  20% { left: 200%; }
-  100% { left: 200%; }
+  0% { transform: translateX(-200%) skewX(-20deg); }
+  20% { transform: translateX(300%) skewX(-20deg); }
+  100% { transform: translateX(300%) skewX(-20deg); }
 }
 
 @keyframes hoverBlip {
-  0% { left: -100%; }
-  45% { left: 200%; }
-  48% { left: -100%; }
-  90% { left: 200%; }
-  100% { left: 200%; }
+  0% { transform: translateX(-200%) skewX(-20deg); }
+  45% { transform: translateX(300%) skewX(-20deg); }
+  48% { transform: translateX(-200%) skewX(-20deg); }
+  90% { transform: translateX(300%) skewX(-20deg); }
+  100% { transform: translateX(300%) skewX(-20deg); }
 }
 
 .ctaWrapper::after {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
+  left: 0;
   width: 50%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
-  transform: skewX(-20deg);
-  transition: left 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transform: translateX(-200%) skewX(-20deg);
+  will-change: transform;
   z-index: 2;
   pointer-events: none;
   animation: continuousBlip 3s linear infinite;
@@ -205,12 +205,13 @@
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
+  left: 0;
   width: 50%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
-  transform: skewX(-20deg);
-  transition: all 0.6s ease;
+  transform: translateX(-200%) skewX(-20deg);
+  will-change: transform;
+  transition: transform 0.6s ease;
   pointer-events: none;
   z-index: 2;
 }
@@ -272,6 +273,8 @@
   align-items: center;
   gap: 56px;
   width: max-content;
+  will-change: transform;
+  backface-visibility: hidden;
   animation: ticker 28s linear infinite;
 }
 

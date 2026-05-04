@@ -24,17 +24,23 @@ export default function Home() {
   const [showDeferred, setShowDeferred] = useState(false);
 
   useEffect(() => {
-    // To kill TBT, we wait for the browser to be "idle" or a safe delay
-    // before rendering the heavy components that trigger JS evaluation.
-    const idleCallback = window.requestIdleCallback || ((cb) => setTimeout(cb, 1000));
+    // To kill TBT, we wait until the loader is completely gone.
+    // This ensures the initial "entrance" frame is 100% smooth.
+    const handleLoaderGone = () => {
+      const idleCallback = window.requestIdleCallback || ((cb) => setTimeout(cb, 500));
+      idleCallback(() => {
+        setShowDeferred(true);
+      });
+    };
+
+    window.addEventListener("loader-gone", handleLoaderGone);
     
-    const handle = idleCallback(() => {
-      setShowDeferred(true);
-    });
+    // Safety fallback: if for some reason the event doesn't fire
+    const timer = setTimeout(() => setShowDeferred(true), 4000);
 
     return () => {
-      if (window.cancelIdleCallback) window.cancelIdleCallback(handle);
-      else clearTimeout(handle);
+      window.removeEventListener("loader-gone", handleLoaderGone);
+      clearTimeout(timer);
     };
   }, []);
 

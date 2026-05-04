@@ -39,6 +39,8 @@ export default function Loader() {
     setFadeOut(true);
     setTimeout(() => {
       setGone(true);
+      // Signal to page.js that the heavy lifting can begin
+      window.dispatchEvent(new CustomEvent("loader-gone"));
     }, FADE_DURATION);
   };
 
