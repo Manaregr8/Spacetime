@@ -11,31 +11,31 @@ import styles from "./TheExperience.module.css";
 const slides = [
   {
     id: 1,
-    image: "/homebannerImages/remove_the_big_202604020018.png",
+    image: "/homebannerImages/remove_the_big_202604020018.webp",
     title: "Where Work Feels Like a Privilege",
     desc: "Every corner designed to make you want to stay.",
   },
   {
     id: 2,
-    image: "/homebannerImages/create_a_office_202604020015.png",
+    image: "/homebannerImages/create_a_office_202604020015.webp",
     title: "A Community That Moves With You",
     desc: "Founders, operators and creators — all under one roof.",
   },
   {
     id: 3,
-    image: "/homebannerImages/Enhance_office_image_202604020030.jpeg",
+    image: "/homebannerImages/Enhance_office_image_202604020030.webp",
     title: "Hospitality at Every Turn",
     desc: "Warm service that anticipates before you ask.",
   },
   {
     id: 4,
-    image: "/homebannerImages/event2.png",
+    image: "/homebannerImages/event2.webp",
     title: "Spaces That Speak Your Language",
     desc: "Curated environments for those who demand excellence.",
   },
   {
     id: 5,
-    image: "/homebannerImages/Enhance_office_modern_202604020034.jpeg",
+    image: "/homebannerImages/Enhance_office_modern_202604020034.webp",
     title: "Built for the Long Game",
     desc: "Scale seamlessly from 1 seat to an entire floor.",
   },

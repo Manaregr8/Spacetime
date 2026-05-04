@@ -83,7 +83,7 @@ export default function InvitationForm() {
             <div className={styles.host}>
               <div className={styles.avatar}>
                 <Image
-                  src="/bannerLogo/sm(2).png"
+                  src="/bannerLogo/sm(2).webp"
                   alt="Akanksha"
                   fill
                   style={{ objectFit: "cover" }}

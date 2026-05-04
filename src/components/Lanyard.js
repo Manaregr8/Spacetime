@@ -85,9 +85,9 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
   };
 
   const { nodes, materials } = useGLTF("/card.glb");
-  const texture = useTexture("/lanyard.png");
-  // Drop your own card design at /public/card-face.png to replace the default
-  const cardTexture = useTexture("/g27.png");
+  const texture = useTexture("/lanyard.webp");
+  // Drop your own card design at /public/card-face.webp to replace the default
+  const cardTexture = useTexture("/g27.webp");
   cardTexture.flipY = false;
   // Card UV only spans V=0→0.757 (not the full 1.0).
   // repeat.y=1/0.757 stretches that range to cover the full image height,
@@ -233,4 +233,4 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
 }
 
 useGLTF.preload("/card.glb");
-useTexture.preload("/card-face.png");
+useTexture.preload("/card-face.webp");

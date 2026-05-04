@@ -1,15 +1,25 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./OurAddresses.module.css";
 
 const locations = [
+  {
+    id: "mohan-estate",
+    name: "Mohan Estate",
+    meta: "300+ seats | 30,000 sq ft",
+    tag: "COWORKING & MANAGED OFFICES",
+    image: "/homebannerImages/subtle_masterclass.webp",
+    priceHighlight: "From ₹8,000/mo",
+    href: "/mohan-estate",
+  },
   {
     id: "gk2",
     name: "Greater Kailash II",
     meta: "1,200 seats | 4 centers",
     tag: "COWORKING & MANAGED OFFICES",
-    image: "/homebannerImages/Enhance_office_image_202604020030.jpeg",
+    image: "/homebannerImages/Enhance_office_image_202604020030.webp",
     priceHighlight: "From ₹9,999/mo",
   },
   {
@@ -17,7 +27,7 @@ const locations = [
     name: "Saket, Westend Marg",
     meta: "630 seats | 3 centers",
     tag: "COWORKING & MANAGED OFFICES",
-    image: "/homebannerImages/event2.png",
+    image: "/homebannerImages/event2.webp",
     priceHighlight: "From ₹7,999/mo",
   },
   {
@@ -25,7 +35,7 @@ const locations = [
     name: "NSIC Okhla",
     meta: "345 seats | Managed offices",
     tag: "COWORKING & MANAGED OFFICES",
-    image: "/homebannerImages/Enhance_office_modern_202604020034.jpeg",
+    image: "/homebannerImages/Enhance_office_modern_202604020034.webp",
     priceHighlight: "From ₹14,499/mo",
   },
   {
@@ -33,7 +43,7 @@ const locations = [
     name: "Panchsheel Enclave",
     meta: "120 seats",
     tag: "COWORKING",
-    image: "/homebannerImages/remove_the_big_202604020018.png",
+    image: "/homebannerImages/remove_the_big_202604020018.webp",
     priceHighlight: "From ₹7,999/mo",
   },
   {
@@ -41,7 +51,7 @@ const locations = [
     name: "Sarita Vihar",
     meta: "240 seats",
     tag: "COWORKING",
-    image: "/homebannerImages/create_a_office_202604020015.png",
+    image: "/homebannerImages/create_a_office_202604020015.webp",
     priceHighlight: "From ₹8,499/mo",
   },
   {
@@ -49,7 +59,7 @@ const locations = [
     name: "Connaught Place",
     meta: "Premium Managed Offices",
     tag: "MANAGED OFFICES",
-    image: "/homebannerImages/Enhance_office_image_202604020030.jpeg",
+    image: "/homebannerImages/Enhance_office_image_202604020030.webp",
     priceHighlight: "Contact Sales",
   },
   {
@@ -57,7 +67,7 @@ const locations = [
     name: "Indore",
     meta: "Managed Offices",
     tag: "MANAGED OFFICES",
-    image: "/homebannerImages/event2.png",
+    image: "/homebannerImages/event2.webp",
     priceHighlight: "Contact Sales",
   },
 ];
@@ -82,14 +92,8 @@ function AddressCard({ location, index }) {
     return () => observer.disconnect();
   }, []);
 
-  return (
-    <div
-      ref={ref}
-      className={`${styles.card} ${styles.fadeUp}`}
-      style={{ transitionDelay: `${index * 80}ms` }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
+  const CardContent = (
+    <>
       <Image
         src={location.image}
         alt={location.name}
@@ -112,6 +116,33 @@ function AddressCard({ location, index }) {
           <span className={styles.priceHighlight}>{location.priceHighlight}</span>
         )}
       </div>
+    </>
+  );
+
+  if (location.href) {
+    return (
+      <Link
+        ref={ref}
+        href={location.href}
+        className={`${styles.card} ${styles.fadeUp}`}
+        style={{ transitionDelay: `${index * 80}ms` }}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
+        {CardContent}
+      </Link>
+    );
+  }
+
+  return (
+    <div
+      ref={ref}
+      className={`${styles.card} ${styles.fadeUp}`}
+      style={{ transitionDelay: `${index * 80}ms` }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      {CardContent}
     </div>
   );
 }
@@ -150,11 +181,6 @@ export default function OurAddresses() {
             <AddressCard key={loc.id} location={loc} index={i} />
           ))}
           {/* 8th card — desktop arrow only */}
-          <div className={styles.arrowCard}>
-            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.arrowIcon}>
-              <path d="M10 30H50M50 30L34 14M50 30L34 46" stroke="#111" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
         </div>
 
         <p className={styles.footerNote}>

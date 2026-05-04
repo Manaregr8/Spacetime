@@ -7,11 +7,11 @@ import { useBooking } from "@/context/BookingContext";
 import styles from "./Navbar.module.css";
 
 const navLinks = [
-  { label: "Locations", href: "#our-addresses" },
-  { label: "Spaces", href: "#our-spaces" },
-  { label: "Experience", href: "#the-experience" },
-  { label: "Virtual Office", href: "#virtual-office" },
-  { label: "Community", href: "#events" },
+  { label: "Locations", href: "/#our-addresses" },
+  { label: "Spaces", href: "/#our-spaces" },
+  { label: "Experience", href: "/#the-experience" },
+  { label: "Virtual Office", href: "/#virtual-office" },
+  { label: "Community", href: "/#events" },
 ];
 
 export default function Navbar() {
@@ -30,7 +30,7 @@ export default function Navbar() {
       <div className={styles.inner}>
         {/* Logo */}
         <Link href="/" className={styles.logo}>
-          <Image src="/logo.png" alt="Spacetime" width={200} height={50} style={{ objectFit: 'contain', height: '36px', width: 'auto' }} priority />
+          <Image src="/logo.webp" alt="Spacetime" width={200} height={50} style={{ objectFit: 'contain', height: '36px', width: 'auto' }} priority />
         </Link>
 
         {/* Desktop Nav Links */}

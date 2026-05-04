@@ -5,8 +5,8 @@ import styles from "./HeroSection.module.css";
 
 const bannerLogos = [
   "/bannerLogo/sm.webp",
-  "/bannerLogo/sm (1).png",
-  "/bannerLogo/sm.png",
+  "/bannerLogo/sm (1).webp",
+  "/bannerLogo/sm.webp",
   "/bannerLogo/sm.svg",
 ];
 

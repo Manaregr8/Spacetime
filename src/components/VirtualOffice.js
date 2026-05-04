@@ -40,7 +40,7 @@ export default function VirtualOffice() {
           {/* Left image */}
           <div className={styles.imageWrap}>
             <Image
-              src="/homebannerImages/md.png"
+              src="/homebannerImages/md.webp"
               alt="Virtual Office receptionist"
               fill
               style={{ objectFit: "cover" }}

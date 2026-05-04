@@ -6,12 +6,12 @@ import { useBooking } from "@/context/BookingContext";
 import styles from "./Footer.module.css";
 
 const quickLinks = [
-  { label: "Locations", href: "#our-addresses" },
-  { label: "Spaces", href: "#our-spaces" },
-  { label: "Virtual Office", href: "#virtual-office" },
-  { label: "Community", href: "#events" },
-  { label: "Book a Tour", href: "#contact" },
-  { label: "Careers", href: "#contact" },
+  { label: "Locations", href: "/#our-addresses" },
+  { label: "Spaces", href: "/#our-spaces" },
+  { label: "Virtual Office", href: "/#virtual-office" },
+  { label: "Community", href: "/#events" },
+  { label: "Book a Tour", href: "/#contact" },
+  { label: "Careers", href: "/#contact" },
 ];
 
 const locationLabels = [
@@ -51,7 +51,7 @@ export default function Footer() {
           {/* Col 1 — Brand */}
           <div className={styles.brand}>
             <div className={styles.logo}>
-              <Image src="/logo.png" alt="Spacetime" width={200} height={50} style={{ objectFit: 'contain', height: '40px', width: 'auto' }} />
+              <Image src="/logo.webp" alt="Spacetime" width={200} height={50} style={{ objectFit: 'contain', height: '40px', width: 'auto' }} />
             </div>
             <p className={styles.tagline}>
               Hosting ambition with warm hospitality. A curated sanctuary for those who build, create, and lead — designed to elevate every workday.

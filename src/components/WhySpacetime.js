@@ -110,7 +110,7 @@ export default function WhySpacetime() {
             </p>
             <div className={styles.imageWrap}>
               <Image
-                src="/homebannerImages/Enhance_office_image_202604020030.jpeg"
+                src="/homebannerImages/Enhance_office_image_202604020030.webp"
                 alt="Spacetime interior"
                 fill
                 style={{ objectFit: "cover" }}

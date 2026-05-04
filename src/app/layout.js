@@ -36,8 +36,8 @@ export const metadata = {
   description:
     "Curated sanctuaries for those who build. Hospitality-first. Design that elevates.",
   icons: {
-    icon: "/g2.png",
-    apple: "/g2.png",
+    icon: "/g2.webp",
+    apple: "/g2.webp",
   },
 };
 

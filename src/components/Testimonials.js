@@ -13,21 +13,21 @@ import styles from './Testimonials.module.css';
 const testimonialsData = [
   {
     id: 1,
-    image: '/testimonials/Praveen Hatti.png',
+    image: '/testimonials/Praveen Hatti.webp',
     text: "Spacetime isn't just an office, it's the first place my team looks forward to coming to every day.",
     name: 'Praveen Hatti',
     post: 'Founder & CEO, Avacasa'
   },
   {
     id: 2,
-    image: '/testimonials/Pankaj-Jain.png',
+    image: '/testimonials/Pankaj-Jain.webp',
     text: "The hospitality and attention to detail make it feel like a private club for startups. We've grown from 8 to 28 people here without missing a beat.",
     name: 'Pankaj Jain',
     post: 'Chairman, RPZ / CORFAC International'
   },
   {
     id: 3,
-    image: '/testimonials/Nupur.png',
+    image: '/testimonials/Nupur.webp',
     text: "Best decision we made in 2025. The community, the spaces, the services — everything is top notch.",
     name: 'Nupur Verma',
     post: 'CMO, Achromic Ventures'
