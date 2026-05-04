@@ -94,6 +94,7 @@ function SpaceCard({ space, index, onCtaClick, expanded, onExpand }) {
             src={space.image}
             alt={space.altText}
             fill
+            quality={60}
             style={{ objectFit: "cover" }}
             sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
           />
@@ -113,6 +114,7 @@ function SpaceCard({ space, index, onCtaClick, expanded, onExpand }) {
           src={space.image}
           alt={space.altText}
           fill
+          quality={60}
           style={{ objectFit: "cover" }}
           sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
         />

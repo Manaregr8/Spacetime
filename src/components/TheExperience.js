@@ -97,6 +97,7 @@ export default function TheExperience() {
                   src={slide.image}
                   alt={slide.title}
                   fill
+                  quality={60}
                   style={{ objectFit: "cover" }}
                   sizes="(max-width: 768px) 90vw, 60vw"
                 />

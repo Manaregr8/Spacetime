@@ -24,6 +24,7 @@ export default function HeroSection() {
         fill
         priority
         fetchPriority="high"
+        quality={60}
         className={styles.heroImage}
         style={{ objectFit: "cover" }}
         onLoad={() => setHeroLoaded(true)}

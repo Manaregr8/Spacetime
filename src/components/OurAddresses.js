@@ -98,6 +98,7 @@ function AddressCard({ location, index }) {
         src={location.image}
         alt={location.name}
         fill
+        quality={60}
         style={{ objectFit: "cover" }}
         sizes="(max-width: 768px) 100vw, 25vw"
       />
