@@ -191,7 +191,6 @@ export default function MonthlyEvents() {
                   alt={activeEvent.title}
                   fill
                   style={{ objectFit: "cover" }}
-                  priority
                   sizes="(max-width: 1200px) 100vw, 60vw"
                 />
               </div>
