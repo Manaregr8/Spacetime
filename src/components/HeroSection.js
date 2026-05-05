@@ -6,8 +6,14 @@ import styles from "./HeroSection.module.css";
 const bannerLogos = [
   "/bannerLogo/sm.webp",
   "/bannerLogo/sm (1).webp",
-  "/bannerLogo/sm.webp",
   "/bannerLogo/sm.svg",
+  "/bannerLogo/art.png",
+  "/bannerLogo/bolt.png",
+  "/bannerLogo/energia.png",
+  "/bannerLogo/on purpose.png",
+  "/bannerLogo/redbus.png",
+  "/bannerLogo/renewables.png",
+  "/bannerLogo/waaree.png",
 ];
 
 export default function HeroSection() {
@@ -65,10 +71,9 @@ export default function HeroSection() {
                   <Image
                     src={src}
                     alt=""
-                    height={36}
-                    width={0}
-                    sizes="200px"
-                    style={{ width: "auto", height: "clamp(24px, 3vw, 36px)", objectFit: "contain" }}
+                    height={32}
+                    width={100}
+                    style={{ width: "100%", height: "clamp(20px, 2.5vw, 32px)", objectFit: "contain" }}
                   />
                 </div>
               ))}

@@ -73,8 +73,8 @@ export default function BookingModal() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ 
-          ...form, 
+        body: JSON.stringify({
+          ...form,
           source: modalType === 'tour' ? "Private Tour" : (modalType === 'virtual' ? "Virtual Office" : form.option),
           option: modalType === 'tour' ? "Private Tour" : (modalType === 'virtual' ? "Virtual Office" : form.option)
         }),
@@ -113,7 +113,7 @@ export default function BookingModal() {
               {modalType === "virtual" ? "Your Virtual Office is ready." : <>Your invitation is<br />ready.</>}
             </h2>
             <p className={styles.desc}>
-              {modalType === "virtual" 
+              {modalType === "virtual"
                 ? "Secure your prestigious Delhi-NCR address and join a community of 180+ ambitious companies. Professional, discreet, and hospitality-led."
                 : "Experience the difference between renting space and being hosted. Claim a full complimentary day or 3 hours in one of our private rooms — no strings, no pressure. Or book a private walkthrough."
               }
@@ -121,7 +121,7 @@ export default function BookingModal() {
             <div className={styles.host}>
               <div className={styles.avatar}>
                 <Image
-                  src="/bannerLogo/sm(2).webp"
+                  src="/akanshaMam.jpeg"
                   alt="Akanksha"
                   fill
                   style={{ objectFit: "cover" }}
@@ -161,7 +161,7 @@ export default function BookingModal() {
               <span className={styles.flag} aria-label="India">🇮🇳</span>
               <input className={`${styles.input} ${styles.phoneInput}`} type="tel" name="phone" placeholder="Write your phone number" value={form.phone} onChange={handleChange} required autoComplete="tel" />
             </div>
-            
+
             {modalType !== "tour" && modalType !== "virtual" && (
               <div className={styles.selectWrap}>
                 <select className={styles.select} name="option" value={form.option} onChange={handleChange} required>
