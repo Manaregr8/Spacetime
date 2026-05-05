@@ -1,5 +1,4 @@
-"use client";
-
+import React, { useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useBooking } from "@/context/BookingContext";
@@ -39,6 +38,52 @@ const tickerItems = [
 
 export default function Footer() {
   const { openModal } = useBooking();
+  const marqueeRef = useRef(null);
+  const velocityRef = useRef(0);
+  const positionRef = useRef(-50);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    let animationFrameId;
+
+    const animate = () => {
+      // Base auto-scroll speed (moves left slightly)
+      const baseSpeed = -0.015;
+
+      // Decay scroll velocity over time for smoothness
+      velocityRef.current *= 0.95;
+
+      // Combine base auto-scroll with scroll-induced movement
+      positionRef.current += baseSpeed + velocityRef.current;
+
+      // Keep within seamless looping bounds (-50% to 0%)
+      if (positionRef.current > 0) positionRef.current = -50;
+      if (positionRef.current < -50) positionRef.current = 0;
+
+      if (marqueeRef.current) {
+        marqueeRef.current.style.transform = `translateX(${positionRef.current}%)`;
+      }
+
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      const diff = Math.abs(currentY - lastScrollY.current);
+
+      // Add rightward velocity whenever scroll happens (up or down)
+      velocityRef.current += diff * 0.001;
+      lastScrollY.current = currentY;
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    animationFrameId = requestAnimationFrame(animate);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
 
   // Duplicate for seamless loop
   const allTicker = [...tickerItems, ...tickerItems];
@@ -157,7 +202,7 @@ export default function Footer() {
 
       {/* ── CTA Marquee Section ── */}
       <div className={styles.ctaSection}>
-        <div className={styles.marqueeTrack}>
+        <div className={styles.marqueeTrack} ref={marqueeRef} style={{ animation: 'none' }}>
           <h2 className={styles.marqueeText}>
             <span>experience spacetime</span>
             <span>experience spacetime</span>
