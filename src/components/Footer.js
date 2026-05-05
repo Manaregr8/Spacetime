@@ -155,15 +155,29 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* ── Auto-scrolling ticker ── */}
-      <div className={styles.ticker}>
-        <div className={styles.tickerTrack}>
-          {allTicker.map((item, i) => (
-            <span key={i} className={styles.tickerItem}>
-              {item}
-              <span className={styles.tickerDot}>·</span>
-            </span>
-          ))}
+      {/* ── CTA Marquee Section ── */}
+      <div className={styles.ctaSection}>
+        <div className={styles.marqueeTrack}>
+          <h2 className={styles.marqueeText}>
+            <span>experience spacetime</span>
+            <span>experience spacetime</span>
+            <span>experience spacetime</span>
+            <span>experience spacetime</span>
+            <span>experience spacetime</span>
+            <span>experience spacetime</span>
+            <span>experience spacetime</span>
+            <span>experience spacetime</span>
+            <span>experience spacetime</span>
+            <span>experience spacetime</span>
+            <span>experience spacetime</span>
+            <span>experience spacetime</span>
+          </h2>
+        </div>
+        <div className={styles.ctaOverlay}>
+          <button className={styles.bigCta} onClick={() => openModal("tour")}>
+            <span>Book my private tour</span>
+            <img className={styles.arrow} src="./path3.svg"></img>
+          </button>
         </div>
       </div>
 
@@ -171,9 +185,7 @@ export default function Footer() {
       <div className={styles.bottomBar}>
         <div className={styles.bottomInner}>
           <div className={styles.bottomLeft}>
-            <button className={styles.bottomCta} onClick={() => openModal("tour")}>
-              Book a Private Walkthrough &rarr;
-            </button>
+
             <p className={styles.copyright}>© 2026 Spacetime. A private club for those who build.</p>
           </div>
           <div className={styles.legal}>

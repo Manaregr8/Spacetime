@@ -14,6 +14,133 @@
   max-width: 100vw;
 }
 
+.ctaSection {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 50px 0;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.marqueeTrack {
+  display: flex;
+  white-space: nowrap;
+  animation: marqueeScrollRight 800s linear infinite;
+  width: max-content;
+  margin-top: -80px;
+}
+
+.marqueeText {
+  font-family: var(--font-be-vietnam), sans-serif;
+  font-size: 350px;
+
+  text-transform: capitalize;
+  font-weight: 900;
+  color: #fcbb2d;
+  /* Extremely subtle ghost text */
+  margin: 0;
+  letter-spacing: -10px;
+  display: flex;
+  gap: 60px;
+  line-height: 1;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+
+
+.marqueeText span {
+  font-weight: 300;
+  text-transform: lowercase;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  opacity: 0.1;
+  /* Faint gold for spans */
+}
+
+.yellow {
+  opacity: 1;
+  color: #fcbb2d;
+}
+
+@keyframes marqueeScrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.ctaOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+
+
+.bigCta {
+  position: relative;
+  overflow: hidden;
+  background: none;
+  border: none;
+  background-color: white;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.4s ease;
+  font-family: var(--font-body), "Manrope", sans-serif;
+  color: black;
+  border: 1px solid #2c2c2c36;
+  padding: 15px 20px;
+  border-radius: 5px;
+  z-index: 1;
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.arrow {
+  width: 10px;
+}
+
+.bigCta::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background-color: #fcbb2d;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: -1;
+}
+
+.bigCta:hover {
+  color: white;
+}
+
+.bigCta:hover .arrow {
+  filter: invert(1) brightness(2);
+}
+
+.bigCta:hover::before {
+  transform: translateY(0);
+}
+
 .marqueeOuter {
   overflow: hidden;
   width: 100%;
@@ -33,7 +160,7 @@
   display: flex;
   gap: 56px;
   width: max-content;
-  animation: marqueeScroll 22s linear infinite;
+  animation: marqueeScroll 200s linear infinite;
 }
 
 .marqueeTrack:hover {
@@ -227,6 +354,7 @@
 .bottomBar {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0;
+  background-color: white;
 }
 
 .bottomInner {
@@ -245,11 +373,15 @@
   gap: 16px;
 }
 
+.ctaSection {
+  background-color: white;
+}
+
 .bottomCta {
   background: none;
   border: none;
   padding: 0;
-  color: #fff;
+  color: black;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
@@ -264,7 +396,8 @@
 
 .copyright {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.45); /* Same as legalLink */
+  color: black;
+  /* Same as legalLink */
   font-family: var(--font-body), "Manrope", sans-serif;
 }
 
@@ -275,7 +408,7 @@
 
 .legalLink {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.45);
+  color: black;
   text-decoration: none;
   font-family: var(--font-body), "Manrope", sans-serif;
   transition: color 0.18s;
@@ -313,9 +446,11 @@
   font-family: var(--font-heading), "Cal Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #fcbb2d; /* Vibrant brand gold */
+  color: #fcbb2d;
+  /* Vibrant brand gold */
   white-space: nowrap;
-  letter-spacing: 0.22em; /* Extra tracking for premium feel */
+  letter-spacing: 0.22em;
+  /* Extra tracking for premium feel */
   text-transform: uppercase;
   padding: 0 0 0 44px;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
@@ -324,7 +459,8 @@
 
 .tickerItem:hover {
   color: #fcbb2d;
-  text-shadow: 0 0 12px rgba(252, 187, 45, 0.4); /* Soft glow */
+  text-shadow: 0 0 12px rgba(252, 187, 45, 0.4);
+  /* Soft glow */
 }
 
 .tickerDot {
@@ -341,6 +477,16 @@
 
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@media(max-width:1212px) {
+  .marqueeText {
+    font-size: 150px;
+  }
+
+  .marqueeTrack {
+    margin-top: -30px;
   }
 }
 
@@ -381,5 +527,19 @@
 
   .tickerDot {
     margin-left: 16px;
+  }
+}
+
+@media(max-width:586px) {
+  .marqueeText {
+    font-size: 100px;
+  }
+
+  .marqueeTrack {
+    margin-top: -30px;
+  }
+
+  .bigCta {
+    margin-top: 70px;
   }
 }

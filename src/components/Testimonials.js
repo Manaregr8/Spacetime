@@ -1,7 +1,6 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -51,66 +50,52 @@ export default function Testimonials() {
             <p className={styles.desc}>
               Founders, operators and creators who chose Spacetime and never looked back. Their work speaks. Their words do too.
             </p>
-            <Link href="/" className={styles.contactLink}>
-              contact now -{'>'}
-            </Link>
-
-            <div className={styles.customNavigation}>
-              <button className="swiper-button-prev-custom">{'<'}</button>
-              <button className="swiper-button-next-custom">{'>'}</button>
-            </div>
           </div>
 
           <div className={styles.rightCol}>
             <Swiper
               modules={[Navigation, Pagination]}
-              spaceBetween={20}
-              slidesPerView={1.2}
+              spaceBetween={40}
+              slidesPerView={1}
               navigation={{
                 prevEl: '.swiper-button-prev-custom',
                 nextEl: '.swiper-button-next-custom',
               }}
               pagination={{
-                clickable: true,
-                el: `.${styles.customPagination}`
-              }}
-              breakpoints={{
-                640: {
-                  slidesPerView: 1.5,
-                },
-                1024: {
-                  slidesPerView: 2.2,
-                },
-                1280: {
-                  slidesPerView: 2.5,
-                }
+                type: 'progressbar',
+                el: `.${styles.customProgress}`
               }}
               className={styles.swiperContainer}
             >
               {testimonialsData.map((item) => (
                 <SwiperSlide key={item.id} className={styles.slide}>
                   <div className={styles.card}>
-                    <div className={styles.cardImageWrap}>
-                      <Image
-                        src={item.image}
-                        alt={item.name}
-                        fill
-                        style={{ objectFit: 'cover', objectPosition: 'top' }}
-                      />
-                    </div>
                     <div className={styles.cardContent}>
-                      <div className={styles.smallQuote}>
-                        <QuoteIcon />
+                      <div className={styles.topRow}>
+                        <div className={styles.quoteMark}>“</div>
+                        <div className={styles.avatarWrap}>
+                          <Image src={item.image} alt={item.name} fill style={{ objectFit: 'cover' }} />
+                        </div>
                       </div>
                       <p className={styles.cardText}>{item.text}</p>
-                      <h4 className={styles.cardName}>{item.name}</h4>
-                      <span className={styles.cardPost}>{item.post}</span>
+                      <div className={styles.cardAuthor}>
+                        {item.name} &ndash; {item.post}
+                      </div>
                     </div>
                   </div>
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className={styles.customPagination}></div>
+
+            <div className={styles.controlsRow}>
+              <div className={styles.customNavigation}>
+                <button className="swiper-button-prev-custom">{'<'}</button>
+                <button className="swiper-button-next-custom">{'>'}</button>
+              </div>
+              <div className={styles.progressWrap}>
+                <div className={styles.customProgress}></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

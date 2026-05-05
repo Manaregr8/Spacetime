@@ -46,19 +46,7 @@ export default function Navbar() {
 
         {/* Right section */}
         <div className={styles.navRight}>
-          <div className={styles.phoneGroup}>
-            <PhoneIcon />
-            <a href="tel:+919810474703" className={styles.phoneNum}>+91 98104 74703</a>
-            <a
-              href="https://wa.me/919810474703"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Chat on WhatsApp"
-              style={{ display: "flex", alignItems: "center" }}
-            >
-              <WaIcon />
-            </a>
-          </div>
+
           <button className={styles.ctaBtn} onClick={() => openModal("tour")}>
             Book a Private Tour
           </button>

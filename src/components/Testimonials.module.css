@@ -1,8 +1,8 @@
 /* ── Section wrapper ──────────────────────────────────── */
 .section {
-  padding: 0px 0;
+  padding: 80px 0;
+  background: #2c2c2c;
   overflow: hidden;
-  background: white;
 }
 
 .inner {
@@ -13,31 +13,27 @@
 }
 
 .container {
-  background: #2c2c2c;
-  color: #fff;
   display: flex;
-  position: relative;
-  padding: 40px 0 40px 80px;
+  align-items: stretch;
+  gap: 40px;
 }
 
 /* ── Left content column ───────────────────────────────── */
 .leftCol {
-  width: 35%;
+  width: calc(40% - 20px);
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-right: 40px;
-  position: relative;
-  z-index: 10;
+  justify-content: flex-start;
 }
 
 .heading {
-  font-size: clamp(32px, 3vw, 42px);
+  font-family: var(--font-heading), sans-serif;
+  font-size: clamp(32px, 4vw, 55px);
   line-height: 1.1;
-  margin-bottom: 24px;
-  font-weight: 400;
   color: #fff;
+  font-weight: 400;
+  margin-bottom: 24px;
 }
 
 .desc {
@@ -48,53 +44,9 @@
   max-width: 400px;
 }
 
-.contactLink {
-  font-size: 14px;
-  color: #fcbb2d;
-  text-decoration: none;
-  font-weight: 500;
-  margin-bottom: 50px;
-  transition: opacity 0.2s;
-}
-
-.contactLink:hover {
-  opacity: 0.8;
-}
-
-/* ── Custom Navigation ─────────────────────────────────── */
-.customNavigation {
-  display: flex;
-  gap: 2px;
-}
-
-.customNavigation button {
-  width: 48px;
-  height: 38px;
-  background: #e5e5e5;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: bold;
-  color: #000;
-  transition: background 0.2s;
-}
-
-.customNavigation button:hover {
-  background: #fcbb2d;
-  color: #000;
-}
-
-.customNavigation button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
 /* ── Right side / slider ───────────────────────────────── */
 .rightCol {
-  width: 65%;
+  width: calc(60% - 20px);
   position: relative;
   z-index: 5;
 }
@@ -102,8 +54,10 @@
 .swiperContainer {
   width: 100%;
   overflow: visible !important;
-  margin-top: 20px;
-  clip-path: inset(-1000% -1000% -1000% -30px);
+  clip-path: inset(-100px 0 -100px 0);
+  /* Allows top bleed but clips sides */
+  padding-top: 100px;
+  margin-top: -80px;
 }
 
 .slide {
@@ -117,106 +71,152 @@
   height: 100%;
 }
 
-.cardImageWrap {
-  background: #e5e5e5;
-  aspect-ratio: 1 / 1;
-  height: auto;
-  position: relative;
-  overflow: hidden;
-}
-
 .cardContent {
-  background: #ffffff; /* Changed from #e5e5e5 to white */
-  border-top: 15px solid #2c2c2c;
-  position: relative;
-  padding: 30px;
+  background: #ffffff;
+  padding: 50px 50px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
 }
 
-/* Quote accent on card */
-.smallQuote {
-  position: absolute;
-  top: -27.5px;
-  left: -10px;
-  width: 40px;
-  height: 40px;
-  background: #fcbb2d;
-  border-radius: 50%;
+.topRow {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
 }
 
-.smallQuote svg {
-  width: 20px;
-  height: 20px;
-  color: #111;
+.quoteMark {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 80px;
+  line-height: 0.8;
+  color: #fcbb2d;
+  font-weight: 100;
+}
+
+.avatarWrap {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  margin-top: -120px;
+  /* Increased pop-out distance */
+  background: #e2e8f0;
+  /* Thick white border to separate from background */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .cardText {
-  font-size: 14px;
+  font-family: var(--font-body), sans-serif;
+  font-size: 20px;
   color: #111;
   line-height: 1.6;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
   flex-grow: 1;
-}
-
-.cardName {
-  font-size: 15px;
-  font-weight: 600;
-  color: #000;
-  margin-bottom: 4px;
-  letter-spacing: 0.5px; /* Added letter spacing */
-}
-
-.cardPost {
-  font-size: 13px;
-  color: #555;
   font-weight: 500;
 }
 
-/* ── Custom Pagination ─────────────────────────────────── */
-.customPagination {
+.cardAuthor {
+  font-family: var(--font-body), sans-serif;
+  font-size: 14px;
+  color: #555;
+  font-weight: 700;
+}
+
+.controlsRow {
   display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  margin-top: 24px;
-  padding-right: 20px;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+  width: 100%;
 }
 
-.customPagination :global(.swiper-pagination-bullet) {
-  width: 10px;
-  height: 10px;
-  background: #fff;
-  opacity: 0.4;
+.customNavigation {
+  display: flex;
+  gap: 12px;
+}
+
+.customNavigation button {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  transition: opacity 0.2s;
+  font-size: 16px;
+  color: #0b1a2e;
+  transition: all 0.2s;
 }
 
-.customPagination :global(.swiper-pagination-bullet-active) {
-  opacity: 1;
+.customNavigation button:hover {
+  border-color: #0b1a2e;
+}
+
+.customNavigation button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  border-color: #e2e8f0;
+}
+
+/* Swiper Progressbar Override */
+.progressWrap {
+  flex-grow: 1;
+  position: relative;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.15);
+  /* Light line on dark background */
+}
+
+.customProgress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.customProgress :global(.swiper-pagination-progressbar-fill) {
   background: #fcbb2d;
+  /* Gold fill to match theme */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: left top;
 }
 
 /* ── Responsive ───────────────────────────────────────── */
 @media (max-width: 1024px) {
+  .inner {
+    padding: 0 24px;
+  }
+
   .container {
     flex-direction: column;
-    padding: 60px 40px;
+    gap: 32px;
   }
 
   .leftCol {
     width: 100%;
-    padding-right: 0;
-    margin-bottom: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .rightCol {
     width: 100%;
+  }
+
+  .cardContent {
+    padding: 60px 40px;
+  }
+
+  .controlsRow {
+    padding-left: 0;
   }
 }
 
@@ -225,16 +225,29 @@
     padding: 0 16px;
   }
 
-  .container {
-    padding: 60px 20px 40px;
+  .section {
+    padding: 60px 0;
   }
 
-  .heading {
-    font-size: 28px;
+  .cardContent {
+    padding: 40px 24px;
   }
 
-  .customPagination {
-    padding-right: 0;
-    justify-content: center;
+  .cardText {
+    font-size: 20px;
+  }
+
+  .controlsRow {
+    padding-left: 0;
+  }
+
+  .avatarWrap {
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+  }
+
+  .quoteMark {
+    font-size: 60px;
   }
 }
