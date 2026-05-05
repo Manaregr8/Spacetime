@@ -194,7 +194,6 @@ export default function MonthlyEvents() {
                   sizes="(max-width: 1200px) 100vw, 60vw"
                 />
               </div>
-              <div className={styles.featuredOverlay} />
               <div className={styles.featuredContent}>
                 <span className={styles.tag}>{activeEvent.tag}</span>
                 <h1 className={styles.featuredTitle}>{activeEvent.title}</h1>

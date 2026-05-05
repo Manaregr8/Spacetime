@@ -1,7 +1,7 @@
 /* ── Hero wrapper ──────────────────────────────────────── */
 .hero {
   position: relative;
-  aspect-ratio: 16 / 7;
+  aspect-ratio: 16 / 7.5;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -57,7 +57,7 @@
 .content {
   position: relative;
   z-index: 1;
-  padding: 0 0 0 48px;
+  padding: 70px 0 0 48px;
   max-width: 850px;
   margin: auto 0;
   /* Centers content vertically in available space */
@@ -114,17 +114,39 @@
 }
 
 @keyframes continuousBlip {
-  0% { transform: translateX(-200%) skewX(-20deg); }
-  20% { transform: translateX(300%) skewX(-20deg); }
-  100% { transform: translateX(300%) skewX(-20deg); }
+  0% {
+    transform: translateX(-200%) skewX(-20deg);
+  }
+
+  20% {
+    transform: translateX(300%) skewX(-20deg);
+  }
+
+  100% {
+    transform: translateX(300%) skewX(-20deg);
+  }
 }
 
 @keyframes hoverBlip {
-  0% { transform: translateX(-200%) skewX(-20deg); }
-  45% { transform: translateX(300%) skewX(-20deg); }
-  48% { transform: translateX(-200%) skewX(-20deg); }
-  90% { transform: translateX(300%) skewX(-20deg); }
-  100% { transform: translateX(300%) skewX(-20deg); }
+  0% {
+    transform: translateX(-200%) skewX(-20deg);
+  }
+
+  45% {
+    transform: translateX(300%) skewX(-20deg);
+  }
+
+  48% {
+    transform: translateX(-200%) skewX(-20deg);
+  }
+
+  90% {
+    transform: translateX(300%) skewX(-20deg);
+  }
+
+  100% {
+    transform: translateX(300%) skewX(-20deg);
+  }
 }
 
 .ctaWrapper::after {
@@ -243,9 +265,15 @@
 
 /* 180+ companies text ─────────────────────────── */
 .logosTagText {
-  color: rgba(255, 255, 255, 0.5);
+  display: none;
+  color: black;
+  background-color: white;
+  width: fit-content;
+  padding: 5px 10px 5px 70px;
+  transform: translateX(-70px);
+  border-radius: 5px;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 8px;

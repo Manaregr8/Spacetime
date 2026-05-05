@@ -3,7 +3,7 @@ import "./globals.css";
 import dynamic from "next/dynamic";
 import { BookingProvider } from "@/context/BookingContext";
 
-const BookingModal = dynamic(() => import("@/components/BookingModal"), { ssr: false });
+const BookingModal = dynamic(() => import("@/components/BookingModal"), { ssr: true });
 
 const tsukimi = Tsukimi_Rounded({
   subsets: ["latin"],
