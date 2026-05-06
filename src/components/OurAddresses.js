@@ -12,7 +12,6 @@ const locations = [
     tag: "COWORKING & MANAGED OFFICES",
     image: "/homebannerImages/subtle_masterclass.webp",
     priceHighlight: "From ₹8,000/mo",
-    href: "/mohan-estate",
   },
   {
     id: "gk2",
