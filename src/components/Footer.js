@@ -98,7 +98,7 @@ export default function Footer() {
           {/* Col 1 — Brand */}
           <div className={styles.brand}>
             <div className={styles.logo}>
-              <Image src="/logo.webp" alt="Spacetime" width={200} height={50} style={{ objectFit: 'contain', height: '40px', width: 'auto' }} />
+              <Image src="/g20.png" alt="Spacetime" width={200} height={50} style={{ objectFit: 'contain', height: '40px', width: 'auto' }} />
             </div>
             <p className={styles.tagline}>
               Hosting ambition with warm hospitality. A curated sanctuary for those who build, create, and lead — designed to elevate every workday.

@@ -90,7 +90,7 @@
   font-family: var(--font-heading), sans-serif;
   font-size: 80px;
   line-height: 0.8;
-  color: #fcbb2d;
+  color: #b89257ff;
   font-weight: 100;
 }
 
@@ -180,7 +180,7 @@
 }
 
 .customProgress :global(.swiper-pagination-progressbar-fill) {
-  background: #fcbb2d;
+  background: #b89257ff;
   /* Gold fill to match theme */
   position: absolute;
   left: 0;

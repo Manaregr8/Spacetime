@@ -37,7 +37,7 @@
 }
 
 .highlight {
-  color: #fcbb2d;
+  color: #b89257ff;
 }
 
 .desc {
@@ -243,7 +243,7 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: #fcbb2d;
+  background: #b89257ff;
   color: #fff;
   font-size: 26px;
   font-weight: 700;

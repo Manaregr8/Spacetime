@@ -123,7 +123,7 @@
 }
 
 .tagHighlight {
-  color: #fcbb2d;
+  color: #b89257ff;
 }
 
 /* ── Card text ────────────────────────────────────────── */
@@ -209,7 +209,7 @@
 }
 
 .cardCta:hover {
-  color: #fcbb2d;
+  color: #b89257ff;
 }
 
 /* ── CTA row ──────────────────────────────────────────── */

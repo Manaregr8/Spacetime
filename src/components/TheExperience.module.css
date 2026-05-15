@@ -101,7 +101,7 @@
 
 /* Active slide hover — title goes orange, desc goes white */
 :global(.swiper-slide-active) .imageWrap:hover .slideTitle {
-  color: #fcbb2d;
+  color: #b89257ff;
 }
 
 :global(.swiper-slide-active) .imageWrap:hover .slideDesc {

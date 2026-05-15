@@ -20,7 +20,7 @@ export default function Loader() {
       setGone(true);
       return;
     }
-    
+
     // Once hero is loaded, wait a tiny bit then fade out
     if (isHeroLoaded) {
       exit();
@@ -68,7 +68,7 @@ export default function Loader() {
           <path
             className={!isHeroLoaded ? styles.pulsingDot : ""}
             style={{
-              fill: "#fcbb2d",
+              fill: "#b89257ff ",
               stroke: "none",
             }}
             d="m -9736.4961,9660.1498 c -13.1959,-3.425 -22.1724,-11.7667 -26.5255,-24.6498 -5.7849,-17.1203 2.2784,-36.0762 18.8071,-44.2133 6.151,-3.0281 7.4255,-3.2845 16.1974,-3.2586 8.4356,0.025 10.2025,0.359 15.4992,2.9306 24.0218,11.6628 28.5157,42.5509 8.8109,60.5601 -8.7487,7.9957 -21.8994,11.4574 -32.7891,8.631 z"

@@ -170,7 +170,7 @@ export default function OurAddresses() {
     <section id="our-addresses" className={styles.section}>
       <div className={styles.inner}>
         <div ref={headerRef} className={`${styles.header} ${styles.fadeUp}`}>
-          <h2 className={styles.sectionTitle}>Our <span style={{ color: "#fcbb2d", fontWeight: "bold" }}>Addresses</span></h2>
+          <h2 className={styles.sectionTitle}>Our <span style={{ color: "#b89257ff ", fontWeight: "bold" }}>Addresses</span></h2>
           <p className={styles.sectionSub}>
             Prime. Privately held. Built to grow with Delhi-NCR&apos;s most ambitious companies.
           </p>

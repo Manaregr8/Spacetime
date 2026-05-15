@@ -85,7 +85,7 @@
 }
 
 .tagHighlight {
-  color: #fcbb2d;
+  color: #b89257ff;
 }
 
 /* ── Bottom info ──────────────────────────────────────── */
@@ -112,7 +112,7 @@
 .priceHighlight {
   display: inline-block;
   margin-top: 10px;
-  background: #fcbb2d;
+  background: #b89257ff;
   color: #fff;
   font-size: 12px;
   font-weight: 600;
@@ -161,7 +161,7 @@
 }
 
 .arrowCard:hover .arrowIcon path {
-  stroke: #fcbb2d;
+  stroke: #b89257ff;
 }
 
 .arrowIcon {

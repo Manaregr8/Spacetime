@@ -54,7 +54,7 @@ export default function VirtualOffice() {
               <span className={styles.tagHighlight}>VIRTUAL</span> OFFICE
             </span>
             <h2 className={styles.heading}>
-              A prestigious <span style={{ color: "#fcbb2d", fontWeight: "700" }}>Delhi-NCR address</span><br />
+              A prestigious <span style={{ color: "#b89257ff ", fontWeight: "700" }}>Delhi-NCR address</span><br />
               that works as hard as you do.
             </h2>
             <div className={styles.pills}>

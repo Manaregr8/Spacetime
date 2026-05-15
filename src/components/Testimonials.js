@@ -46,7 +46,7 @@ export default function Testimonials() {
         <div className={styles.container}>
 
           <div className={styles.leftCol}>
-            <h2 className={styles.heading}>Real voices from<br />the <span style={{ color: "#fcbb2d", fontWeight: 800 }}>Spacetime</span><br /><span style={{ color: "#fcbb2d", fontWeight: 800 }}>community</span></h2>
+            <h2 className={styles.heading}>Real voices from<br />the <span style={{ color: "#b89257ff ", fontWeight: 800 }}>Spacetime</span><br /><span style={{ color: "#b89257ff ", fontWeight: 800 }}>community</span></h2>
             <p className={styles.desc}>
               Founders, operators and creators who chose Spacetime and never looked back. Their work speaks. Their words do too.
             </p>

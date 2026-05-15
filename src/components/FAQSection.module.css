@@ -55,7 +55,7 @@
 .categoryTitle {
   font-size: 13px;
   font-weight: 700;
-  color: #fcbb2d;
+  color: #b89257ff;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 24px;
@@ -121,7 +121,7 @@
 }
 
 .itemActive .icon {
-  color: #fcbb2d;
+  color: #b89257ff;
 }
 
 .answer {
