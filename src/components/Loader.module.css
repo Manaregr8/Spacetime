@@ -1,4 +1,3 @@
-/* ── Full-screen loader ───────────────────────────────────────────── */
 .loader {
   position: fixed;
   inset: 0;
@@ -15,66 +14,18 @@
   visibility: hidden;
 }
 
-/* ── Single unified SVG logo ─────────────────────────────────────── */
-/*
-  The SVG viewBox is 431.43 × 107.62 (≈ 4:1 ratio).
-  We let it fill 90vw up to 520px wide; height is automatic
-  because the SVG's own preserveAspectRatio handles it.
-  No flex children = no overlap ever.
-*/
-.svgLogo {
+.logo {
   display: block;
   width: 90vw;
   max-width: 520px;
   height: auto;
-  /* fade-in the complete logo when the loader mounts */
   opacity: 0;
-  animation: fadeIn 0.6s ease-out forwards;
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
 @media (max-width: 480px) {
-  .svgLogo {
+  .logo {
     width: 92vw;
-  }
-}
-
-/* ── "space" text stroke-draw animation (CSS fallback) ───────────── */
-/*
-  The JS Web Animations API drives the primary animation.
-  This keyframe is a safety fallback for environments where
-  the JS hasn't run yet or is slow.
-*/
-.animText {
-  stroke-dasharray: 3000;
-  stroke-dashoffset: 3000;
-  animation:
-    drawText 2s 0s ease-out forwards,
-    fillText 0.8s 2s ease-in-out forwards;
-}
-
-/* ── "time" path — fades in as "space" fills ─────────────────────── */
-.animFadeIn {
-  opacity: 0;
-  animation: fadeIn 0.8s 2s ease-out forwards;
-}
-
-/* ── Keyframes ───────────────────────────────────────────────────── */
-
-@keyframes drawText {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes fillText {
-  from {
-    fill: transparent;
-    stroke: #ffffff;
-  }
-
-  to {
-    fill: #ffffff;
-    stroke: transparent;
   }
 }
 
@@ -85,35 +36,5 @@
 
   to {
     opacity: 1;
-  }
-}
-
-@keyframes fillCircle {
-  from {
-    fill: transparent;
-    stroke: #ffffff;
-  }
-
-  to {
-    fill: #b89257ff;
-    stroke: transparent;
-  }
-}
-
-.pulsingDot {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: dotPulse 1.2s ease-in-out infinite alternate;
-}
-
-@keyframes dotPulse {
-  from {
-    opacity: 0.4;
-    transform: scale(0.85);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1.05);
   }
 }
