@@ -395,7 +395,7 @@
 
 .copyright {
   font-size: 13px;
-  color: #b69258;
+  color: #d9d9d9;
   font-family: var(--font-body), "Inter", sans-serif;
 }
 
@@ -406,7 +406,7 @@
 
 .legalLink {
   font-size: 13px;
-  color: #b69258;
+  color: #d9d9d9;
   text-decoration: none;
   font-family: var(--font-body), "Inter", sans-serif;
   transition: color 0.18s;
