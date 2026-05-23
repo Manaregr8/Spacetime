@@ -92,19 +92,17 @@
   line-height: 0.8;
   color: #b89257ff;
   font-weight: 100;
+  flex-shrink: 0;
 }
 
 .avatarWrap {
-  width: 200px;
-  height: 200px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  margin-top: -120px;
-  /* Increased pop-out distance */
   background: #e2e8f0;
-  /* Thick white border to separate from background */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .cardText {
@@ -242,9 +240,8 @@
   }
 
   .avatarWrap {
-    width: 100px;
-    height: 100px;
-    margin-top: -50px;
+    width: 70px;
+    height: 70px;
   }
 
   .quoteMark {

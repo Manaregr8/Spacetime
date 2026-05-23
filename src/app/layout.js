@@ -1,37 +1,25 @@
-import { Cal_Sans, Manrope, Be_Vietnam_Pro, Tsukimi_Rounded } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import dynamic from "next/dynamic";
 import { BookingProvider } from "@/context/BookingContext";
 
 const BookingModal = dynamic(() => import("@/components/BookingModal"), { ssr: true });
 
-const tsukimi = Tsukimi_Rounded({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-tsukimi",
-  display: "swap",
-});
 
-const calSans = Cal_Sans({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-heading",
   display: "swap",
 });
 
-const manrope = Manrope({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-body",
   display: "swap",
 });
 
-const beVietnamPro = Be_Vietnam_Pro({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-be-vietnam",
-  display: "swap",
-});
 
 export const metadata = {
   title: "Spacetime | Premium Coworking Spaces",
@@ -45,7 +33,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${calSans.variable} ${manrope.variable} ${beVietnamPro.variable} ${tsukimi.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
       <body>
         <BookingProvider>
           {children}

@@ -46,14 +46,6 @@ const locations = [
     priceHighlight: "From ₹7,999/mo",
   },
   {
-    id: "sarita",
-    name: "Sarita Vihar",
-    meta: "240 seats",
-    tag: "COWORKING",
-    image: "/homebannerImages/create_a_office_202604020015.webp",
-    priceHighlight: "From ₹8,499/mo",
-  },
-  {
     id: "cp",
     name: "Connaught Place",
     meta: "Premium Managed Offices",
@@ -149,6 +141,7 @@ function AddressCard({ location, index }) {
 
 export default function OurAddresses() {
   const headerRef = useRef(null);
+  const arrowRef = useRef(null);
 
   useEffect(() => {
     const el = headerRef.current;
@@ -161,6 +154,22 @@ export default function OurAddresses() {
         }
       },
       { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const el = arrowRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add(styles.visible);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.1 }
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -180,7 +189,26 @@ export default function OurAddresses() {
           {locations.map((loc, i) => (
             <AddressCard key={loc.id} location={loc} index={i} />
           ))}
-          {/* 8th card — desktop arrow only */}
+          <Link
+            ref={arrowRef}
+            href="/#contact"
+            aria-label="Explore more locations"
+            className={`${styles.arrowCard} ${styles.fadeUp}`}
+            style={{ transitionDelay: `${locations.length * 80}ms` }}
+          >
+            <svg
+              className={styles.arrowIcon}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#111"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M8 4l8 8-8 8" />
+            </svg>
+          </Link>
         </div>
 
         <p className={styles.footerNote}>

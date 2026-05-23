@@ -2,7 +2,7 @@
   position: relative;
   padding: 80px 0 0 0;
   background-color: #ffffff;
-  font-family: var(--font-body), "Manrope", sans-serif;
+  font-family: var(--font-body), "Inter", sans-serif;
 }
 
 /* ── Container ── */
@@ -24,6 +24,8 @@
   color: #111;
   margin-bottom: 16px;
   letter-spacing: 1.3px;
+  font-family: var(--font-heading), "Poppins", sans-serif;
+
 }
 
 .subheading {

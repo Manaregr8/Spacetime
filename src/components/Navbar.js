@@ -29,8 +29,8 @@ export default function Navbar() {
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.inner}>
         {/* Logo */}
-        <Link href="/" className={styles.logo}>
-          <Image src="/g20.png" alt="Spacetime" width={200} height={50} style={{ objectFit: 'contain', height: '36px', width: 'auto' }} priority />
+          <Link href="/" className={styles.logo}>
+          <Image src="/g20.png" alt="Spacetime" width={200} height={50} style={{ objectFit: 'contain', height: '40px', width: 'auto' }} priority />
         </Link>
 
         {/* Desktop Nav Links */}

@@ -233,7 +233,7 @@
   color: rgba(255, 255, 255, 0.85);
   font-size: 18px;
   font-weight: 600;
-  font-family: var(--font-body), "Manrope", sans-serif;
+  font-family: var(--font-body), "Inter", sans-serif;
   text-decoration: none;
   padding: 14px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
@@ -257,7 +257,7 @@
   font-size: 11px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.3);
-  font-family: var(--font-body), "Manrope", sans-serif;
+  font-family: var(--font-body), "Inter", sans-serif;
   min-width: 20px;
 }
 
@@ -277,7 +277,7 @@
 .drawerPhone {
   color: rgba(255, 255, 255, 0.55);
   font-size: 14px;
-  font-family: var(--font-body), "Manrope", sans-serif;
+  font-family: var(--font-body), "Inter", sans-serif;
   text-decoration: none;
 }
 
@@ -291,7 +291,7 @@
   font-weight: 600;
   text-decoration: none;
   text-align: center;
-  font-family: var(--font-body), "Manrope", sans-serif;
+  font-family: var(--font-body), "Inter", sans-serif;
   border: none;
   cursor: pointer;
   width: 100%;

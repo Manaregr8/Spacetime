@@ -138,7 +138,7 @@
   border-radius: 10px;
   padding: 14px 16px;
   font-size: 14px;
-  font-family: var(--font-body), "Manrope", sans-serif;
+  font-family: var(--font-body), "Inter", sans-serif;
   color: #111;
   outline: none;
   transition: border-color 0.2s ease;
@@ -197,7 +197,7 @@
   border-radius: 10px;
   padding: 14px 16px;
   font-size: 14px;
-  font-family: var(--font-body), "Manrope", sans-serif;
+  font-family: var(--font-body), "Inter", sans-serif;
   color: #111;
   outline: none;
   cursor: pointer;
@@ -241,13 +241,13 @@
 .submitMain {
   font-size: 15px;
   font-weight: 600;
-  font-family: var(--font-body), "Manrope", sans-serif;
+  font-family: var(--font-body), "Inter", sans-serif;
 }
 
 .submitSub {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.55);
-  font-family: var(--font-body), "Manrope", sans-serif;
+  font-family: var(--font-body), "Inter", sans-serif;
 }
 
 /* ── Success state ─────────────────────────────────────── */
@@ -279,13 +279,13 @@
   font-size: 20px;
   font-weight: 700;
   color: #111;
-  font-family: var(--font-body), "Manrope", sans-serif;
+  font-family: var(--font-body), "Inter", sans-serif;
 }
 
 .successSub {
   font-size: 14px;
   color: #555;
-  font-family: var(--font-body), "Manrope", sans-serif;
+  font-family: var(--font-body), "Inter", sans-serif;
   max-width: 280px;
 }
 
@@ -293,7 +293,7 @@
 .errorMsg {
   font-size: 13px;
   color: #fc8181;
-  font-family: var(--font-body), "Manrope", sans-serif;
+  font-family: var(--font-body), "Inter", sans-serif;
   text-align: center;
 }
 

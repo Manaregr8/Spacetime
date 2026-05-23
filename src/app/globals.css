@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: var(--font-body), "Manrope", sans-serif;
+  font-family: var(--font-body), "Inter", sans-serif;
   font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,13 +21,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading), "Cal Sans", sans-serif;
+  font-family: var(--font-heading), "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 p, span, a, button, input, label, li {
-  font-family: var(--font-body), "Manrope", sans-serif;
+  font-family: var(--font-body), "Inter", sans-serif;
   font-optical-sizing: auto;
 }
 
