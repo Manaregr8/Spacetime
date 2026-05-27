@@ -30,7 +30,7 @@ export default function Navbar() {
       <div className={styles.inner}>
         {/* Logo */}
           <Link href="/" className={styles.logo}>
-          <Image src="/g20.png" alt="Spacetime" width={200} height={50} style={{ objectFit: 'contain', height: '40px', width: 'auto' }} priority />
+          <Image src="/logo.png" alt="Spacetime" width={200} height={50} style={{ objectFit: 'contain' }} priority />
         </Link>
 
         {/* Desktop Nav Links */}
@@ -96,7 +96,7 @@ export default function Navbar() {
 
         <div className={styles.drawerBottom}>
           <div className={styles.drawerDivider} />
-          <a href="tel:+919810474703" className={styles.drawerPhone}>+91 98104 74703</a>
+          <a href="tel:+919818450490" className={styles.drawerPhone}>+91 98184 50490</a>
           <button
             className={styles.drawerCta}
             onClick={() => { setMenuOpen(false); openModal("tour"); }}

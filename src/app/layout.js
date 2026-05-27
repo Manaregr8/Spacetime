@@ -1,4 +1,4 @@
-import { Inter, Poppins } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import dynamic from "next/dynamic";
 import { BookingProvider } from "@/context/BookingContext";
@@ -6,7 +6,7 @@ import { BookingProvider } from "@/context/BookingContext";
 const BookingModal = dynamic(() => import("@/components/BookingModal"), { ssr: true });
 
 
-const poppins = Poppins({
+const manrope = Manrope({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-heading",
@@ -26,14 +26,18 @@ export const metadata = {
   description:
     "Curated sanctuaries for those who build. Hospitality-first. Design that elevates.",
   icons: {
-    icon: "/g2.webp",
-    apple: "/g2.webp",
+    icon: "/favicon_io/favicon.ico",
+    shortcut: "/favicon_io/favicon-32x32.png",
+    apple: "/favicon_io/apple-touch-icon.png",
+    other: [
+      { rel: "manifest", url: "/favicon_io/site.webmanifest" },
+    ],
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
+    <html lang="en" className={`${manrope.variable} ${inter.variable}`}>
       <body>
         <BookingProvider>
           {children}

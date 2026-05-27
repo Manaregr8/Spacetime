@@ -122,14 +122,14 @@ export default function BookingModal() {
               <div className={styles.avatar}>
                 <Image
                   src="/akanshaMam.jpeg"
-                  alt="Akanksha"
+                  alt="Akansha"
                   fill
                   style={{ objectFit: "cover" }}
                   sizes="56px"
                 />
               </div>
               <div>
-                <p className={styles.hostName}>Akanksha</p>
+                <p className={styles.hostName}>Akansha</p>
                 <p className={styles.hostTitle}>CX Manager at Spacetime</p>
               </div>
             </div>

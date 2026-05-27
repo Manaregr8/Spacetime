@@ -5,14 +5,7 @@ import Link from "next/link";
 import styles from "./OurAddresses.module.css";
 
 const locations = [
-  {
-    id: "mohan-estate",
-    name: "Mohan Estate",
-    meta: "300+ seats | 30,000 sq ft",
-    tag: "COWORKING & MANAGED OFFICES",
-    image: "/homebannerImages/subtle_masterclass.webp",
-    priceHighlight: "From ₹8,000/mo",
-  },
+  
   {
     id: "gk2",
     name: "Greater Kailash II",
@@ -44,6 +37,14 @@ const locations = [
     tag: "COWORKING",
     image: "/homebannerImages/remove_the_big_202604020018.webp",
     priceHighlight: "From ₹7,999/mo",
+  },
+  {
+    id: "mohan-estate",
+    name: "Mohan Estate",
+    meta: "300+ seats | 30,000 sq ft",
+    tag: "COWORKING & MANAGED OFFICES",
+    image: "/homebannerImages/subtle_masterclass.webp",
+    priceHighlight: "From ₹8,000/mo",
   },
   {
     id: "cp",

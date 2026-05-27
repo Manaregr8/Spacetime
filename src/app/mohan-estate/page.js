@@ -204,7 +204,7 @@ export default function MohanEstatePage() {
             </div>
             <div className={styles.contactItem}>
               <span className={styles.contactLabel}>Email</span>
-              <span className={styles.contactValue}>akash@myspacetime.in</span>
+              <span className={styles.contactValue}>amit@myspacetime.in</span>
             </div>
           </div>
         </div>

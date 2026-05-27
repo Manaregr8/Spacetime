@@ -46,7 +46,7 @@ export default function Loader() {
   return (
     <div className={`${styles.loader} ${fadeOut ? styles.fadeOut : ""}`}>
       <img
-        src="/g20.png"
+        src="/logo.png"
         alt="spacetime"
         className={styles.logo}
       />

@@ -441,7 +441,7 @@
 .tickerItem {
   display: inline-flex;
   align-items: center;
-  font-family: var(--font-heading), "Poppins", sans-serif;
+  font-family: var(--font-heading), "Manrope", sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #b89257ff;
