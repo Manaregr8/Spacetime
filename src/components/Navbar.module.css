@@ -31,7 +31,7 @@
   color: #fff;
   text-decoration: none;
   flex-shrink: 0;
-  height: 44px;
+  height: 39px;
 }
 
 .logo :global(img) {
