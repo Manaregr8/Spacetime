@@ -26,11 +26,11 @@ export const metadata = {
   description:
     "Curated sanctuaries for those who build. Hospitality-first. Design that elevates.",
   icons: {
-    icon: "/favicon_io/favicon.ico",
-    shortcut: "/favicon_io/favicon-32x32.png",
-    apple: "/favicon_io/apple-touch-icon.png",
+    icon: "/favicon_io%20(1)/favicon.ico",
+    shortcut: "/favicon_io%20(1)/favicon-32x32.png",
+    apple: "/favicon_io%20(1)/apple-touch-icon.png",
     other: [
-      { rel: "manifest", url: "/favicon_io/site.webmanifest" },
+      { rel: "manifest", url: "/favicon_io%20(1)/site.webmanifest" },
     ],
   },
 };
