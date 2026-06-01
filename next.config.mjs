@@ -10,6 +10,21 @@ const nextConfig = {
         destination: "/",
         permanent: true,
       },
+      {
+source: "/panchashil",
+        destination: "/",
+        permanent: true,
+      },
+      {
+source: "/saket",
+        destination: "/",
+        permanent: true,
+      },
+      {
+source: "/South-extension",
+        destination: "/",
+        permanent: true,
+      }
     ];
   },
   webpack: (config) => {
