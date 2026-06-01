@@ -196,7 +196,7 @@ export default function MonthlyEvents() {
               </div>
               <div className={styles.featuredContent}>
                 <span className={styles.tag}>{activeEvent.tag}</span>
-                <h1 className={styles.featuredTitle}>{activeEvent.title}</h1>
+                <h2 className={styles.featuredTitle}>{activeEvent.title}</h2>
                 <div className={styles.featuredMeta}>
                   <div className={styles.featuredMetaItem}>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

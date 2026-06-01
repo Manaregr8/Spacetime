@@ -22,7 +22,7 @@ const inter = Inter({
 
 
 export const metadata = {
-  title: "Spacetime Delhi | Premium Coworking & Managed Office Spaces",
+  title: "Spacetime | Premium Coworking & Managed Office Spaces",
   description:
     "Premium coworking spaces and managed offices in Delhi. Curated sanctuaries for builders and entrepreneurs with hospitality-first service and design that elevates productivity.",
   keywords: "coworking space Delhi, managed office, private office Delhi, virtual office, premium coworking, office space NCR",
@@ -40,7 +40,7 @@ export const metadata = {
     locale: "en_IN",
     url: "https://www.myspacetime.in",
     siteName: "Spacetime",
-    title: "Spacetime Delhi | Premium Coworking & Managed Office Spaces",
+    title: "Spacetime | Premium Coworking & Managed Office Spaces",
     description: "Premium coworking spaces and managed offices in Delhi. Curated sanctuaries for builders and entrepreneurs.",
     images: [
       {
@@ -53,9 +53,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@SpacetimeDelhi",
-    creator: "@SpacetimeDelhi",
-    title: "Spacetime Delhi | Premium Coworking Spaces",
+    site: "@Spacetime",
+    creator: "@Spacetime",
+    title: "Spacetime | Premium Coworking Spaces",
     description: "Premium coworking and managed offices in Delhi NCR.",
   },
   icons: {
