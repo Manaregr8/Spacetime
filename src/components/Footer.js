@@ -147,7 +147,7 @@ export default function Footer() {
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.77 1.19 2 2 0 012.73 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.08-1.08a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                   </svg>
                 </span>
-                <a href="tel:+919818450490" className={styles.contactLink}>+91 98184 50490</a>
+                <a href="tel:+919818450490" className={styles.contactLink}>+91 98184 50490</a> <a href="tel:+919810474703" className={styles.contactLink}>+919810474703</a>
               </li>
               <li className={styles.contactItem}>
                 <span className={styles.contactIcon}>
