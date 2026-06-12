@@ -2,7 +2,7 @@ import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import dynamic from "next/dynamic";
 import { BookingProvider } from "@/context/BookingContext";
-
+import Script from "next/script";
 const BookingModal = dynamic(() => import("@/components/BookingModal"), { ssr: true });
 
 
@@ -119,6 +119,15 @@ export default function RootLayout({ children }) {
           {children}
           <BookingModal />
         </BookingProvider>
+           {/* 2. Move scripts to the bottom of <body> and use the <Script> component */}
+        <Script 
+          src="https://cdn.botpress.cloud/webchat/v3.6/inject.js" 
+          strategy="afterInteractive" 
+        />
+        <Script 
+          src="https://files.bpcontent.cloud/2026/06/11/09/20260611091437-U4TQ6V73.js" 
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
