@@ -30,7 +30,7 @@ export default function Navbar() {
       <div className={styles.inner}>
         {/* Logo */}
           <Link href="/" className={styles.logo}>
-          <Image src="/logo.png" alt="Spacetime" width={200} height={50} style={{ objectFit: 'contain' }} priority />
+          <Image src="/logo.png" alt="Spacetime" width={150} height={50} style={{ objectFit: 'contain' }} priority />
         </Link>
 
         {/* Desktop Nav Links */}
