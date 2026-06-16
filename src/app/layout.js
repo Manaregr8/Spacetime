@@ -113,14 +113,7 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </head>
-      <body>
-        <BookingProvider>
-          {children}
-          <BookingModal />
-        </BookingProvider>
-           {/* 2. Move scripts to the bottom of <body> and use the <Script> component */}
-        <Script 
+          <Script 
           src="https://cdn.botpress.cloud/webchat/v3.6/inject.js" 
           strategy="afterInteractive" 
         />
@@ -128,6 +121,14 @@ export default function RootLayout({ children }) {
           src="https://files.bpcontent.cloud/2026/06/11/09/20260611091437-U4TQ6V73.js" 
           strategy="afterInteractive"
         />
+      </head>
+      <body>
+        <BookingProvider>
+          {children}
+          <BookingModal />
+        </BookingProvider>
+           {/* 2. Move scripts to the bottom of <body> and use the <Script> component */}
+      
       </body>
     </html>
   );
