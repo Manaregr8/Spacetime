@@ -115,11 +115,9 @@ export default function RootLayout({ children }) {
         />
           <Script 
           src="https://cdn.botpress.cloud/webchat/v3.6/inject.js" 
-          strategy="afterInteractive" 
         />
         <Script 
           src="https://files.bpcontent.cloud/2026/06/11/09/20260611091437-U4TQ6V73.js" 
-          strategy="afterInteractive"
         />
       </head>
       <body>
