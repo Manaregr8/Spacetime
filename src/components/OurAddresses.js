@@ -13,6 +13,7 @@ const locations = [
     tag: "COWORKING & MANAGED OFFICES",
     image: "/homebannerImages/Enhance_office_image_202604020030.webp",
     priceHighlight: "From ₹9,999/mo",
+    href: "/address/gk2",
   },
   {
     id: "saket",
@@ -21,6 +22,7 @@ const locations = [
     tag: "COWORKING & MANAGED OFFICES",
     image: "/homebannerImages/event2.webp",
     priceHighlight: "From ₹7,999/mo",
+    href: "/address/saket",
   },
   {
     id: "nsic",
@@ -29,6 +31,7 @@ const locations = [
     tag: "COWORKING & MANAGED OFFICES",
     image: "/homebannerImages/Enhance_office_modern_202604020034.webp",
     priceHighlight: "From ₹14,499/mo",
+    href: "/address/nsic",
   },
   {
     id: "panchsheel",
@@ -37,6 +40,7 @@ const locations = [
     tag: "COWORKING",
     image: "/homebannerImages/remove_the_big_202604020018.webp",
     priceHighlight: "From ₹7,999/mo",
+    href: "/address/panchsheel",
   },
   {
     id: "mohan-estate",
@@ -45,6 +49,7 @@ const locations = [
     tag: "COWORKING & MANAGED OFFICES",
     image: "/homebannerImages/subtle_masterclass.webp",
     priceHighlight: "From ₹8,000/mo",
+    href: "/address/mohan-estate",
   },
   {
     id: "cp",
@@ -53,6 +58,7 @@ const locations = [
     tag: "MANAGED OFFICES",
     image: "/homebannerImages/Enhance_office_image_202604020030.webp",
     priceHighlight: "Contact Sales",
+    href: "/address/cp",
   },
   {
     id: "indore",
@@ -61,6 +67,7 @@ const locations = [
     tag: "MANAGED OFFICES",
     image: "/homebannerImages/event2.webp",
     priceHighlight: "Contact Sales",
+    href: "/address/indore",
   },
 ];
 

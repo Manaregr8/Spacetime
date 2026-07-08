@@ -1,0 +1,272 @@
+.section {
+  background: #fff;
+}
+
+/* ── Fade-up animation ── */
+.fadeUp {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.visible {}
+
+.fadeUp.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ══════════════════════════════════════════
+   Intro Banner
+   ══════════════════════════════════════════ */
+.introBanner {
+  background: #f9f8f6;
+  padding: 80px 0;
+}
+
+.introInner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.introLeft {
+  flex: 0 0 32%;
+}
+
+.introTitle {
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 500;
+  color: #111;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+}
+
+.introRight {
+  flex: 1;
+}
+
+.introDesc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 24px;
+}
+
+.introLink {
+  font-size: 15px;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.introLink:hover {
+  color: #b89257;
+}
+
+/* ══════════════════════════════════════════
+   Plans Section
+   ══════════════════════════════════════════ */
+.plansSection {
+  padding: 80px 0;
+}
+
+.plansInner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.plansTitle {
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 500;
+  color: #111;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+  margin-bottom: 12px;
+}
+
+.plansSubtitle {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.55);
+  margin-bottom: 48px;
+}
+
+/* ── Cards Grid ── */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Header */
+.cardHeader {
+  background: #f9f8f6;
+  padding: 32px 28px 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+  letter-spacing: -0.2px;
+}
+
+.cardDesc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+/* Card Body */
+.cardBody {
+  padding: 28px;
+  flex: 1;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.featureItem {
+  position: relative;
+  padding-left: 16px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #111;
+}
+
+.featureItem::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #b89257;
+  font-weight: 700;
+}
+
+/* Card Footer */
+.cardFooter {
+  padding: 0 28px 28px;
+}
+
+.pricingRow {
+  display: flex;
+  gap: 0;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.priceBlock {
+  flex: 1;
+  background: #f4f3f0;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.priceBlock + .priceBlock {
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.priceLabel {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.priceValue {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  display: inline;
+}
+
+.pricePer {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.priceDuration {
+  font-size: 12px;
+  font-weight: 500;
+  color: #b89257;
+}
+
+/* Book Now Button */
+.bookBtn {
+  width: 100%;
+  height: 48px;
+  background: #111;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.bookBtn:hover {
+  background: #333;
+  transform: translateY(-1px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+  .introInner {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .introLeft {
+    flex: none;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .introInner,
+  .plansInner {
+    padding: 0 24px;
+  }
+
+  .introBanner,
+  .plansSection {
+    padding: 48px 0;
+  }
+}

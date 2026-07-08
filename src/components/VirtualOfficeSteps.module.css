@@ -1,0 +1,210 @@
+.section {
+  background: #fff;
+}
+
+.fadeUp {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.visible {}
+
+.fadeUp.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ══════════════════════════════════════════
+   Steps Section
+   ══════════════════════════════════════════ */
+.stepsWrapper {
+  padding: 80px 0;
+}
+
+.stepsInner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.stepsTitle {
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 500;
+  color: #111;
+  letter-spacing: -0.4px;
+  margin-bottom: 48px;
+}
+
+.stepsLayout {
+  display: flex;
+  gap: 60px;
+  align-items: stretch;
+}
+
+/* Left Image */
+.stepsImageWrapper {
+  flex: 0 0 55%;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 420px;
+}
+
+.stepsImage {
+  object-fit: cover;
+}
+
+/* Right Steps */
+.stepsList {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.stepItem {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.stepIconWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.stepIcon {
+  width: 52px;
+  height: 52px;
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  color: #111;
+  background: #fff;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.stepItem:hover .stepIcon {
+  border-color: #b89257;
+  background: #fdf8f2;
+}
+
+.stepIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.stepConnector {
+  width: 1.5px;
+  flex: 1;
+  min-height: 24px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 6px 0;
+}
+
+.stepText {
+  padding-top: 6px;
+}
+
+.stepLabel {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.stepDesc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* ══════════════════════════════════════════
+   Trust Logos
+   ══════════════════════════════════════════ */
+.trustWrapper {
+  padding: 60px 0 80px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.trustInner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+  text-align: center;
+}
+
+.trustTitle {
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 500;
+  color: #111;
+  letter-spacing: -0.3px;
+  margin-bottom: 48px;
+}
+
+.logoStrip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+  flex-wrap: wrap;
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoText {
+  font-size: 22px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.logoItem:hover .logoText {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+  .stepsLayout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .stepsImageWrapper {
+    flex: none;
+    min-height: 300px;
+  }
+
+  .logoStrip {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stepsInner,
+  .trustInner {
+    padding: 0 24px;
+  }
+
+  .stepsWrapper,
+  .trustWrapper {
+    padding: 48px 0;
+  }
+
+  .logoText {
+    font-size: 16px;
+  }
+}

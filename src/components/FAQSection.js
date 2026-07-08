@@ -57,12 +57,14 @@ const ChevronRight = () => (
   </svg>
 );
 
-export default function FAQSection() {
-  const [activeCategory, setActiveCategory] = useState("Pricing");
+export default function FAQSection({ customFaqs }) {
+  // Use custom FAQs if provided, otherwise fallback to the default static data
+  const dataToUse = customFaqs || faqData;
+  const [activeCategory, setActiveCategory] = useState(Object.keys(dataToUse)[0]);
   const [openIndex, setOpenIndex] = useState(0);
 
-  const categories = Object.keys(faqData);
-  const activeQuestions = faqData[activeCategory];
+  const categories = Object.keys(dataToUse);
+  const activeQuestions = dataToUse[activeCategory];
 
   const handleCategoryClick = (category) => {
     setActiveCategory(category);
@@ -85,7 +87,7 @@ export default function FAQSection() {
 
         <div className={styles.content}>
           <div className={styles.accordion}>
-            {Object.entries(faqData).map(([category, questions]) => (
+            {Object.entries(dataToUse).map(([category, questions]) => (
               <div key={category} className={styles.categoryGroup}>
                 <h3 className={styles.categoryTitle}>{category}</h3>
                 {questions.map((item, index) => {

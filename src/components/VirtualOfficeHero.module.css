@@ -1,0 +1,239 @@
+.section {
+  background: #fff;
+  padding-top: 80px; /* Accounts for navbar */
+  min-height: 100vh;
+}
+
+.inner {
+  display: flex;
+  max-width: 1600px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/* ── Left Column (Image) ── */
+.leftColumn {
+  flex: 0 0 45%;
+  position: relative;
+  min-height: calc(100vh - 80px); /* Fill remaining viewport */
+}
+
+.imageWrapper {
+  position: absolute;
+  inset: 0;
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+/* ── Right Column (Content) ── */
+.rightColumn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 60px;
+}
+
+.textContent {
+  max-width: 600px;
+  width: 100%;
+}
+
+.overline {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #111;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.heading {
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 500;
+  color: #111;
+  line-height: 1.2;
+  margin-bottom: 32px;
+  letter-spacing: -0.5px;
+}
+
+.bullets {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.bullet {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: #111;
+  font-weight: 500;
+}
+
+.checkIcon {
+  width: 18px;
+  height: 18px;
+  color: #111; /* Or #b89257 gold if preferred */
+}
+
+/* ── Form Styling ── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formRow {
+  display: flex;
+  gap: 24px;
+}
+
+.formGroup {
+  flex: 1;
+  position: relative;
+}
+
+.input,
+.select,
+.phoneInput {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  font-size: 15px;
+  color: #111;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  font-family: inherit;
+}
+
+.input::placeholder,
+.phoneInput::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.input:focus,
+.select:focus,
+.phoneInput:focus {
+  border-color: #111;
+}
+
+.select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.selectArrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #111;
+  width: 16px;
+  height: 16px;
+}
+
+/* Custom Phone Input with Country Code */
+.phoneInputWrapper {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  height: 52px;
+  background: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.phoneInputWrapper:focus-within {
+  border-color: #111;
+}
+
+.countryCode {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  color: #111;
+  background: #f9f8f6;
+  border-radius: 4px 0 0 4px;
+}
+
+.flag {
+  font-size: 16px;
+}
+
+.caret {
+  width: 14px;
+  height: 14px;
+  color: #111;
+}
+
+.phoneInput {
+  border: none;
+  height: 100%;
+  border-radius: 0 4px 4px 0;
+}
+
+.phoneInput:focus {
+  border-color: transparent;
+}
+
+/* Submit Button */
+.submitBtn {
+  margin-top: 16px;
+  background: #666; /* Gray background to match screenshot */
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  height: 52px;
+  padding: 0 32px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.submitBtn:hover {
+  background: #555;
+  transform: translateY(-1px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+  .inner {
+    flex-direction: column;
+  }
+  
+  .leftColumn {
+    flex: none;
+    height: 400px;
+    min-height: auto;
+  }
+  
+  .rightColumn {
+    padding: 60px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    flex-direction: column;
+  }
+  
+  .submitBtn {
+    width: 100%;
+  }
+}

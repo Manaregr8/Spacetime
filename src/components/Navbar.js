@@ -14,7 +14,7 @@ const navLinks = [
   { label: "Community", href: "/#events" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ alwaysDark = false }) {
   const { openModal } = useBooking();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,7 +26,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
+    <nav className={`${styles.nav} ${scrolled || alwaysDark ? styles.scrolled : ""}`}>
       <div className={styles.inner}>
         {/* Logo */}
           <Link href="/" className={styles.logo}>
