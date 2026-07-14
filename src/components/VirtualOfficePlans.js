@@ -14,8 +14,8 @@ const plansData = [
       "Mail and package handling",
     ],
     pricing: [
-      { duration: "12 months", price: "₹2,799" },
-      { duration: "24 months", price: "₹2,599" },
+      { duration: "12 months", price: "₹1,799" },
+      { duration: "24 months", price: "₹1,549" },
     ],
   },
   {
@@ -27,8 +27,8 @@ const plansData = [
       "Mail and package handling",
     ],
     pricing: [
-      { duration: "12 months", price: "₹2,399" },
-      { duration: "24 months", price: "₹2,199" },
+      { duration: "12 months", price: "₹1,999" },
+      { duration: "24 months", price: "₹1,749" },
     ],
   },
   {
@@ -37,8 +37,8 @@ const plansData = [
       "Premium address for your business card, website, and more with mail and package handling services",
     features: ["Mail and package handling"],
     pricing: [
-      { duration: "12 months", price: "₹1,299" },
-      { duration: "24 months", price: "₹1,199" },
+      { duration: "12 months", price: "₹1,099" },
+      { duration: "24 months", price: "₹959" },
     ],
   },
 ];

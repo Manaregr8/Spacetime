@@ -35,8 +35,8 @@ export const addressFeaturesData = {
       images: defaultImages.spaces
     },
     breakfastData: {
-      title: "Daily breakfast & snacks",
-      description: "We're serious about our spreads. Whether it's your first breakfast, second breakfast, or a quick afternoon pick-me-up, we make sure you have the energy to stay focused and do your best work.",
+      title: "Endless Free Drinks. Curated Menu to Match.",
+      description: "We take our food seriously. From early breakfast to late afternoon, grab what you need to stay fueled, focused, and doing your best work.",
       images: defaultImages.breakfast
     },
     moreSolutionsData: {

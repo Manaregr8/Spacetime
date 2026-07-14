@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useBooking } from "@/context/BookingContext";
 import styles from "./VirtualOffice.module.css";
 
@@ -73,6 +74,9 @@ export default function VirtualOffice() {
               <span className={styles.ctaMain}>Get your Virtual Address</span>
               <span className={styles.ctaSub}>Ready in minutes</span>
             </button>
+            <Link href="/virtual-office" className={styles.ctaSecondary}>
+              Explore Plans →
+            </Link>
           </div>
         </div>
       </div>

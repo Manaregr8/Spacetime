@@ -135,7 +135,7 @@ export default function VirtualOfficeSteps() {
       <div ref={trustRef} className={`${styles.trustWrapper} ${styles.fadeUp}`}>
         <div className={styles.trustInner}>
           <h3 className={styles.trustTitle}>
-            10,000+ businesses trust Spacetime for their Virtual Office needs
+            High growth businesses trust Spacetime for their Virtual Office needs
           </h3>
           <div className={styles.logoStrip}>
             {trustedLogos.map((name, i) => (

@@ -6,18 +6,18 @@ import styles from "./MonthlyEvents.module.css";
 const initialEvents = [
   {
     id: 1,
-    title: "AI Masterclass with Spacetime Founder",
-    date: "15 APR, 6:00 PM",
-    location: "Spacetime, Greater Kailash II",
-    tag: "Masterclass",
-    shortDesc: "AI strategy and tools for founders.",
-    fullDesc: "An intimate session with Spacetime's founder on leveraging AI in your business — from automation to decision-making. Practical, candid, and built for builders.",
+    title: "An Evening Above the Ordinary",
+    date: "24 JUL, 6:00 PM",
+    location: "The Penteli by Spacetime, NSIC Metro Station, New Delhi",
+    tag: "Exclusive Invite",
+    shortDesc: "An invitation to discover The Penteli by Spacetime.",
+    fullDesc: "An invitation to discover The Penteli by Spacetime — where exceptional workspaces meet elevated hospitality. An evening of cocktails, exceptional hospitality, and meaningful conversations. By private invitation.",
     image: "/homebannerImages/subtle_masterclass.webp"
   },
   {
     id: 2,
     title: "Wellness Wednesday — Yoga & Sound Healing",
-    date: "22 APR, 8:00 AM",
+    date: "30 JUL, 8:00 AM",
     location: "Saket, Westend Marg Centre",
     tag: "Wellness",
     shortDesc: "Start Wednesday with intention.",
@@ -27,7 +27,7 @@ const initialEvents = [
   {
     id: 3,
     title: "Investor Connect — Networking Lunch",
-    date: "03 MAY, 12:30 PM",
+    date: "06 AUG, 12:30 PM",
     location: "Connaught Place Centre",
     tag: "Networking",
     shortDesc: "Curated introductions over a private lunch.",

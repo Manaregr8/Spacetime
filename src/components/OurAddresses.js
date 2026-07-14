@@ -21,7 +21,7 @@ const locations = [
     meta: "630 seats | 3 centers",
     tag: "COWORKING & MANAGED OFFICES",
     image: "/homebannerImages/event2.webp",
-    priceHighlight: "From ₹7,999/mo",
+    priceHighlight: "From ₹8,995/mo",
     href: "/address/saket",
   },
   {
@@ -30,7 +30,7 @@ const locations = [
     meta: "345 seats | Managed offices",
     tag: "COWORKING & MANAGED OFFICES",
     image: "/homebannerImages/Enhance_office_modern_202604020034.webp",
-    priceHighlight: "From ₹14,499/mo",
+    priceHighlight: "From ₹12,999/mo",
     href: "/address/nsic",
   },
   {
@@ -39,7 +39,7 @@ const locations = [
     meta: "120 seats",
     tag: "COWORKING",
     image: "/homebannerImages/remove_the_big_202604020018.webp",
-    priceHighlight: "From ₹7,999/mo",
+    priceHighlight: "From ₹10,499/mo",
     href: "/address/panchsheel",
   },
   {
@@ -48,7 +48,7 @@ const locations = [
     meta: "300+ seats | 30,000 sq ft",
     tag: "COWORKING & MANAGED OFFICES",
     image: "/homebannerImages/subtle_masterclass.webp",
-    priceHighlight: "From ₹8,000/mo",
+    priceHighlight: "From ₹6,995/mo",
     href: "/address/mohan-estate",
   },
   {
@@ -66,7 +66,7 @@ const locations = [
     meta: "Managed Offices",
     tag: "MANAGED OFFICES",
     image: "/homebannerImages/event2.webp",
-    priceHighlight: "Contact Sales",
+    priceHighlight: "From ₹4,995/mo",
     href: "/address/indore",
   },
 ];
@@ -183,6 +183,16 @@ export default function OurAddresses() {
     return () => observer.disconnect();
   }, []);
 
+  const clientLogos = [
+    { src: "/bannerLogo/lenskartlogo.svg", alt: "Lenskart" },
+    { src: "/bannerLogo/bolt.png", alt: "Bolt" },
+    { src: "/bannerLogo/redbus.png", alt: "redBus" },
+    { src: "/bannerLogo/energia.png", alt: "Energia" },
+    { src: "/bannerLogo/waaree.png", alt: "Waaree" },
+    { src: "/bannerLogo/on purpose.png", alt: "On Purpose" },
+    { src: "/bannerLogo/art.png", alt: "Art-e" },
+  ];
+
   return (
     <section id="our-addresses" className={styles.section}>
       <div className={styles.inner}>
@@ -222,6 +232,25 @@ export default function OurAddresses() {
         <p className={styles.footerNote}>
           900+ new seats launching in the next 6 months.
         </p>
+
+        {/* ── Real company logos ── */}
+        <div className={styles.logoStrip}>
+          <p className={styles.logoStripLabel}>Trusted by high-growth businesses</p>
+          <div className={styles.logoRow}>
+            {clientLogos.map((logo) => (
+              <div key={logo.alt} className={styles.logoItem}>
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={110}
+                  height={40}
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

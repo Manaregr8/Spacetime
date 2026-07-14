@@ -22,11 +22,10 @@ const WORKSPACE_TYPES = [
     label: "Coworking & Day Passes",
     subtitle: "For individuals",
     spacesMatch: ["Coworking Desk", "Dedicated Seat"],
-    price: (loc) => loc.priceHighlight,
-    priceNote: "+₹399/mo",
+    price: (loc) => loc.coworkingPrice || loc.priceHighlight,
     included: [
       "Fully furnished, move-in ready desk",
-      "Daily breakfast, craft coffee, and snacks",
+      "Endless free drinks & curated menu",
       "Flexible term length options",
       "Access to all locations across our network",
       "Dedicated on-site support",
@@ -38,11 +37,10 @@ const WORKSPACE_TYPES = [
     label: "Private Offices",
     subtitle: "For individuals & teams",
     spacesMatch: ["Private Office", "Managed Office"],
-    price: (loc) => loc.priceHighlight,
-    priceNote: "/mo",
+    price: (loc) => loc.privateOfficePrice || loc.priceHighlight,
     included: [
       "Fully furnished, move-in ready office",
-      "Daily breakfast, craft coffee, and snacks",
+      "Endless free drinks & curated menu",
       "Flexible term length options",
       "Access to 200+ locations across 85+ cities",
       "Dedicated on-site support",
@@ -54,8 +52,7 @@ const WORKSPACE_TYPES = [
     label: "Meeting Rooms",
     subtitle: "For collaboration",
     spacesMatch: ["Meeting Room"],
-    price: () => "From ₹75/hour",
-    priceNote: "/hour",
+    price: (loc) => loc.meetingRoomPrice ?? null,
     included: [
       "Professional AV-equipped meeting rooms",
       "High-speed dedicated fibre internet",
@@ -72,7 +69,7 @@ export default function AddressWorkspace({ location }) {
   
   // Calculate default tab synchronously
   const defaultTab = WORKSPACE_TYPES.find((t) =>
-    t.spacesMatch.some((s) => location?.spaces?.includes(s))
+    t.price(location) !== null
   )?.key || null;
 
   const [activeTab, setActiveTab] = useState(defaultTab);
@@ -83,7 +80,7 @@ export default function AddressWorkspace({ location }) {
   useEffect(() => {
     if (!location) return;
     const first = WORKSPACE_TYPES.find((t) =>
-      t.spacesMatch.some((s) => location.spaces?.includes(s))
+      t.price(location) !== null
     );
     if (first) setActiveTab(first.key);
   }, [location]);
@@ -111,7 +108,7 @@ export default function AddressWorkspace({ location }) {
 
   // Only show tabs whose space type is offered at this location
   const availableTabs = WORKSPACE_TYPES.filter((t) =>
-    t.spacesMatch.some((s) => location.spaces?.includes(s))
+    t.price(location) !== null
   );
 
   const currentTab = WORKSPACE_TYPES.find((t) => t.key === activeTab);
@@ -130,25 +127,28 @@ export default function AddressWorkspace({ location }) {
 
           {/* ── Tabs ────────────────────────────────────────── */}
           <div className={styles.tabs} role="tablist" aria-label="Workspace types">
-            {availableTabs.map((tab) => (
-              <button
-                key={tab.key}
-                id={`workspace-tab-${location.slug}-${tab.key}`}
-                role="tab"
-                aria-selected={activeTab === tab.key}
-                className={`${styles.tab} ${activeTab === tab.key ? styles.tabActive : ""}`}
-                onClick={() => setActiveTab(tab.key)}
-              >
-                <span className={styles.tabLabel}>{tab.label}</span>
-                <span className={styles.tabSub}>{tab.subtitle}</span>
-                {activeTab === tab.key && tabPrice && (
-                  <span className={styles.tabPrice}>
-                    {tabPrice}
-                    <span className={styles.tabPriceNote}> {tab.priceNote}</span>
-                  </span>
-                )}
-              </button>
-            ))}
+            {availableTabs.map((tab) => {
+              const tabItemPrice = tab.price(location);
+              const isActive = activeTab === tab.key;
+              return (
+                <button
+                  key={tab.key}
+                  id={`workspace-tab-${location.slug}-${tab.key}`}
+                  role="tab"
+                  aria-selected={isActive}
+                  className={`${styles.tab} ${isActive ? styles.tabActive : ""}`}
+                  onClick={() => setActiveTab(tab.key)}
+                >
+                  <span className={styles.tabLabel}>{tab.label}</span>
+                  <span className={styles.tabSub}>{tab.subtitle}</span>
+                  {tabItemPrice && (
+                    <span className={`${styles.tabPrice} ${!isActive ? styles.tabPriceDim : ""}`}>
+                      {tabItemPrice}
+                    </span>
+                  )}
+                </button>
+              );
+            })}
           </div>
 
           {/* ── Sub-caption ──────────────────────────────────── */}
