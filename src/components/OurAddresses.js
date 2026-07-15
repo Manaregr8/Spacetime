@@ -5,7 +5,7 @@ import Link from "next/link";
 import styles from "./OurAddresses.module.css";
 
 const locations = [
-  
+
   {
     id: "gk2",
     name: "Greater Kailash II",
@@ -229,26 +229,14 @@ export default function OurAddresses() {
           </Link>
         </div>
 
-        <p className={styles.footerNote}>
+        {/*<p className={styles.footerNote}>
           900+ new seats launching in the next 6 months.
         </p>
+        */}
 
         {/* ── Real company logos ── */}
         <div className={styles.logoStrip}>
-          <p className={styles.logoStripLabel}>Trusted by high-growth businesses</p>
-          <div className={styles.logoRow}>
-            {clientLogos.map((logo) => (
-              <div key={logo.alt} className={styles.logoItem}>
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={110}
-                  height={40}
-                  style={{ objectFit: "contain" }}
-                />
-              </div>
-            ))}
-          </div>
+          <p className={styles.logoStripLabel}>900+ new seats launching in the next 6 months.</p>
         </div>
 
       </div>

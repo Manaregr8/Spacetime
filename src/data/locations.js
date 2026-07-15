@@ -5,6 +5,7 @@
 
 export const locations = [
   {
+
     slug: "gk2",
     promoTag: "Up to 30% Off Select Private Offices",
     name: "Greater Kailash II",
