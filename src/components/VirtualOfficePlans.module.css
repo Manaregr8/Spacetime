@@ -94,6 +94,7 @@
   font-size: 15px;
   color: rgba(0, 0, 0, 0.55);
   margin-bottom: 48px;
+  max-width: 50%;
 }
 
 /* ── Cards Grid ── */
@@ -192,7 +193,7 @@
   gap: 2px;
 }
 
-.priceBlock + .priceBlock {
+.priceBlock+.priceBlock {
   border-left: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -260,6 +261,7 @@
 }
 
 @media (max-width: 768px) {
+
   .introInner,
   .plansInner {
     padding: 0 24px;

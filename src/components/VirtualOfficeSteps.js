@@ -16,8 +16,8 @@ const steps = [
         <line x1="32" y1="8" x2="32" y2="40" />
       </svg>
     ),
-    title: "Step 1",
-    description: "Select a plan that suits your business needs",
+    title: "Choose Your Address",
+    description: "Select the Spacetime location and plan that best aligns with your business.",
   },
   {
     icon: (
@@ -27,8 +27,8 @@ const steps = [
         <circle cx="24" cy="20" r="3" />
       </svg>
     ),
-    title: "Step 2",
-    description: "Choose your preferred centre and duration",
+    title: "Complete Your Documentation",
+    description: "Share your KYC details and required documents. We'll guide you through every step.",
   },
   {
     icon: (
@@ -39,8 +39,8 @@ const steps = [
         <path d="M16 30L20 34L32 22" />
       </svg>
     ),
-    title: "Step 3",
-    description: "Complete the payment",
+    title: "We Take Care of the Rest",
+    description: "Our team prepares your agreement, verifies your documents, and ensures everything is processed efficiently.",
   },
   {
     icon: (
@@ -52,8 +52,8 @@ const steps = [
         <line x1="18" y1="32" x2="26" y2="32" />
       </svg>
     ),
-    title: "Step 4",
-    description: "Complete your KYC to access your Virtual Office",
+    title: "Start Building Your Presence",
+    description: "Your virtual office is ready. Use your new business address with confidence and focus on growing your business.",
   },
 ];
 
@@ -95,7 +95,7 @@ export default function VirtualOfficeSteps() {
       <div ref={stepsRef} className={`${styles.stepsWrapper} ${styles.fadeUp}`}>
         <div className={styles.stepsInner}>
           <h2 className={styles.stepsTitle}>
-            Register for a Virtual Office by Spacetime in 4 steps
+            Your virtual business address, ready in minutes.
           </h2>
 
           <div className={styles.stepsLayout}>
@@ -135,7 +135,7 @@ export default function VirtualOfficeSteps() {
       <div ref={trustRef} className={`${styles.trustWrapper} ${styles.fadeUp}`}>
         <div className={styles.trustInner}>
           <h3 className={styles.trustTitle}>
-            High growth businesses trust Spacetime for their Virtual Office needs
+            Trusted by businesses that are building what's next.
           </h3>
           <div className={styles.logoStrip}>
             {trustedLogos.map((name, i) => (

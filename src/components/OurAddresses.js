@@ -29,7 +29,7 @@ const locations = [
     name: "NSIC Okhla",
     meta: "345 seats | Managed offices",
     tag: "COWORKING & MANAGED OFFICES",
-    image: "/homebannerImages/Enhance_office_modern_202604020034.webp",
+    image: "/okhlansicpics/49720B73-8495-4DF8-8D32-1CC9A44502CE.PNG",
     priceHighlight: "From ₹12,999/mo",
     href: "/address/nsic",
   },

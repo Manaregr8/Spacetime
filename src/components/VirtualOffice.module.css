@@ -96,8 +96,9 @@
 .ctaSecondary {
   width: 100%;
   color: #111;
-  background-color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: #111;
+  color: #fff;
   border-radius: 12px;
   padding: 16px 32px;
   font-size: 14px;
@@ -121,11 +122,11 @@
 
 .cta {
   width: 100%;
-  background: #111;
-  color: #fff;
+  background-color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #ffffff1a;
   border-radius: 12px;
-  padding: 16px 32px;
+  padding: 8px 32px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -134,7 +135,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -142,17 +142,16 @@
 .ctaMain {
   font-size: 15px;
   font-weight: 700;
-  color: #fff;
 }
 
 .ctaSub {
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.5);
   font-weight: 400;
+  margin-top: -10px;
 }
 
 .cta:hover {
-  background: #222;
+  background: #fff;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   border-color: rgba(252, 187, 45, 0.3);

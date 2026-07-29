@@ -77,10 +77,10 @@ export const locations = [
     privateOfficePrice: "From ₹13,999/mo",
     meetingRoomPrice: "From ₹900/hr",
     virtualOfficePrice: "From ₹1,499/mo",
-    heroImage: "/homebannerImages/Enhance_office_modern_202604020034.webp",
+    heroImage: "/okhlansicpics/49720B73-8495-4DF8-8D32-1CC9A44502CE.PNG",
     galleryImages: [
-      "/homebannerImages/Office_rooms_with_202604020025.webp",
-      "/homebannerImages/Enhance_office_image_202604020030.webp",
+      "/okhlansicpics/6CA821BD-7211-4157-B580-DE1DAC9AA26F.PNG",
+      "/okhlansicpics/C4881EEE-670F-4F7B-80DC-54B7E0BB7FB8.PNG",
     ],
     description:
       "Spacetime at NSIC Okhla is our enterprise-grade flagship for managed offices. Designed for companies that require exclusivity, privacy, and a command-centre feel, NSIC delivers floor-to-ceiling sophistication with world-class infrastructure. Located within the NSIC complex, this address combines industrial gravitas with Spacetime's signature hospitality—ideal for funded startups and scaling businesses.",

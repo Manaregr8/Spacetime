@@ -6,12 +6,13 @@ import styles from "./VirtualOfficePlans.module.css";
 
 const plansData = [
   {
-    title: "Company Registration Plan",
+    title: "Business Registration",
     description:
-      "Premium address with government-compliant documentation for company registration",
+      "Everything needed to establish your company with confidence.",
     features: [
-      "Benefit from government compliant documentation for new business & GST registration",
-      "Mail and package handling",
+      "Registered office for incorporation.",
+      "Premium business presence.",
+      "Room to grow with spacetime."
     ],
     pricing: [
       { duration: "12 months", price: "₹1,799" },
@@ -19,12 +20,13 @@ const plansData = [
     ],
   },
   {
-    title: "GST Registration Plan",
+    title: "GST Ready",
     description:
-      "Premium address with government-compliant documentation for GST registration",
+      "Ideal for businesses requiring GST registration support.",
     features: [
-      "Benefit from government compliant documentation for GST registration",
-      "Mail and package handling",
+      "GST-ready documentation.",
+      "Premium address, Secure correspondence handling.",
+      "Business support when you need it."
     ],
     pricing: [
       { duration: "12 months", price: "₹1,999" },
@@ -32,10 +34,13 @@ const plansData = [
     ],
   },
   {
-    title: "Business Address Plan",
+    title: "Business Presence",
     description:
-      "Premium address for your business card, website, and more with mail and package handling services",
-    features: ["Mail and package handling"],
+      "For a professional mailing and registered address.",
+    features: ["Premium commercial address.",
+      "Professional mail handling.",
+      "Meeting rooms on demand."
+    ],
     pricing: [
       { duration: "12 months", price: "₹1,099" },
       { duration: "24 months", price: "₹959" },
@@ -77,18 +82,12 @@ export default function VirtualOfficePlans() {
         <div className={styles.introInner}>
           <div className={styles.introLeft}>
             <h2 className={styles.introTitle}>
-              What is Virtual Office by Spacetime?
+              Your business, backed by a premium address.
             </h2>
           </div>
           <div className={styles.introRight}>
             <p className={styles.introDesc}>
-              Give your business a premium address, without the overhead cost of
-              a physical space. Choose from our Virtual Office solutions —
-              Business address plan, GST registration plan and Business
-              registration plan. Whether you&apos;re looking to establish your
-              business or grow your operations to a new city, our Virtual Office
-              solutions cater to everyone from freelancers, start-ups to large
-              companies.
+              Whether you're launching a startup, expanding into Delhi, or running a remote business, a Spacetime Virtual Office gives you the credibility of a prestigious business address—along with the flexibility to operate from anywhere. From company and GST registration to secure mail handling and access to beautifully designed workspaces, everything you need is backed by the professionalism and hospitality that define Spacetime.
             </p>
             <a href="#plans" className={styles.introLink}>
               Know more about Spacetime Virtual Office →
@@ -101,10 +100,10 @@ export default function VirtualOfficePlans() {
       <div className={styles.plansSection} id="plans">
         <div className={styles.plansInner}>
           <h2 className={styles.plansTitle}>
-            Pick a plan that&apos;s perfect for you
+            Designed around the way you work.
           </h2>
           <p className={styles.plansSubtitle}>
-            Explore our flexible plans that are designed for your business needs
+            From business registration to GST compliance and professional business addresses, choose the plan that best fits your requirements today—with the flexibility to upgrade as your business grows.
           </p>
 
           <div

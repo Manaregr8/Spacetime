@@ -43,19 +43,23 @@ export default function VirtualOfficeHero() {
         <div className={styles.rightColumn}>
           <div className={styles.textContent}>
             <h1 className={styles.heading}>
-              Give your business an address it deserves with Virtual Office by Spacetime
+              An address that opens doors.
             </h1>
-            
+            <div className={styles.headingsub}>
+              <span>A prestigious business address with everything you need to establish your company with confidence.</span>
+            </div>
+
+
             <div className={styles.bullets}>
               <div className={styles.bullet}>
                 <svg className={styles.checkIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <polyline points="20 6 9 17 4 12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <polyline points="20 6 9 17 4 12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 <span>Plan starting at INR 1099/month</span>
               </div>
               <div className={styles.bullet}>
                 <svg className={styles.checkIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <polyline points="20 6 9 17 4 12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <polyline points="20 6 9 17 4 12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 <span>Documentation within 15 minutes</span>
               </div>
@@ -87,14 +91,14 @@ export default function VirtualOfficeHero() {
                     className={styles.input}
                   />
                 </div>
-                
+
                 <div className={styles.formGroup}>
                   <div className={styles.phoneInputWrapper}>
                     <div className={styles.countryCode}>
                       <span className={styles.flag}>🇮🇳</span>
                       <span>+91</span>
                       <svg className={styles.caret} viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <polyline points="6 9 12 15 18 9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <polyline points="6 9 12 15 18 9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </div>
                     <input
@@ -126,7 +130,7 @@ export default function VirtualOfficeHero() {
                 </select>
                 <div className={styles.selectArrow}>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <polyline points="6 9 12 15 18 9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <polyline points="6 9 12 15 18 9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
               </div>

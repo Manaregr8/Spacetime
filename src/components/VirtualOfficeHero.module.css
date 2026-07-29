@@ -1,7 +1,13 @@
 .section {
   background: #fff;
-  padding-top: 80px; /* Accounts for navbar */
+  padding-top: 80px;
+  /* Accounts for navbar */
   min-height: 100vh;
+}
+
+.headingsub {
+  margin-top: -30px;
+  margin-bottom: 30px;
 }
 
 .inner {
@@ -15,7 +21,8 @@
 .leftColumn {
   flex: 0 0 45%;
   position: relative;
-  min-height: calc(100vh - 80px); /* Fill remaining viewport */
+  min-height: calc(100vh - 80px);
+  /* Fill remaining viewport */
 }
 
 .imageWrapper {
@@ -81,7 +88,8 @@
 .checkIcon {
   width: 18px;
   height: 18px;
-  color: #111; /* Or #b89257 gold if preferred */
+  color: #111;
+  /* Or #b89257 gold if preferred */
 }
 
 /* ── Form Styling ── */
@@ -193,7 +201,8 @@
 /* Submit Button */
 .submitBtn {
   margin-top: 16px;
-  background: #666; /* Gray background to match screenshot */
+  background: #666;
+  /* Gray background to match screenshot */
   color: #fff;
   font-size: 15px;
   font-weight: 500;
@@ -216,13 +225,13 @@
   .inner {
     flex-direction: column;
   }
-  
+
   .leftColumn {
     flex: none;
     height: 400px;
     min-height: auto;
   }
-  
+
   .rightColumn {
     padding: 60px 32px;
   }
@@ -232,7 +241,7 @@
   .formRow {
     flex-direction: column;
   }
-  
+
   .submitBtn {
     width: 100%;
   }

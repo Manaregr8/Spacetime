@@ -14,7 +14,7 @@ const reasons = [
         <rect x="12" y="24" width="16" height="2" rx="1" />
       </svg>
     ),
-    text: "Get a premium address and save up to 90% on overhead costs of a physical space",
+    text: "Establish your business at carefully selected commercial locations that enhance your company's credibility from day one.",
   },
   {
     icon: (
@@ -26,7 +26,7 @@ const reasons = [
         <line x1="10" y1="32" x2="38" y2="32" />
       </svg>
     ),
-    text: "Partner with a trusted name that inspires confidence",
+    text: "From documentation to activation, our streamlined onboarding process gets your business up and running with minimal effort.",
   },
   {
     icon: (
@@ -37,7 +37,7 @@ const reasons = [
         <line x1="18" y1="42" x2="30" y2="42" />
       </svg>
     ),
-    text: "Choose from our centres across India",
+    text: "Documentation designed to simplify company incorporation and GST registration requirements.",
   },
   {
     icon: (
@@ -48,7 +48,7 @@ const reasons = [
         <polyline points="18 28 22 32 30 24" />
       </svg>
     ),
-    text: "Register in under 15 minutes",
+    text: "Receive and manage important business correspondence securely, even while you work remotely.",
   },
   {
     icon: (
@@ -59,7 +59,7 @@ const reasons = [
         <path d="M26 38C26 30 29.4 26 32 26C38.6 26 40 30 40 38" />
       </svg>
     ),
-    text: "Get continued support from a dedicated team",
+    text: "Move seamlessly from a virtual office to meeting rooms, dedicated desks, private cabins, or managed office spaces.",
   },
   {
     icon: (
@@ -68,7 +68,7 @@ const reasons = [
         <rect x="20" y="18" width="8" height="6" rx="1" />
       </svg>
     ),
-    text: "Use your virtual address for business cards, websites, and official correspondence",
+    text: "Supported by professionally managed centres, hospitality-driven teams, and beautifully designed workspaces.",
   },
 ];
 
@@ -94,7 +94,7 @@ export default function VirtualOfficeWhy() {
   return (
     <section className={styles.section}>
       <div ref={ref} className={`${styles.inner} ${styles.fadeUp}`}>
-        <h2 className={styles.title}>Why choose Virtual Office by Spacetime?</h2>
+        <h2 className={styles.title}>Why businesses choose Spacetime</h2>
 
         <div className={styles.grid}>
           {reasons.map((item, i) => (
