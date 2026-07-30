@@ -9,7 +9,7 @@ import styles from "./Footer.module.css";
 const quickLinks = [
   { label: "Locations", href: "/#our-addresses" },
   { label: "Spaces", href: "/#our-spaces" },
-  { label: "Virtual Office", href: "/#virtual-office" },
+  { label: "Virtual Office", href: "/virtual-office" },
   { label: "Community", href: "/#events" },
   { label: "Book a Tour", href: "/#contact" },
   { label: "Careers", href: "/#contact" },

@@ -10,7 +10,7 @@ const navLinks = [
   { label: "Locations", href: "/#our-addresses" },
   { label: "Spaces", href: "/#our-spaces" },
   { label: "Experience", href: "/#the-experience" },
-  { label: "Virtual Office", href: "/#virtual-office" },
+  { label: "Virtual Office", href: "/virtual-office" },
   { label: "Community", href: "/#events" },
 ];
 
