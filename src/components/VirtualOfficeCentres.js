@@ -2,28 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { useBooking } from "@/context/BookingContext";
 import styles from "./VirtualOfficeCentres.module.css";
 
 const centres = [
   {
-    city: "Delhi",
-    label: "Virtual Offices in Delhi",
-    image: "/homebannerImages/Enhance_office_image_202604020030.webp",
-  },
-  {
-    city: "Greater Kailash",
+    city: "Greater Kailash II",
     label: "Virtual Offices in GK-II",
     image: "/homebannerImages/Enhance_office_modern_202604020034.webp",
-  },
-  {
-    city: "Saket",
-    label: "Virtual Offices in Saket",
-    image: "/homebannerImages/remove_the_big_202604020018.webp",
-  },
-  {
-    city: "Okhla",
-    label: "Virtual Offices in Okhla",
-    image: "/homebannerImages/create_a_office_202604020015.webp",
   },
   {
     city: "Connaught Place",
@@ -31,9 +17,29 @@ const centres = [
     image: "/homebannerImages/subtle_masterclass.webp",
   },
   {
-    city: "Panchsheel",
+    city: "Mohan Estate",
+    label: "Virtual Offices in Mohan Estate",
+    image: "/homebannerImages/Enhance_office_image_202604020030.webp",
+  },
+  {
+    city: "Panchsheel Enclave",
     label: "Virtual Offices in Panchsheel",
     image: "/homebannerImages/subtle_networking.webp",
+  },
+  {
+    city: "NSIC Okhla",
+    label: "Virtual Offices in Okhla",
+    image: "/okhlansicpics/6CA821BD-7211-4157-B580-DE1DAC9AA26F.PNG",
+  },
+  {
+    city: "Saket, Westend Marg",
+    label: "Virtual Offices in Saket",
+    image: "/homebannerImages/remove_the_big_202604020018.webp",
+  },
+  {
+    city: "Indore",
+    label: "Virtual Offices in Indore",
+    image: "/homebannerImages/create_a_office_202604020015.webp",
   },
 ];
 
@@ -42,6 +48,7 @@ export default function VirtualOfficeCentres() {
   const scrollRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const { openModal } = useBooking();
 
   useEffect(() => {
     const el = sectionRef.current;
@@ -87,7 +94,7 @@ export default function VirtualOfficeCentres() {
       className={`${styles.section} ${styles.fadeUp}`}
     >
       <div className={styles.inner}>
-        <h2 className={styles.title}>Find the address that fits your <span style={{ color: "#b89257ff", fontWeight: "700" }}>ambition.</span></h2>
+        <h2 className={styles.title}>Find the address that <span style={{ color: "#b89257ff", fontWeight: "700" }}>fits your ambition.</span></h2>
 
         <div className={styles.carouselWrapper}>
           {canScrollLeft && (
@@ -104,7 +111,12 @@ export default function VirtualOfficeCentres() {
 
           <div ref={scrollRef} className={styles.track}>
             {centres.map((c, i) => (
-              <div key={i} className={styles.card}>
+              <button
+                key={i}
+                className={styles.card}
+                onClick={() => openModal("virtual", c.city)}
+                aria-label={`Book virtual office in ${c.city}`}
+              >
                 <div className={styles.cardImage}>
                   <Image
                     src={c.image}
@@ -113,9 +125,12 @@ export default function VirtualOfficeCentres() {
                     sizes="(max-width: 768px) 70vw, 25vw"
                     className={styles.img}
                   />
+                  <div className={styles.cardOverlay}>
+                    <span className={styles.cardCta}>Book this address →</span>
+                  </div>
                 </div>
                 <p className={styles.cardLabel}>{c.label}</p>
-              </div>
+              </button>
             ))}
           </div>
 

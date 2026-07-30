@@ -64,7 +64,6 @@
   z-index: 1;
 }
 
-
 .closeBtn:hover {
   background: rgba(0, 0, 0, 0.14);
   color: #111;
@@ -152,6 +151,7 @@
   border-color: #aaa;
 }
 
+/* ── Phone ────────────────────────────────────────────── */
 .phoneWrap {
   position: relative;
   display: flex;
@@ -185,7 +185,9 @@
   border-color: transparent !important;
 }
 
-.selectWrap {
+/* ── Select / Location ────────────────────────────────── */
+.selectWrap,
+.locationWrap {
   position: relative;
 }
 
@@ -218,6 +220,7 @@
   pointer-events: none;
 }
 
+/* ── Submit ───────────────────────────────────────────── */
 .submit {
   background: #1a1a1a;
   color: #fff;

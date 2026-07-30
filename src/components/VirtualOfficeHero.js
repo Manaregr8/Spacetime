@@ -43,7 +43,7 @@ export default function VirtualOfficeHero() {
         <div className={styles.rightColumn}>
           <div className={styles.textContent}>
             <h1 className={styles.heading}>
-              An address that <span style={{ color: "#b89257ff", fontWeight: "700" }}>opens doors.</span>
+              The address behind <span style={{ color: "#b89257ff", fontWeight: "700" }}>ambitious businesses.</span>
             </h1>
             <div className={styles.headingsub}>
               <span>A prestigious business address with everything you need to establish your company with confidence.</span>
@@ -55,7 +55,7 @@ export default function VirtualOfficeHero() {
                 <svg className={styles.checkIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <polyline points="20 6 9 17 4 12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                <span>Plan starting at INR 1099/month</span>
+                <span>Plans starting at ₹1099/month</span>
               </div>
               <div className={styles.bullet}>
                 <svg className={styles.checkIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor">

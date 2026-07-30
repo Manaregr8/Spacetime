@@ -71,7 +71,7 @@ export default function VirtualOffice() {
           {/* Right CTA */}
           <div className={styles.ctaWrap}>
             <Link href="/virtual-office" className={styles.ctaSecondary}>
-              Explore Plans →
+              Explore Plans
             </Link>
             <button className={styles.cta} onClick={() => openModal("virtual")}>
               <span className={styles.ctaMain}>Get your Virtual Address</span>

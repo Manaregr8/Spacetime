@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import { useBooking } from "@/context/BookingContext";
 import styles from "./VirtualOfficeSteps.module.css";
 
 const steps = [
@@ -69,6 +70,7 @@ const trustedLogos = [
 export default function VirtualOfficeSteps() {
   const stepsRef = useRef(null);
   const trustRef = useRef(null);
+  const { openModal } = useBooking();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -95,7 +97,7 @@ export default function VirtualOfficeSteps() {
       <div ref={stepsRef} className={`${styles.stepsWrapper} ${styles.fadeUp}`}>
         <div className={styles.stepsInner}>
           <h2 className={styles.stepsTitle}>
-            Your virtual business address, ready in <span style={{ color: "#b89257ff", fontWeight: "700" }}>minutes.</span>
+            Your virtual business address, <span style={{ color: "#b89257ff", fontWeight: "700" }}>ready in minutes.</span>
           </h2>
 
           <div className={styles.stepsLayout}>
@@ -135,7 +137,7 @@ export default function VirtualOfficeSteps() {
       <div ref={trustRef} className={`${styles.trustWrapper} ${styles.fadeUp}`}>
         <div className={styles.trustInner}>
           <h3 className={styles.trustTitle}>
-            Trusted by businesses that are building what's <span style={{ color: "#b89257ff", fontWeight: "700" }}>next.</span>
+            Trusted by businesses that are  <span style={{ color: "#b89257ff", fontWeight: "700" }}>building what's next.</span>
           </h3>
           <div className={styles.logoStrip}>
             {trustedLogos.map((logo, i) => (
@@ -143,12 +145,20 @@ export default function VirtualOfficeSteps() {
                 <Image
                   src={logo.src}
                   alt={logo.name}
-                  width={150}
-                  height={50}
+                  width={100}
+                  height={40}
                   className={styles.logoImage}
                 />
               </div>
             ))}
+          </div>
+          <div className={styles.learnMoreWrap}>
+            <button
+              className={styles.learnMoreBtn}
+              onClick={() => openModal("virtual")}
+            >
+              Learn more
+            </button>
           </div>
         </div>
       </div>

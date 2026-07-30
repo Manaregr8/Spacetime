@@ -14,10 +14,10 @@ const options = [
   "Private Walkthrough",
 ];
 
-const BLANK = { firstName: "", lastName: "", email: "", phone: "", option: "" };
+const BLANK = { firstName: "", lastName: "", email: "", phone: "", option: "", location: "" };
 
 export default function BookingModal() {
-  const { isOpen, modalType, closeModal } = useBooking();
+  const { isOpen, modalType, modalLocation, closeModal } = useBooking();
   const [mounted, setMounted] = useState(false);
   const [form, setForm] = useState(BLANK);
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
@@ -41,7 +41,7 @@ export default function BookingModal() {
       setForm(BLANK);
       setStatus("idle");
     } else if (modalType === "virtual") {
-      setForm((prev) => ({ ...prev, option: "Virtual Office" }));
+      setForm((prev) => ({ ...prev, option: "Virtual Office", location: modalLocation || "" }));
     }
   }, [isOpen, modalType]);
 
@@ -76,7 +76,8 @@ export default function BookingModal() {
         body: JSON.stringify({
           ...form,
           source: modalType === 'tour' ? "Private Tour" : (modalType === 'virtual' ? "Virtual Office" : form.option),
-          option: modalType === 'tour' ? "Private Tour" : (modalType === 'virtual' ? "Virtual Office" : form.option)
+          option: modalType === 'tour' ? "Private Tour" : (modalType === 'virtual' ? "Virtual Office" : form.option),
+          location: form.location || undefined,
         }),
       });
       if (!res.ok) throw new Error("Server error");
@@ -161,6 +162,28 @@ export default function BookingModal() {
               <span className={styles.flag} aria-label="India">🇮🇳</span>
               <input className={`${styles.input} ${styles.phoneInput}`} type="tel" name="phone" placeholder="Write your phone number" value={form.phone} onChange={handleChange} required autoComplete="tel" />
             </div>
+
+            {modalType === "virtual" && (
+              <div className={styles.locationWrap}>
+                <select
+                  className={styles.select}
+                  name="location"
+                  value={form.location}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="" disabled>Select location</option>
+                  <option value="Greater Kailash II">Greater Kailash II</option>
+                  <option value="Connaught Place">Connaught Place</option>
+                  <option value="Mohan Estate">Mohan Estate</option>
+                  <option value="Panchsheel Enclave">Panchsheel Enclave</option>
+                  <option value="NSIC Okhla">NSIC Okhla</option>
+                  <option value="Saket, Westend Marg">Saket, Westend Marg</option>
+                  <option value="Indore">Indore</option>
+                </select>
+                <span className={styles.selectArrow}>&#8964;</span>
+              </div>
+            )}
 
             {modalType !== "tour" && modalType !== "virtual" && (
               <div className={styles.selectWrap}>

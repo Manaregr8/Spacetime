@@ -52,17 +52,15 @@ export default function VirtualOfficeWhy() {
   return (
     <section className={styles.section}>
       <div ref={ref} className={`${styles.inner} ${styles.fadeUp}`}>
-        <h2 className={styles.title}>Why businesses choose <span style={{ color: "#b89257ff", fontWeight: "700" }}>Spacetime</span></h2>
+        <h2 className={styles.title}>Why businesses <span style={{ color: "#b89257ff", fontWeight: "700" }}>choose Spacetime</span></h2>
 
         <div className={styles.grid}>
           {reasons.map((item, i) => (
             <div key={i} className={styles.card}>
-              <div className={styles.cardHeader}>
-                <span className={styles.number}>
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className={styles.cardHeading}>{item.heading}</h3>
-              </div>
+              <span className={styles.number}>
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className={styles.cardHeading}>{item.heading}</h3>
               <p className={styles.cardText}>{item.text}</p>
             </div>
           ))}

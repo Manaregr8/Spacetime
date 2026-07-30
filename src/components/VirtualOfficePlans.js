@@ -100,7 +100,7 @@ export default function VirtualOfficePlans() {
       <div className={styles.plansSection} id="plans">
         <div className={styles.plansInner}>
           <h2 className={styles.plansTitle}>
-            Designed around the way you <span style={{ color: "#b89257ff", fontWeight: "700" }}>work.</span>
+            Designed around the <span style={{ color: "#b89257ff", fontWeight: "700" }}>way you work.</span>
           </h2>
           <p className={styles.plansSubtitle}>
             From business registration to GST compliance and professional business addresses, choose the plan that best fits your requirements today—with the flexibility to upgrade as your business grows.
