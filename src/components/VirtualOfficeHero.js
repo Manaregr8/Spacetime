@@ -122,11 +122,13 @@ export default function VirtualOfficeHero() {
                   onChange={handleChange}
                   className={styles.select}
                 >
-                  <option value="New Delhi">New Delhi</option>
-                  <option value="Gurugram">Gurugram</option>
-                  <option value="Noida">Noida</option>
-                  <option value="Mumbai">Mumbai</option>
-                  <option value="Bengaluru">Bengaluru</option>
+                  <option value="New Delhi">Greater Kailash II</option>
+                  <option value="Gurugram">Connaught Place</option>
+                  <option value="Noida">Mohan Estate</option>
+                  <option value="Mumbai">Panchsheel Enclave</option>
+                  <option value="Bengaluru">NSIC Okhla</option>
+                  <option value="Bengaluru">Saket, Westend Marg</option>
+                  <option value="Bengaluru">Indore</option>
                 </select>
                 <div className={styles.selectArrow}>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
