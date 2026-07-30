@@ -244,24 +244,35 @@
 }
 
 /* ── Responsive ── */
+@media (max-width: 1200px) {
+  .introInner,
+  .plansInner {
+    padding: 0 36px;
+  }
+}
+
 @media (max-width: 992px) {
   .introInner {
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
   }
 
   .introLeft {
     flex: none;
   }
 
+  .plansSubtitle {
+    max-width: 100%;
+    margin-bottom: 36px;
+  }
+
   .cardsGrid {
-    grid-template-columns: 1fr;
-    max-width: 500px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-
   .introInner,
   .plansInner {
     padding: 0 24px;
@@ -270,5 +281,48 @@
   .introBanner,
   .plansSection {
     padding: 48px 0;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .introInner,
+  .plansInner {
+    padding: 0 16px;
+  }
+
+  .introBanner,
+  .plansSection {
+    padding: 36px 0;
+  }
+
+  .introTitle,
+  .plansTitle {
+    font-size: 24px;
+  }
+
+  .cardHeader {
+    padding: 24px 18px 16px;
+  }
+
+  .cardBody {
+    padding: 20px 18px;
+  }
+
+  .cardFooter {
+    padding: 0 18px 20px;
+  }
+
+  .priceBlock {
+    padding: 12px 14px;
+  }
+
+  .priceValue {
+    font-size: 19px;
   }
 }

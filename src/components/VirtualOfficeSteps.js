@@ -58,12 +58,12 @@ const steps = [
 ];
 
 const trustedLogos = [
-  "Zomato",
-  "Swiggy",
-  "PhonePe",
-  "Razorpay",
-  "Meesho",
-  "CRED",
+  { name: "Energeia", src: "/bannerLogo1/energia.png" },
+  { name: "BoltEarth", src: "/bannerLogo1/bolt.png" },
+  { name: "Art-E", src: "/bannerLogo1/art.png" },
+  { name: "Kudrat Foundation", src: "/bannerLogo1/kudrat.svg" },
+  { name: "Wisemonk", src: "/bannerLogo1/wisemonk.svg" },
+  { name: "Better Collective", src: "/bannerLogo1/bettercollective.svg" },
 ];
 
 export default function VirtualOfficeSteps() {
@@ -138,9 +138,15 @@ export default function VirtualOfficeSteps() {
             Trusted by businesses that are building what's next.
           </h3>
           <div className={styles.logoStrip}>
-            {trustedLogos.map((name, i) => (
+            {trustedLogos.map((logo, i) => (
               <div key={i} className={styles.logoItem}>
-                <span className={styles.logoText}>{name}</span>
+                <Image
+                  src={logo.src}
+                  alt={logo.name}
+                  width={150}
+                  height={50}
+                  className={styles.logoImage}
+                />
               </div>
             ))}
           </div>

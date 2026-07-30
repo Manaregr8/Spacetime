@@ -221,6 +221,12 @@
 }
 
 /* ── Responsive ── */
+@media (max-width: 1200px) {
+  .rightColumn {
+    padding: 60px 40px;
+  }
+}
+
 @media (max-width: 992px) {
   .inner {
     flex-direction: column;
@@ -228,21 +234,74 @@
 
   .leftColumn {
     flex: none;
-    height: 400px;
+    height: 360px;
     min-height: auto;
   }
 
   .rightColumn {
-    padding: 60px 32px;
+    padding: 48px 32px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+  .section {
+    padding-top: 70px;
+  }
+
+  .leftColumn {
+    height: 250px;
+  }
+
+  .rightColumn {
+    padding: 32px 16px;
+  }
+
+  .heading {
+    font-size: clamp(24px, 6vw, 30px);
+    margin-bottom: 16px;
+  }
+
+  .headingsub {
+    margin-top: -8px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .bullets {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .bullet {
+    font-size: 14px;
+  }
+
+  .form {
+    gap: 16px;
+  }
+
   .formRow {
     flex-direction: column;
+    gap: 16px;
+  }
+
+  .input,
+  .select,
+  .phoneInputWrapper {
+    height: 48px;
+    font-size: 14px;
+  }
+
+  .countryCode {
+    font-size: 13px;
+    padding: 0 10px;
   }
 
   .submitBtn {
     width: 100%;
+    height: 48px;
+    margin-top: 8px;
   }
 }

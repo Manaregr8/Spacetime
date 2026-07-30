@@ -130,6 +130,10 @@
 
 /* ── Responsive ── */
 @media (max-width: 1200px) {
+  .inner {
+    padding: 0 36px;
+  }
+
   .card {
     flex: 0 0 calc(33.333% - 16px);
   }
@@ -147,14 +151,39 @@
   }
 
   .card {
-    flex: 0 0 70%;
+    flex: 0 0 82%;
   }
 
   .section {
     padding: 48px 0;
   }
 
+  .title {
+    font-size: 23px;
+    margin-bottom: 28px;
+  }
+
   .arrow {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .inner {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 36px 0;
+  }
+
+  .card {
+    flex: 0 0 85%;
+    border-radius: 12px;
+  }
+
+  .cardLabel {
+    padding: 12px 14px;
+    font-size: 14px;
   }
 }

@@ -8,7 +8,7 @@ const plansData = [
   {
     title: "Business Registration",
     description:
-      "Everything needed to establish your company with confidence.",
+      "Everything needed to establish your company.",
     features: [
       "Registered office for incorporation.",
       "Premium business presence.",

@@ -299,3 +299,21 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .card {
+    padding: 24px 16px;
+    border-radius: 14px;
+    gap: 28px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .input,
+  .select {
+    padding: 14px 14px;
+    font-size: 14px;
+  }
+}
