@@ -82,7 +82,7 @@ export default function VirtualOfficePlans() {
         <div className={styles.introInner}>
           <div className={styles.introLeft}>
             <h2 className={styles.introTitle}>
-              Your business, backed by a premium address.
+              Your business, backed by a <span style={{ color: "#b89257ff", fontWeight: "700" }}>premium address.</span>
             </h2>
           </div>
           <div className={styles.introRight}>
@@ -100,7 +100,7 @@ export default function VirtualOfficePlans() {
       <div className={styles.plansSection} id="plans">
         <div className={styles.plansInner}>
           <h2 className={styles.plansTitle}>
-            Designed around the way you work.
+            Designed around the way you <span style={{ color: "#b89257ff", fontWeight: "700" }}>work.</span>
           </h2>
           <p className={styles.plansSubtitle}>
             From business registration to GST compliance and professional business addresses, choose the plan that best fits your requirements today—with the flexibility to upgrade as your business grows.

@@ -6,8 +6,13 @@
 }
 
 .headingsub {
-  margin-top: -30px;
-  margin-bottom: 30px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  letter-spacing: 0.1px;
 }
 
 .inner {
@@ -65,7 +70,7 @@
   font-weight: 500;
   color: #111;
   line-height: 1.2;
-  margin-bottom: 32px;
+  margin-bottom: 8px;
   letter-spacing: -0.5px;
 }
 
@@ -262,7 +267,7 @@
   }
 
   .headingsub {
-    margin-top: -8px;
+
     margin-bottom: 24px;
     font-size: 14px;
     line-height: 1.5;

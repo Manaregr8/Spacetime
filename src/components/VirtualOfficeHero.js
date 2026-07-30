@@ -29,7 +29,7 @@ export default function VirtualOfficeHero() {
         <div className={styles.leftColumn}>
           <div className={styles.imageWrapper}>
             <Image
-              src="/homebannerImages/Enhance_office_image_202604020030.webp"
+              src="/okhlansicpics/ChatGPT Image Jul 30, 2026, 02_41_12 PM.png"
               alt="Premium office building"
               fill
               sizes="(max-width: 992px) 100vw, 50vw"
@@ -43,7 +43,7 @@ export default function VirtualOfficeHero() {
         <div className={styles.rightColumn}>
           <div className={styles.textContent}>
             <h1 className={styles.heading}>
-              An address that opens doors.
+              An address that <span style={{ color: "#b89257ff", fontWeight: "700" }}>opens doors.</span>
             </h1>
             <div className={styles.headingsub}>
               <span>A prestigious business address with everything you need to establish your company with confidence.</span>

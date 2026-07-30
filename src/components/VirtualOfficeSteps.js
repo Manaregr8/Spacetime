@@ -95,14 +95,14 @@ export default function VirtualOfficeSteps() {
       <div ref={stepsRef} className={`${styles.stepsWrapper} ${styles.fadeUp}`}>
         <div className={styles.stepsInner}>
           <h2 className={styles.stepsTitle}>
-            Your virtual business address, ready in minutes.
+            Your virtual business address, ready in <span style={{ color: "#b89257ff", fontWeight: "700" }}>minutes.</span>
           </h2>
 
           <div className={styles.stepsLayout}>
             {/* Left: Image */}
             <div className={styles.stepsImageWrapper}>
               <Image
-                src="/homebannerImages/Enhance_office_modern_202604020034.webp"
+                src="/okhlansicpics/78F00947-DDDB-4460-8361-D2D809A6233D.PNG"
                 alt="Virtual office registration"
                 fill
                 sizes="(max-width: 992px) 100vw, 55vw"
@@ -135,7 +135,7 @@ export default function VirtualOfficeSteps() {
       <div ref={trustRef} className={`${styles.trustWrapper} ${styles.fadeUp}`}>
         <div className={styles.trustInner}>
           <h3 className={styles.trustTitle}>
-            Trusted by businesses that are building what's next.
+            Trusted by businesses that are building what's <span style={{ color: "#b89257ff", fontWeight: "700" }}>next.</span>
           </h3>
           <div className={styles.logoStrip}>
             {trustedLogos.map((logo, i) => (

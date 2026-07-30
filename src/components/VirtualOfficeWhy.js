@@ -5,70 +5,28 @@ import styles from "./VirtualOfficeWhy.module.css";
 
 const reasons = [
   {
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="6" y="10" width="36" height="28" rx="3" />
-        <line x1="6" y1="18" x2="42" y2="18" />
-        <line x1="14" y1="14" x2="14" y2="14.01" strokeWidth="2" />
-        <line x1="10" y1="14" x2="10" y2="14.01" strokeWidth="2" />
-        <rect x="12" y="24" width="16" height="2" rx="1" />
-      </svg>
-    ),
+    heading: "Premium Business Addresses",
     text: "Establish your business at carefully selected commercial locations that enhance your company's credibility from day one.",
   },
   {
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="24" cy="24" r="16" />
-        <ellipse cx="24" cy="24" rx="8" ry="16" />
-        <line x1="8" y1="24" x2="40" y2="24" />
-        <line x1="10" y1="16" x2="38" y2="16" />
-        <line x1="10" y1="32" x2="38" y2="32" />
-      </svg>
-    ),
+    heading: "Fast & Hassle-Free Setup",
     text: "From documentation to activation, our streamlined onboarding process gets your business up and running with minimal effort.",
   },
   {
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M24 6C24 6 34 16 34 24C34 29.5 29.5 34 24 34C18.5 34 14 29.5 14 24C14 16 24 6 24 6Z" />
-        <circle cx="24" cy="24" r="4" />
-        <line x1="24" y1="34" x2="24" y2="42" />
-        <line x1="18" y1="42" x2="30" y2="42" />
-      </svg>
-    ),
+    heading: "Company & GST Registration Support",
     text: "Documentation designed to simplify company incorporation and GST registration requirements.",
   },
   {
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="10" y="6" width="28" height="36" rx="3" />
-        <line x1="18" y1="14" x2="30" y2="14" />
-        <line x1="18" y1="20" x2="30" y2="20" />
-        <polyline points="18 28 22 32 30 24" />
-      </svg>
-    ),
+    heading: "Professional Mail Handling",
     text: "Receive and manage important business correspondence securely, even while you work remotely.",
   },
   {
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="20" cy="16" r="6" />
-        <circle cx="32" cy="16" r="6" />
-        <path d="M8 38C8 30 13.4 26 20 26C22 26 23.8 26.4 25.4 27.2" />
-        <path d="M26 38C26 30 29.4 26 32 26C38.6 26 40 30 40 38" />
-      </svg>
-    ),
-    text: "Move seamlessly from a virtual office to meeting rooms, dedicated desks, private cabins, or managed office spaces.",
+    heading: "Upgrade as You Grow",
+    text: "Move seamlessly from a virtual office to meeting rooms, dedicated desks, private cabins, or managed office spaces—all within the Spacetime ecosystem.",
   },
   {
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 38V22L24 10L36 22V38H28V30H20V38H12Z" />
-        <rect x="20" y="18" width="8" height="6" rx="1" />
-      </svg>
-    ),
-    text: "Supported by professionally managed centres, hospitality-driven teams, and beautifully designed workspaces.",
+    heading: "Backed by the Spacetime Experience",
+    text: "Every virtual office is supported by professionally managed centres, hospitality-driven teams, and beautifully designed workspaces that reflect your brand when clients visit.",
   },
 ];
 
@@ -94,12 +52,17 @@ export default function VirtualOfficeWhy() {
   return (
     <section className={styles.section}>
       <div ref={ref} className={`${styles.inner} ${styles.fadeUp}`}>
-        <h2 className={styles.title}>Why businesses choose Spacetime</h2>
+        <h2 className={styles.title}>Why businesses choose <span style={{ color: "#b89257ff", fontWeight: "700" }}>Spacetime</span></h2>
 
         <div className={styles.grid}>
           {reasons.map((item, i) => (
             <div key={i} className={styles.card}>
-              <div className={styles.iconWrapper}>{item.icon}</div>
+              <div className={styles.cardHeader}>
+                <span className={styles.number}>
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className={styles.cardHeading}>{item.heading}</h3>
+              </div>
               <p className={styles.cardText}>{item.text}</p>
             </div>
           ))}

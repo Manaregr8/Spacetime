@@ -87,7 +87,7 @@ export default function VirtualOfficeCentres() {
       className={`${styles.section} ${styles.fadeUp}`}
     >
       <div className={styles.inner}>
-        <h2 className={styles.title}>Find the address that fits your ambition.</h2>
+        <h2 className={styles.title}>Find the address that fits your <span style={{ color: "#b89257ff", fontWeight: "700" }}>ambition.</span></h2>
 
         <div className={styles.carouselWrapper}>
           {canScrollLeft && (
