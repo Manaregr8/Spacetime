@@ -12,7 +12,7 @@ const initialEvents = [
     tag: "Exclusive Invite",
     shortDesc: "An invitation to discover The Penteli by Spacetime.",
     fullDesc: "An invitation to discover The Penteli by Spacetime — where exceptional workspaces meet elevated hospitality. An evening of cocktails, exceptional hospitality, and meaningful conversations. By private invitation.",
-    image: "/homebannerImages/subtle_masterclass.webp"
+    image: "/ChatGPT Image Aug 3, 2026, 08_55_00 AM.png"
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const initialEvents = [
     tag: "Wellness",
     shortDesc: "Start Wednesday with intention.",
     fullDesc: "A guided yoga and sound healing session to reset and recharge mid-week. Open to all Spacetime members and their guests. Mats and refreshments provided.",
-    image: "/homebannerImages/subtle_wellness.webp"
+    image: "/ChatGPT Image Aug 3, 2026, 09_02_27 AM.png"
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const initialEvents = [
     tag: "Networking",
     shortDesc: "Curated introductions over a private lunch.",
     fullDesc: "A curated, invite-only networking lunch connecting founders with investors. Limited seats. Hosted by the Spacetime community team with warm introductions and structured conversations.",
-    image: "/homebannerImages/subtle_networking.webp"
+    image: "/ChatGPT Image Aug 3, 2026, 08_58_59 AM.png"
   },
 ];
 

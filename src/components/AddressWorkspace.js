@@ -25,12 +25,12 @@ const WORKSPACE_TYPES = [
     price: (loc) => loc.coworkingPrice || loc.priceHighlight,
     included: [
       "Fully furnished, move-in ready desk",
-      "Endless free drinks & curated menu",
+      "Tea, coffee & purified water",
       "Flexible term length options",
       "Access to all locations across our network",
       "Dedicated on-site support",
     ],
-    image: (loc) => loc.galleryImages?.[0] || loc.heroImage,
+    image: (loc) => loc.heroImage,
   },
   {
     key: "private",
@@ -40,9 +40,9 @@ const WORKSPACE_TYPES = [
     price: (loc) => loc.privateOfficePrice || loc.priceHighlight,
     included: [
       "Fully furnished, move-in ready office",
-      "Endless free drinks & curated menu",
+      "Tea, coffee & purified water",
       "Flexible term length options",
-      "Access to 200+ locations across 85+ cities",
+      "Access to prime centers across Delhi-NCR",
       "Dedicated on-site support",
     ],
     image: (loc) => loc.heroImage,
@@ -60,7 +60,7 @@ const WORKSPACE_TYPES = [
       "Whiteboard & presentation tools included",
       "Concierge support for every session",
     ],
-    image: (loc) => loc.galleryImages?.[1] || loc.heroImage,
+    image: (loc) => loc.heroImage,
   },
 ];
 
@@ -123,7 +123,7 @@ export default function AddressWorkspace({ location }) {
 
         {/* ── Section heading ─────────────────────────────── */}
         <div ref={sectionRef} className={`${styles.headingBlock} ${styles.fadeUp}`}>
-          <h2 className={styles.heading}>Find Your Ideal Workspace</h2>
+          <h2 className={styles.heading}>Find Your <span style={{ color: "#b89257", fontWeight: "700" }}>Ideal Workspace</span></h2>
 
           {/* ── Tabs ────────────────────────────────────────── */}
           <div className={styles.tabs} role="tablist" aria-label="Workspace types">
@@ -209,13 +209,6 @@ export default function AddressWorkspace({ location }) {
             </ul>
 
             <div className={styles.ctaGroup}>
-              <button
-                id={`workspace-tour-btn-${location.slug}-${activeTab}`}
-                className={styles.ctaSecondary}
-                onClick={() => openModal("tour")}
-              >
-                See What&apos;s Available
-              </button>
               <button
                 id={`workspace-book-btn-${location.slug}-${activeTab}`}
                 className={styles.ctaPrimary}

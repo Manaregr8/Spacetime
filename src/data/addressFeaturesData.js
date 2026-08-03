@@ -2,15 +2,10 @@
 
 const defaultImages = {
   spaces: [
-    { src: "/homebannerImages/Enhance_office_modern_202604020034.webp", label: "Comfy Common Lounges" },
-    { src: "/homebannerImages/remove_the_big_202604020018.webp", label: "Cafe" },
-    { src: "/homebannerImages/create_a_office_202604020015.webp", label: "4 Meeting Rooms" },
-    { src: "/homebannerImages/subtle_masterclass.webp", label: "Phone Booths" }
-  ],
-  breakfast: [
-    "/homebannerImages/event1.webp",
-    "/homebannerImages/event2.webp",
-    "/homebannerImages/event3.webp"
+    { src: "/saket.png" },
+    { src: "/panchsheel.png" },
+    { src: "/mohan-estate.png" },
+    { src: "/connaught-place.png" }
   ]
 };
 
@@ -34,23 +29,27 @@ export const addressFeaturesData = {
       ],
       images: defaultImages.spaces
     },
-    breakfastData: {
-      title: "Endless Free Drinks. Curated Menu to Match.",
-      description: "We take our food seriously. From early breakfast to late afternoon, grab what you need to stay fueled, focused, and doing your best work.",
-      images: defaultImages.breakfast
+    amenitiesData: {
+      title: "Thoughtfully Brewed. Freely Poured.",
+      description: "Stay refreshed and fueled throughout your workday with artisanal coffee, a selection of fine teas, and fresh purified water served in our premium lounge spaces.",
+      images: [
+        "/coffee/ChatGPT Image Aug 3, 2026, 10_44_28 AM.png",
+        "/coffee/ChatGPT Image Aug 3, 2026, 10_44_28 AMassa.png",
+        "/coffee/ChatGPT Image Aug 3, 2026, 10_44_28 AMsasas.png"
+      ]
     },
     moreSolutionsData: {
       virtualMembership: {
         title: "Virtual Membership",
         badge: "For individuals or companies",
         description: "Establish your business in a prime location with a professional mailing address, plus reliable mail retrieval — we'll receive your mail and have it ready whenever you need it. As a virtual member, you can also book meeting rooms at your home location at the member rate.",
-        price: "From ₹2,999/mo",
+        price: "From ₹1,099/mo",
         image: "/homebannerImages/Enhance_office_image_202604020030.webp"
       },
       highlightBanner: {
         title: "The best workplace provider, period.",
         bullets: [
-          "A network of 200+ other locations around the world at your fingertips",
+          "Access to prime centers across Delhi-NCR & expanding hubs",
           "All-inclusive amenities",
           "Unparalleled hospitality"
         ]
@@ -65,7 +64,7 @@ export const addressFeaturesData = {
       "Location & Access": [
         {
           q: "What are the operating hours for this location?",
-          a: "This location offers 24/7 access for all Private Office and Dedicated Desk members. Our community team is on-site Monday to Friday, 9:00 AM to 6:00 PM."
+          a: "Operating hours for this location are 8:00 AM to 8:00 PM, Monday to Saturday."
         },
         {
           q: "Is parking available on-site?",
@@ -75,7 +74,7 @@ export const addressFeaturesData = {
       "Amenities": [
         {
           q: "What amenities are specific to this location?",
-          a: "Beyond our standard premium amenities, this location features a fully-stocked barista cafe, private phone booths, and a wellness room."
+          a: "Beyond our standard premium amenities, this location features coffee, tea & purified water, private phone booths, and high-speed internet."
         }
       ]
     }

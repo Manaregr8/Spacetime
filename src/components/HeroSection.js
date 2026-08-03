@@ -24,7 +24,7 @@ export default function HeroSection() {
     <section className={styles.hero}>
       {/* LCP Optimization: Use Image component with priority instead of CSS background */}
       <Image
-        src="/homebannerImages/create_a_office_202604020015.webp"
+        src="/okhlansicpics/6CA821BD-7211-4157-B580-DE1DAC9AA26F.PNG"
         alt="Spacetime Office"
         fill
         priority

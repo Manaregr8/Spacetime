@@ -42,7 +42,7 @@ export default function AddressMoreSolutions({ location }) {
     <section className={styles.section}>
       <div className={styles.inner}>
 
-        <h2 className={styles.sectionTitle}>More Workspace Solutions</h2>
+        <h2 className={styles.sectionTitle}>More <span style={{ color: "#b89257", fontWeight: "700" }}>Workspace Solutions</span></h2>
 
         {/* --- Virtual Membership --- */}
         <div ref={vmemRef} className={`${styles.virtualMembership} ${styles.fadeUp}`}>
@@ -88,7 +88,7 @@ export default function AddressMoreSolutions({ location }) {
         {/* --- Video Block --- */}
         <div ref={videoRef} className={`${styles.videoBlock} ${styles.fadeUp}`}>
           <div className={styles.videoLeft}>
-            <h2 className={styles.videoTitle}>{videoBlock.title}</h2>
+            <h2 className={styles.videoTitle}>No one does <span style={{ color: "#b89257", fontWeight: "700" }}>flex, coworking, or community</span> like us.</h2>
             <p className={styles.videoDesc}>{videoBlock.description}</p>
           </div>
           <div className={styles.videoRight}>

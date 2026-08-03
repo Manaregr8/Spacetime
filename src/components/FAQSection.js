@@ -26,7 +26,7 @@ const faqData = {
   "Locations": [
     {
       q: "What are your locations?",
-      a: "All premium South & Central Delhi locations — Greater Kailash II, Saket (Westend Marg), Connaught Place, NSIC Okhla, Panchsheel Enclave and Sarita Vihar."
+      a: "All premium South & Central Delhi locations — Greater Kailash II, Saket (Westend Marg), Connaught Place, The Penteli By Spacetime (Okhla), Panchsheel Enclave, Mohan Cooperative and Indore."
     },
   ],
   "Virtual Office": [

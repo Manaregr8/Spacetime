@@ -256,7 +256,12 @@ export default function AddressHero({ location }) {
         {/* ── Description + Highlights (below gallery) ────────── */}
         <div ref={descRef} className={`${styles.descSection} ${styles.fadeUp}`}>
           {tagline && (
-            <h2 className={styles.descTitle}>{tagline}</h2>
+            <h2 className={styles.descTitle}>
+              {tagline.split(" at ").length > 1
+                ? <>{tagline.split(" at ")[0]} at <span style={{ color: "#b89257", fontWeight: "700" }}>{tagline.split(" at ").slice(1).join(" at ")}</span></>
+                : tagline
+              }
+            </h2>
           )}
           {description && (
             <p className={styles.descText}>{description}</p>
@@ -264,7 +269,7 @@ export default function AddressHero({ location }) {
 
           {highlights.length > 0 && (
             <div className={styles.highlightsWrapper}>
-              <p className={styles.highlightsLabel}>Location Highlights</p>
+              <p className={styles.highlightsLabel}>Highlights</p>
               <ul className={styles.highlights}>
                 {highlights.map((h, i) => (
                   <li key={i} className={styles.highlight}>

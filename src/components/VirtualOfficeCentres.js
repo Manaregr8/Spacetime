@@ -17,8 +17,8 @@ const centres = [
     image: "/homebannerImages/subtle_masterclass.webp",
   },
   {
-    city: "Mohan Estate",
-    label: "Virtual Offices in Mohan Estate",
+    city: "Mohan Cooperative",
+    label: "Virtual Offices in Mohan Cooperative",
     image: "/homebannerImages/Enhance_office_image_202604020030.webp",
   },
   {
@@ -27,8 +27,8 @@ const centres = [
     image: "/homebannerImages/subtle_networking.webp",
   },
   {
-    city: "NSIC Okhla",
-    label: "Virtual Offices in Okhla",
+    city: "The Penteli By Spacetime",
+    label: "Virtual Offices in The Penteli",
     image: "/okhlansicpics/6CA821BD-7211-4157-B580-DE1DAC9AA26F.PNG",
   },
   {

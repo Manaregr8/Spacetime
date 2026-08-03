@@ -16,12 +16,13 @@ const quickLinks = [
 ];
 
 const locationLabels = [
-  "Greater Kailash",
-  "Saket",
-  "NSIC Okhla",
-  "Sarita Vihar",
+  "Greater Kailash II",
+  "Saket, Westend Marg",
+  "The Penteli By Spacetime",
   "Connaught Place",
   "Panchsheel Enclave",
+  "Mohan Cooperative",
+  "Indore",
 ];
 
 const tickerItems = [
@@ -223,7 +224,7 @@ export default function Footer() {
         <div className={styles.ctaOverlay}>
           <button className={styles.bigCta} onClick={() => openModal("tour")}>
             <span>Book my private tour</span>
-            <img className={styles.arrow} src="./path3.svg"></img>
+            <img className={styles.arrow} src="/path3.svg" alt="" />
           </button>
         </div>
       </div>

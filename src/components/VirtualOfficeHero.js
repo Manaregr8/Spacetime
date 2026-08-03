@@ -124,9 +124,9 @@ export default function VirtualOfficeHero() {
                 >
                   <option value="New Delhi">Greater Kailash II</option>
                   <option value="Gurugram">Connaught Place</option>
-                  <option value="Noida">Mohan Estate</option>
+                  <option value="Mohan Cooperative">Mohan Cooperative</option>
                   <option value="Mumbai">Panchsheel Enclave</option>
-                  <option value="Bengaluru">NSIC Okhla</option>
+                  <option value="The Penteli By Spacetime">The Penteli By Spacetime</option>
                   <option value="Bengaluru">Saket, Westend Marg</option>
                   <option value="Bengaluru">Indore</option>
                 </select>

@@ -175,9 +175,9 @@ export default function BookingModal() {
                   <option value="" disabled>Select location</option>
                   <option value="Greater Kailash II">Greater Kailash II</option>
                   <option value="Connaught Place">Connaught Place</option>
-                  <option value="Mohan Estate">Mohan Estate</option>
+                  <option value="Mohan Cooperative">Mohan Cooperative</option>
                   <option value="Panchsheel Enclave">Panchsheel Enclave</option>
-                  <option value="NSIC Okhla">NSIC Okhla</option>
+                  <option value="The Penteli By Spacetime">The Penteli By Spacetime</option>
                   <option value="Saket, Westend Marg">Saket, Westend Marg</option>
                   <option value="Indore">Indore</option>
                 </select>

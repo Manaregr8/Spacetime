@@ -95,7 +95,7 @@ export default function RootLayout({ children }) {
       {
         "@type": "City",
         name: "Delhi",
-        areaServed: "Greater Kailash, Saket, NSIC Okhla, Sarita Vihar, Connaught Place, Panchsheel Enclave",
+        areaServed: "Greater Kailash II, Saket, The Penteli By Spacetime (Okhla), Connaught Place, Panchsheel Enclave, Mohan Cooperative, Indore",
       },
     ],
     availableService: [
