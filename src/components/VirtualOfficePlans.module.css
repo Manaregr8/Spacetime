@@ -101,7 +101,7 @@
 .cardsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 32px;
 }
 
 .card {
@@ -129,8 +129,32 @@
   font-size: 20px;
   font-weight: 600;
   color: #111;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   letter-spacing: -0.2px;
+}
+
+/* Title row with badge */
+.cardTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+/* Most Popular badge */
+.popularBadge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  color: #b89257;
+  background: rgba(184, 146, 87, 0.1);
+  border: 1px solid rgba(184, 146, 87, 0.35);
+  border-radius: 20px;
+  padding: 2px 9px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .cardDesc {
@@ -155,19 +179,20 @@
 }
 
 .featureItem {
-  position: relative;
-  padding-left: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
   font-size: 14px;
   line-height: 1.55;
   color: #111;
+  padding-left: 0;
 }
 
-.featureItem::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #b89257;
-  font-weight: 700;
+.featureCheck {
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  margin-top: 2px;
 }
 
 /* Card Footer */

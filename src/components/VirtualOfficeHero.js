@@ -9,17 +9,41 @@ export default function VirtualOfficeHero() {
     fullName: "",
     email: "",
     phone: "",
-    city: "New Delhi"
+    location: "Greater Kailash II"
   });
+  const [status, setStatus] = useState("idle"); // idle | loading | success | error
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Virtual Office Lead:", formData);
-    alert("Thanks! We'll be in touch shortly.");
+    setStatus("loading");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          location: formData.location,
+          option: "Virtual Office",
+          source: "Virtual Office Hero",
+        }),
+      });
+      if (!res.ok) throw new Error("Server error");
+      setStatus("success");
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        location: "Greater Kailash II"
+      });
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -52,16 +76,28 @@ export default function VirtualOfficeHero() {
 
             <div className={styles.bullets}>
               <div className={styles.bullet}>
-                <svg className={styles.checkIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <polyline points="20 6 9 17 4 12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <svg className={styles.checkIcon} viewBox="0 0 24 24" fill="none" stroke="#b89257" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
                 </svg>
-                <span>Plans starting at ₹1099/month</span>
+                <span>Business Registration</span>
               </div>
               <div className={styles.bullet}>
-                <svg className={styles.checkIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <polyline points="20 6 9 17 4 12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <svg className={styles.checkIcon} viewBox="0 0 24 24" fill="none" stroke="#b89257" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
                 </svg>
-                <span>Documentation within 15 minutes</span>
+                <span>GST Registration</span>
+              </div>
+              <div className={styles.bullet}>
+                <svg className={styles.checkIcon} viewBox="0 0 24 24" fill="none" stroke="#b89257" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>Premium Business Address</span>
+              </div>
+              <div className={styles.bullet}>
+                <svg className={styles.checkIcon} viewBox="0 0 24 24" fill="none" stroke="#b89257" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>Documentation in as little as 15 minutes</span>
               </div>
             </div>
 
@@ -116,19 +152,19 @@ export default function VirtualOfficeHero() {
 
               <div className={styles.formGroup}>
                 <select
-                  name="city"
+                  name="location"
                   required
-                  value={formData.city}
+                  value={formData.location}
                   onChange={handleChange}
                   className={styles.select}
                 >
-                  <option value="New Delhi">Greater Kailash II</option>
-                  <option value="Gurugram">Connaught Place</option>
+                  <option value="Greater Kailash II">Greater Kailash II</option>
+                  <option value="Connaught Place">Connaught Place</option>
                   <option value="Mohan Cooperative">Mohan Cooperative</option>
-                  <option value="Mumbai">Panchsheel Enclave</option>
+                  <option value="Panchsheel Enclave">Panchsheel Enclave</option>
                   <option value="The Penteli By Spacetime">The Penteli By Spacetime</option>
-                  <option value="Bengaluru">Saket, Westend Marg</option>
-                  <option value="Bengaluru">Indore</option>
+                  <option value="Saket, Westend Marg">Saket, Westend Marg</option>
+                  <option value="Indore">Indore</option>
                 </select>
                 <div className={styles.selectArrow}>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -137,9 +173,25 @@ export default function VirtualOfficeHero() {
                 </div>
               </div>
 
-              <button type="submit" className={styles.submitBtn}>
-                Request callback
-              </button>
+              <div className={styles.ctaGroup}>
+                <button type="submit" className={styles.ctaPrimary} disabled={status === "loading"}>
+                  {status === "loading" ? "Submitting..." : "Get Started"}
+                </button>
+                <a href="#plans" className={styles.ctaSecondary}>
+                  View Plans
+                </a>
+              </div>
+
+              {status === "success" && (
+                <p style={{ color: "#2e7d32", fontSize: "14px", marginTop: "12px", fontWeight: "500" }}>
+                  ✓ Thank you! Your request has been received. We will contact you shortly.
+                </p>
+              )}
+              {status === "error" && (
+                <p style={{ color: "#d32f2f", fontSize: "14px", marginTop: "12px", fontWeight: "500" }}>
+                  Something went wrong. Please try again or call us directly.
+                </p>
+              )}
             </form>
           </div>
         </div>

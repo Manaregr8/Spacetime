@@ -3,36 +3,60 @@ import React, { useState } from 'react';
 import styles from './FAQSection.module.css';
 
 const faqData = {
-  "Pricing": [
+  "Membership & Workspaces": [
     {
-      q: "How does Managed Office pricing work?",
-      a: "Custom quote based on team size and floor requirements. All-inclusive — furniture, hospitality, internet, maintenance. No hidden charges."
+      q: "What workspace solutions does Spacetime offer?",
+      a: "Spacetime offers flexible desks, dedicated desks, private cabins, managed offices, meeting rooms, event spaces, and virtual offices. Whether you're an individual professional or an enterprise, we have workspace solutions that grow with your business."
     },
     {
-      q: "Can I start with just a few desks and scale?",
-      a: "Yes. Our model is built for seamless growth — from 1 seat to 100+ without moving spaces or disrupting your team."
-    },
-  ],
-  "Day Pass": [
-    {
-      q: "What's included in the Free Day Pass?",
-      a: "Full access to all amenities, high-speed internet, complimentary beverages, and the complete Spacetime experience for one full day. No commitment required."
+      q: "Who is Spacetime designed for?",
+      a: "Our workspaces are ideal for freelancers, startups, SMEs, growing businesses, and enterprise teams looking for flexible, professionally managed office spaces."
     },
     {
-      q: "Is there a long-term commitment?",
-      a: "No. Flexible month-to-month options are available alongside longer-term plans. We work to your timeline, not ours."
+      q: "Can I upgrade my workspace as my team grows?",
+      a: "Absolutely. Many of our members begin with coworking or a private cabin and seamlessly upgrade to larger managed office solutions as their business expands."
     },
   ],
-  "Locations": [
+  "Facilities & Amenities": [
     {
-      q: "What are your locations?",
-      a: "All premium South & Central Delhi locations — Greater Kailash II, Saket (Westend Marg), Connaught Place, The Penteli By Spacetime (Okhla), Panchsheel Enclave, Mohan Cooperative and Indore."
+      q: "What amenities are included?",
+      a: "Members enjoy high-speed internet, meeting rooms, reception services, housekeeping, pantry access, tea and coffee, printing facilities, breakout spaces, and professionally managed common areas."
+    },
+    {
+      q: "Are meeting rooms available for non-members?",
+      a: "Yes. Our meeting and conference rooms can be booked by both members and external guests, subject to availability."
+    },
+    {
+      q: "Are the workspaces fully furnished?",
+      a: "Yes. Every workspace is move-in ready with ergonomic furniture, enterprise-grade internet, power backup, and essential business infrastructure."
     },
   ],
-  "Virtual Office": [
+  "Locations & Access": [
     {
-      q: "How does a Virtual Office work for my needs?",
-      a: "Our virtual office gives you a prestigious Delhi-NCR address for GST registration, mail handling and professional correspondence — all managed by our hospitality team. You can also access meeting rooms at member rates."
+      q: "Where are Spacetime centres located?",
+      a: "Spacetime operates premium workspace centres across key commercial locations in Delhi NCR, offering excellent connectivity and business infrastructure."
+    },
+    {
+      q: "Can I visit a centre before signing up?",
+      a: "Absolutely. We encourage prospective members to schedule a tour and experience the workspace before making a decision."
+    },
+    {
+      q: "What are your operating hours?",
+      a: "Our centres are open during business hours, while member access may vary depending on the workspace plan and location."
+    },
+  ],
+  "Managed Offices & Enterprise Solutions": [
+    {
+      q: "What is a managed office?",
+      a: "A managed office is a fully furnished, customised workspace exclusively designed for your team. Spacetime takes care of fit-outs, operations, and day-to-day management so you can focus on your business."
+    },
+    {
+      q: "Can you customise office layouts?",
+      a: "Yes. We work with businesses to create office spaces tailored to their branding, team size, and operational requirements."
+    },
+    {
+      q: "How quickly can my team move in?",
+      a: "Depending on the size and level of customisation, many offices can be made ready within a short turnaround period."
     },
   ],
 };
@@ -57,9 +81,11 @@ const ChevronRight = () => (
   </svg>
 );
 
-export default function FAQSection({ customFaqs }) {
+export default function FAQSection({ customFaqs, heading, subheading }) {
   // Use custom FAQs if provided, otherwise fallback to the default static data
   const dataToUse = customFaqs || faqData;
+  const defaultHeading = heading || null;
+  const defaultSubheading = subheading || null;
   const [activeCategory, setActiveCategory] = useState(Object.keys(dataToUse)[0]);
   const [openIndex, setOpenIndex] = useState(0);
 
@@ -79,9 +105,13 @@ export default function FAQSection({ customFaqs }) {
     <section className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.header}>
-          <h2 className={styles.heading}>Frequently Asked <span style={{ color: "#b89257ff ", fontWeight: 800, letterSpacing: "-1px" }}>Questions</span></h2>
+          {defaultHeading ? (
+            <h2 className={styles.heading}>{defaultHeading}</h2>
+          ) : (
+            <h2 className={styles.heading}>Questions? We&apos;ve got you <span style={{ color: "#b89257ff ", fontWeight: 800, letterSpacing: "-1px" }}>covered.</span></h2>
+          )}
           <p className={styles.subheading}>
-            Everything you need to know about joining the Spacetime community.
+            {defaultSubheading || "Whether you\u2019re looking for a coworking desk, a managed office, or a meeting room, here are answers to the questions we hear most often."}
           </p>
         </div>
 

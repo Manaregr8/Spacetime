@@ -7,12 +7,13 @@ import styles from "./VirtualOfficePlans.module.css";
 const plansData = [
   {
     title: "Business Registration",
+    mostPopular: true,
     description:
       "Everything needed to establish your company.",
     features: [
-      "Registered office for incorporation.",
-      "Premium business presence.",
-      "Room to grow with spacetime."
+      "Registered office for incorporation",
+      "Premium business presence",
+      "Room to grow with Spacetime"
     ],
     pricing: [
       { duration: "12 months", price: "₹1,799" },
@@ -21,12 +22,13 @@ const plansData = [
   },
   {
     title: "GST Ready",
+    mostPopular: false,
     description:
       "Ideal for businesses requiring GST registration support.",
     features: [
-      "GST-ready documentation.",
-      "Premium address, Secure correspondence handling.",
-      "Business support when you need it."
+      "GST-ready documentation",
+      "Premium address, Secure correspondence handling",
+      "Business support when you need it"
     ],
     pricing: [
       { duration: "12 months", price: "₹1,999" },
@@ -35,11 +37,12 @@ const plansData = [
   },
   {
     title: "Business Presence",
+    mostPopular: false,
     description:
       "For a professional mailing and registered address.",
-    features: ["Premium commercial address.",
-      "Professional mail handling.",
-      "Meeting rooms on demand."
+    features: ["Premium commercial address",
+      "Professional mail handling",
+      "Meeting rooms on demand"
     ],
     pricing: [
       { duration: "12 months", price: "₹1,099" },
@@ -113,7 +116,12 @@ export default function VirtualOfficePlans() {
             {plansData.map((plan, i) => (
               <div key={i} className={styles.card}>
                 <div className={styles.cardHeader}>
-                  <h3 className={styles.cardTitle}>{plan.title}</h3>
+                  <div className={styles.cardTitleRow}>
+                    <h3 className={styles.cardTitle}>{plan.title}</h3>
+                    {plan.mostPopular && (
+                      <span className={styles.popularBadge}>Most Popular</span>
+                    )}
+                  </div>
                   <p className={styles.cardDesc}>{plan.description}</p>
                 </div>
 
@@ -121,6 +129,9 @@ export default function VirtualOfficePlans() {
                   <ul className={styles.featureList}>
                     {plan.features.map((f, j) => (
                       <li key={j} className={styles.featureItem}>
+                        <svg className={styles.featureCheck} viewBox="0 0 24 24" fill="none" stroke="#b89257" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
                         {f}
                       </li>
                     ))}
@@ -144,7 +155,7 @@ export default function VirtualOfficePlans() {
                     className={styles.bookBtn}
                     onClick={() => openModal("virtual")}
                   >
-                    Book now
+                    Choose Plan
                   </button>
                 </div>
               </div>

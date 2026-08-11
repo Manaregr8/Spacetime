@@ -157,7 +157,7 @@ export default function VirtualOfficeSteps() {
               className={styles.learnMoreBtn}
               onClick={() => openModal("virtual")}
             >
-              Learn more
+              Get Started
             </button>
           </div>
         </div>
