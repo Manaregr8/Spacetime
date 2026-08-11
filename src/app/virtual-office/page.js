@@ -147,7 +147,7 @@ export default function VirtualOfficePage() {
       {/* Section 7: FAQ */}
       <FAQSection
         customFaqs={virtualFaqs}
-        heading="Virtual Office FAQs"
+        heading={<>Virtual Office <span style={{ color: "#b89257ff", fontWeight: 800, letterSpacing: "-1px" }}>FAQs</span></>}
         subheading="Everything you need to know about setting up and managing your Virtual Office with Spacetime."
       />
 

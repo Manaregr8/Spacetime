@@ -108,7 +108,7 @@ export default function FAQSection({ customFaqs, heading, subheading }) {
           {defaultHeading ? (
             <h2 className={styles.heading}>{defaultHeading}</h2>
           ) : (
-            <h2 className={styles.heading}>Questions? We&apos;ve got you <span style={{ color: "#b89257ff ", fontWeight: 800, letterSpacing: "-1px" }}>covered.</span></h2>
+            <h2 className={styles.heading}>Questions? <span style={{ color: "#b89257ff", fontWeight: 800, letterSpacing: "-1px" }}>We&apos;ve got you covered.</span></h2>
           )}
           <p className={styles.subheading}>
             {defaultSubheading || "Whether you\u2019re looking for a coworking desk, a managed office, or a meeting room, here are answers to the questions we hear most often."}
