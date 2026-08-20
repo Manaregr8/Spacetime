@@ -16,7 +16,7 @@ const bannerLogos = [
 ];
 
 export default function HeroSection() {
-  const { openModal, setHeroLoaded } = useBooking();
+  const { openModal } = useBooking();
   // Quadruple for seamless infinite marquee
   const marqueeItems = [...bannerLogos, ...bannerLogos, ...bannerLogos, ...bannerLogos];
 
@@ -32,7 +32,6 @@ export default function HeroSection() {
         quality={60}
         className={styles.heroImage}
         style={{ objectFit: "cover" }}
-        onLoad={() => setHeroLoaded(true)}
       />
       {/* Overlay gradients */}
       <div className={styles.overlay} />

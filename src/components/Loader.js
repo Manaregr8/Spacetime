@@ -1,15 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useBooking } from "@/context/BookingContext";
 import styles from "./Loader.module.css";
 
 const FADE_DURATION = 480;
+const SHOW_DURATION = 1200; // fixed display duration, no waiting for hero image
 
 let _played = false;
 
 export default function Loader() {
-  const { isHeroLoaded } = useBooking();
   const shouldShow = !_played;
 
   const [fadeOut, setFadeOut] = useState(false);
@@ -21,16 +20,13 @@ export default function Loader() {
       return;
     }
 
-    if (isHeroLoaded) {
+    // Exit after a fixed duration — don't wait for hero image load
+    const timer = setTimeout(() => {
       exit();
-    }
+    }, SHOW_DURATION);
 
-    const safetyTimer = setTimeout(() => {
-      exit();
-    }, 5000);
-
-    return () => clearTimeout(safetyTimer);
-  }, [shouldShow, isHeroLoaded]);
+    return () => clearTimeout(timer);
+  }, [shouldShow]);
 
   const exit = () => {
     _played = true;

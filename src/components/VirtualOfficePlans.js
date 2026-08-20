@@ -92,9 +92,6 @@ export default function VirtualOfficePlans() {
             <p className={styles.introDesc}>
               Whether you're launching a startup, expanding into Delhi, or running a remote business, a Spacetime Virtual Office gives you the credibility of a prestigious business address—along with the flexibility to operate from anywhere. From company and GST registration to secure mail handling and access to beautifully designed workspaces, everything you need is backed by the professionalism and hospitality that define Spacetime.
             </p>
-            <a href="#plans" className={styles.introLink}>
-              Know more about Spacetime Virtual Office →
-            </a>
           </div>
         </div>
       </div>

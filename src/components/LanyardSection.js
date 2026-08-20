@@ -18,9 +18,6 @@ export default function LanyardSection() {
           <p className={styles.desc}>
             Every member starts with a complimentary day inside one of our curated spaces. Grab the card on the right and claim yours in&nbsp;seconds.
           </p>
-          <p className={styles.flipNote}>
-            <strong>Flip the Pass</strong> <em>*Hold and scan the QR code on the back for exclusive member offers, discounts, and priority booking access.</em>
-          </p>
         </div>
 
         <div className={styles.canvasWrap}>

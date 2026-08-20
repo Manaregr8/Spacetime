@@ -7,22 +7,21 @@ import { useBooking } from "@/context/BookingContext";
 import styles from "./Footer.module.css";
 
 const quickLinks = [
-  { label: "Locations", href: "/#our-addresses" },
   { label: "Spaces", href: "/#our-spaces" },
   { label: "Virtual Office", href: "/virtual-office" },
   { label: "Community", href: "/#events" },
   { label: "Book a Tour", href: "/#contact" },
-  { label: "Careers", href: "/#contact" },
+  { label: "Careers", href: "/careers" },
 ];
 
-const locationLabels = [
-  "Greater Kailash II",
-  "Saket, Westend Marg",
-  "The Penteli By Spacetime",
-  "Connaught Place",
-  "Panchsheel Enclave",
-  "Mohan Cooperative",
-  "Indore",
+const locationLinks = [
+  { label: "Greater Kailash II", href: "/address/gk2" },
+  { label: "Saket, Westend Marg", href: "/address/saket" },
+  { label: "The Penteli By Spacetime", href: "/address/nsic" },
+  { label: "Connaught Place", href: "/address/cp" },
+  { label: "Panchsheel Enclave", href: "/address/panchsheel" },
+  { label: "Mohan Cooperative", href: "/address/mohan-estate" },
+  { label: "Indore", href: "/address/indore" },
 ];
 
 const tickerItems = [
@@ -130,9 +129,9 @@ export default function Footer() {
           <div className={styles.col}>
             <h4 className={styles.colHeading}>Locations</h4>
             <ul className={styles.linkList}>
-              {locationLabels.map((label) => (
-                <li key={label}>
-                  <button onClick={openModal} className={styles.navLink}>{label}</button>
+              {locationLinks.map((loc) => (
+                <li key={loc.label}>
+                  <Link href={loc.href} className={styles.navLink}>{loc.label}</Link>
                 </li>
               ))}
             </ul>
@@ -142,13 +141,13 @@ export default function Footer() {
           <div className={styles.col}>
             <h4 className={styles.colHeading}>Contact</h4>
             <ul className={styles.contactList}>
-              <li className={styles.contactItem}>
+                <li className={styles.contactItem}>
                 <span className={styles.contactIcon}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.77 1.19 2 2 0 012.73 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.08-1.08a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                   </svg>
                 </span>
-                <a href="tel:+919818450490" className={styles.contactLink}>+91 98184 50490</a> <a href="tel:+919810474703" className={styles.contactLink}>098104 74703</a>
+                <a href="tel:+919810474703" className={styles.contactLink}>+91 98104 74703</a> <a href="tel:+919818450490" className={styles.contactLink}>098184 50490</a>
               </li>
               <li className={styles.contactItem}>
                 <span className={styles.contactIcon}>
@@ -167,7 +166,7 @@ export default function Footer() {
                   </svg>
                 </span>
                 <address className={styles.address}>
-                  DLF Savitri, Greater Kailash II,<br />New Delhi 110 048
+                  Level 5, DLF Centre Savitri Complex,<br />Greater Kailash 2, 110048
                 </address>
               </li>
             </ul>

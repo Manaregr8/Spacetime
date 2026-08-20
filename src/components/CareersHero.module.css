@@ -1,0 +1,73 @@
+.section {
+  padding: 160px 48px 80px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.inner {
+  max-width: 1600px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.heading {
+  font-size: clamp(26px, 3vw, 44px);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #111;
+  letter-spacing: -0.5px;
+  margin-bottom: 0;
+  max-width: 600px;
+}
+
+.highlight {
+  color: #b89257; /* Spacetime gold color */
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.btnPrimary {
+  background-color: #111;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 0.2s;
+  border: 1px solid #111;
+}
+
+.btnPrimary:hover {
+  background-color: #333;
+}
+
+.btnSecondary {
+  background-color: transparent;
+  color: #111;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid #e0e0e0;
+  transition: border-color 0.2s;
+}
+
+.btnSecondary:hover {
+  border-color: #111;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 120px 24px 60px;
+  }
+}

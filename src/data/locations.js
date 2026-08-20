@@ -26,7 +26,6 @@ export const locations = [
     description:
       "Nestled in the heart of South Delhi, Spacetime at Greater Kailash II is our flagship location and the perfect address for ambitious founders and growing teams. This center offers coworking desks, dedicated seats, private offices, and conference rooms—all finished with the hospitality-first ethos that defines Spacetime. With metro connectivity, curated design, and a community of high-calibre operators, a day here never feels like just work.",
     highlights: [
-      { icon: "location", label: "Prestige Greater Kailash II Address" },
       { icon: "metro", label: "Metro Accessible" },
       { icon: "enterprise", label: "Lounge & Collaboration Areas" },
       { icon: "phone", label: "Private Phone Booths" },
@@ -56,7 +55,6 @@ export const locations = [
     description:
       "Spacetime at Saket sits on the iconic Westend Marg, surrounded by the best dining, retail, and green spaces South Delhi has to offer. The three centers here provide an ideal blend of tranquility and connectivity—perfect for teams that demand more than just a desk. With luxury-grade interiors, high-speed connectivity, and a team that anticipates your every need, Saket is where ambition meets comfort.",
     highlights: [
-      { icon: "location", label: "Prestige Saket Address" },
       { icon: "metro", label: "Metro Accessible" },
       { icon: "enterprise", label: "Lounge & Collaboration Areas" },
       { icon: "phone", label: "Private Phone Booths" },
@@ -86,7 +84,7 @@ export const locations = [
     description:
       "Spacetime at The Penteli (Okhla) is our enterprise-grade flagship for managed offices. Designed for companies that require exclusivity, privacy, and a command-centre feel, The Penteli delivers floor-to-ceiling sophistication with world-class infrastructure. Located within the NSIC complex, this address combines industrial gravitas with Spacetime's signature hospitality—ideal for funded startups and scaling businesses.",
     highlights: [
-      { icon: "location", label: "Prestige Okhla Address" },
+      { icon: "enterprise", label: "Enterprise-Grade Infrastructure" },
       { icon: "metro", label: "Metro Accessible" },
       { icon: "enterprise", label: "Lounge & Collaboration Areas" },
       { icon: "phone", label: "Private Phone Booths" },
@@ -116,8 +114,6 @@ export const locations = [
     description:
       "Tucked into one of Delhi's most coveted residential enclaves, Spacetime at Panchsheel offers an intimate, curated coworking experience for those who prefer a quieter pace of work. The 120-seat center is designed for focus—with plush breakout areas, dedicated phone booths, and natural light throughout. It's the perfect address for freelancers, consultants, and small teams seeking something truly different.",
     highlights: [
-      { icon: "location", label: "Prestige Panchsheel Enclave Address" },
-      { icon: "metro", label: "Metro Accessible" },
       { icon: "enterprise", label: "Lounge & Collaboration Areas" },
       { icon: "phone", label: "Private Phone Booths" },
       { icon: "cafe", label: "Kitchenette & Café Onsite" },
@@ -146,7 +142,6 @@ export const locations = [
     description:
       "Spacetime at Mohan Cooperative is our largest center—a 30,000 sq ft powerhouse spanning 300+ seats with everything from open coworking floors to enterprise managed offices. Located on the Mathura Road with seamless metro access, Mohan Cooperative is where Delhi's most ambitious companies go to scale. The space is designed to flex with you, whether you're a team of 3 or 300.",
     highlights: [
-      { icon: "location", label: "Prestige Mohan Cooperative Address" },
       { icon: "metro", label: "Metro Accessible" },
       { icon: "enterprise", label: "Lounge & Collaboration Areas" },
       { icon: "phone", label: "Private Phone Booths" },
@@ -176,7 +171,6 @@ export const locations = [
     description:
       "Connaught Place is Delhi's most iconic business address—and Spacetime is bringing its signature hospitality-first managed offices to the heart of the capital. This is for companies that understand the power of a prestige address. Surrounded by embassies, corporate HQs, and India's finest dining, Spacetime at CP is the ultimate statement of intent for a scaling enterprise.",
     highlights: [
-      { icon: "location", label: "Prestige Connaught Place Address" },
       { icon: "metro", label: "Metro Accessible" },
       { icon: "enterprise", label: "Lounge & Collaboration Areas" },
       { icon: "phone", label: "Private Phone Booths" },
@@ -206,7 +200,6 @@ export const locations = [
     description:
       "Spacetime is proud to bring its premium managed office experience to Indore — the commercial heartbeat of Madhya Pradesh. As India's fastest-growing Tier-2 city, Indore is where the next generation of ambitious companies is being built. Our managed offices here offer the same Spacetime-grade design, technology, and hospitality you'd expect in Delhi—now available in the City of Dreams.",
     highlights: [
-      { icon: "location", label: "Prestige Indore Address" },
       { icon: "enterprise", label: "Lounge & Collaboration Areas" },
       { icon: "phone", label: "Private Phone Booths" },
       { icon: "cafe", label: "Kitchenette & Café Onsite" },

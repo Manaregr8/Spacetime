@@ -141,15 +141,15 @@ export default function VirtualOfficePage() {
       {/* Section 5: Browse Centres Across India */}
       <VirtualOfficeCentres />
 
-      {/* Section 6: Contact Form */}
-      <InvitationForm />
-
-      {/* Section 7: FAQ */}
+      {/* Section 6: FAQ */}
       <FAQSection
         customFaqs={virtualFaqs}
         heading={<>Virtual Office <span style={{ color: "#b89257ff", fontWeight: 800, letterSpacing: "-1px" }}>FAQs</span></>}
         subheading="Everything you need to know about setting up and managing your Virtual Office with Spacetime."
       />
+
+      {/* Section 7: Contact Form */}
+      <InvitationForm />
 
       {/* Footer */}
       <Footer />

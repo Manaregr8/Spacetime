@@ -2,7 +2,6 @@
   background: #fff;
   padding-top: 80px;
   /* Accounts for navbar */
-  min-height: 100vh;
 }
 
 .headingsub {
@@ -26,8 +25,7 @@
 .leftColumn {
   flex: 0 0 45%;
   position: relative;
-  min-height: calc(100vh - 80px);
-  /* Fill remaining viewport */
+  min-height: 580px;
 }
 
 .imageWrapper {
@@ -95,6 +93,32 @@
   width: 16px;
   height: 16px;
   flex-shrink: 0;
+}
+
+/* ── 2x2 Bullet Grid ── */
+.bullets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+  row-gap: 16px;
+  margin-bottom: 36px;
+}
+
+.bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.checkIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 /* ── Form Styling ── */

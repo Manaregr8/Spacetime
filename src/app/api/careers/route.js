@@ -1,5 +1,5 @@
-const SHEET_URL =
-  "https://script.google.com/macros/s/AKfycbwKi6ChYV_gKF9v9YCUiKviwl7rlWtZgvbj2daeOfcG7vRIBR6r-p8NWASY763WqD3rnA/exec";
+const CAREERS_SHEET_URL =
+  "https://script.google.com/macros/s/AKfycbyPCALTt4s2oF6HgW8UPDPAvYsbiUHT4uws-GBdX03w1K5WjFVu4__8X2fvrshUzHnMng/exec";
 
 export async function POST(request) {
   try {
@@ -8,7 +8,7 @@ export async function POST(request) {
     const headers = { "Content-Type": "application/json" };
 
     // Step 1: POST to AppScript — it will 302 redirect
-    const first = await fetch(SHEET_URL, {
+    const first = await fetch(CAREERS_SHEET_URL, {
       method: "POST",
       headers,
       body: payload,
@@ -29,7 +29,7 @@ export async function POST(request) {
 
     return Response.json({ result: "success" }, { status: 200 });
   } catch (err) {
-    console.error("[contact API]", err);
+    console.error("[careers API]", err);
     return Response.json({ result: "error", message: err.message }, { status: 500 });
   }
 }

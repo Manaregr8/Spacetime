@@ -53,8 +53,8 @@ export default function VirtualOfficeHero() {
         <div className={styles.leftColumn}>
           <div className={styles.imageWrapper}>
             <Image
-              src="/okhlansicpics/ChatGPT Image Jul 30, 2026, 02_41_12 PM.png"
-              alt="Premium office building"
+              src="/premium-reception.jpg"
+              alt="Premium Spacetime reception"
               fill
               sizes="(max-width: 992px) 100vw, 50vw"
               className={styles.heroImage}
@@ -184,7 +184,7 @@ export default function VirtualOfficeHero() {
 
               {status === "success" && (
                 <p style={{ color: "#2e7d32", fontSize: "14px", marginTop: "12px", fontWeight: "500" }}>
-                  ✓ Thank you! Your request has been received. We will contact you shortly.
+                  ✓ Thank you! Your request has been received. We will reply within one business day.
                 </p>
               )}
               {status === "error" && (

@@ -103,7 +103,7 @@ export default function InvitationForm() {
               <span className={styles.successIcon}>✓</span>
               <p className={styles.successTitle}>We&apos;ve received your request!</p>
               <p className={styles.successSub}>
-                Our team will reach out within one business hour.
+                Our team will reach out within one business day.
               </p>
               <button
                 className={styles.submit}
@@ -192,7 +192,7 @@ export default function InvitationForm() {
                 <span className={styles.submitMain}>
                   {status === "loading" ? "Sending…" : "Send my Invitation"}
                 </span>
-                <span className={styles.submitSub}>We reply within one business hour.</span>
+                <span className={styles.submitSub}>We reply within one business day.</span>
               </button>
             </form>
           )}
